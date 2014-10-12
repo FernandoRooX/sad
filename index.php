@@ -85,7 +85,7 @@ endif;
                             <div style="margin-bottom:25px;" class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                                 <!--<input class="form-control" type="login" id="input_login" placeholder="CPF" name="login" maxlength="14" onkeypress="formatar('###.###.###-##', this);" required="" /> -->
-                                <input class="form-control" type="login" id="input_login" placeholder="CPF" name="login"  maxlength="14" onkeypress="formatar('###.###.###-##', this);" required=""/>
+                                <input class="form-control" type="login" id="input_login" placeholder="LOGIN" name="login"  maxlength="30"  required=""/>
                             </div>
 
                             <div style="margin-bottom:25px;" class="input-group">

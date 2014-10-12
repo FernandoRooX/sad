@@ -28,14 +28,15 @@ class login extends conexao {
     public function logar() {
         $pdo = parent::getDB();
 
-        $logar = $pdo->prepare("SELECT * FROM usuario WHERE ra = ? AND senha = ?");
+        $logar = $pdo->prepare("SELECT * FROM usuario WHERE login = ? AND senha = ?");
         $logar->bindValue(1, $this->getLogin());
         $logar->bindValue(2, $this->getSenha());
         $logar->execute();
         if ($logar->rowCount() == 1):
             $dados = $logar->fetch(PDO::FETCH_OBJ);
-            $_SESSION['perfil'] = $dados-> nome;
+            $_SESSION['login'] = $dados-> login;
             $_SESSION['perfilUsuario'] = $dados-> perfil;
+            $_SESSION['idPESSOA']  = $dados-> PESSOA_idPESSOA;
             $_SESSION['logado'] = true;
             return TRUE;
         else:
@@ -47,7 +48,7 @@ class login extends conexao {
         if (isset($_SESSION['logado'])):
             unset($_SESSION['logado']);
             session_destroy();
-            header("location:http://localhost/teste");
+            header("location:http://localhost/sad");
         endif;
     }
 }
