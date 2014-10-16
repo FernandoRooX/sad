@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <?php 
+    require_once '../conecta.php';
     $variavel = 'coordenador';
     session_start(); 
     require_once '../classes/validaAcesso.php';
@@ -25,15 +26,10 @@
                 <div class="row">
                     <div id="conteudo" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="page-header">
-                            <h3><span class="glyphicon glyphicon-th-list"></span> Cursos</h3>
+                            <h3><span class="glyphicon glyphicon-th-list"></span> Escolher Curso</h3>
                         </div>
 
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                <a href="cadastroCurso.php"><button type="button" class="btn btn-success">Novo Curso</button></a>
-                                <a href="escolherCurso.php"><button type="button" class="btn btn-success">Vincular Turma a Curso</button></a>
-                            </div>
-                        </div>
+                        
                         <hr>
 
                         <div class="row">
@@ -49,33 +45,29 @@
                                         <th>Curso</th>
                                         <th>Orientador</th>
                                         <th>Tipo</th>
-                                        <th>Carga Horária</th>
+                                        
                                         <th></th>
                                     </tr>
                                 </thead>
                                 <tbody class="h5">
+                                    <?php 
+                                    $select = mysql_query("SELECT * FROM curso")or die(mysql_error());
+                                    while($dado = mysql_fetch_array($select)){
+                                        echo"<tr>";
+                                        echo"<td><a href='vincularTurmaCurso.php?idCurso=".$dado['cod']."'>".$dado['nome']."</td>";
+                                        echo"<td><a href='vincularTurmaCurso.php?idCurso=".$dado['cod']."'>".$dado['orientador']."</td>";
+                                        echo"<td><a href='vincularTurmaCurso.php?idCurso=".$dado['cod']."'>".$dado['modalidade']."</td>";
+                                        echo"</a> </tr>";
+                                    }
+                                    
+                                    ?>
+                                    
                                     <tr>
                                         <td></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
-                                        <td><button type="button" class="btn btn-warning btn-xs">Editar</button> <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal-delete">Excluir</button></td>
-                                <div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="modal-delete" aria-hidden="true">
-                                    <div class="modal-dialog modal-sm">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Sair</span></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>Tem certeza que deseja remover essa turma?</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-default" data-dismiss="modal">Não</button>
-                                                <button type="button.btn.btn-danger">Sim</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                      
                                 </tr>
                                 </tbody>
                             </table>

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <?php 
+    require_once '../conecta.php';
+    $idCurso = $_REQUEST['idCurso'];
     $variavel = 'coordenador';
     session_start(); 
     require_once '../classes/validaAcesso.php';
@@ -31,7 +33,7 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <a href="cadastroCurso.php"><button type="button" class="btn btn-success">Novo Curso</button></a>
-                                <a href="escolherCurso.php"><button type="button" class="btn btn-success">Vincular Turma a Curso</button></a>
+                                <a href="vincularTurmaCurso.php"><button type="button" class="btn btn-success">Vincular Turma a Curso</button></a>
                             </div>
                         </div>
                         <hr>
@@ -54,6 +56,12 @@
                                     </tr>
                                 </thead>
                                 <tbody class="h5">
+                                    <?php
+                                    $select = mysql_query("SELECT * FROM turma");
+                                    while ($dado = mysql_fetch_array($select)) {
+        	echo "<input type='checkbox' name='turma[]' id='".htmlentities($dado['periodo'])."' value='".htmlentities($dado['protocolo'])."' />" .htmlentities($dado['nome'])." " ;
+		}
+                ?>
                                     <tr>
                                         <td></td>
                                         <td></td>

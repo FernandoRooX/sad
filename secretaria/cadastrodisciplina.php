@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="pt-BR">
-    <?php session_start(); ?>
+    <?php
+    $variavel = 'coordenador';
+    session_start(); ?>
     <head>
         <?php include_once '../inc/head.php'; ?>
         <title>Cadastro de Aluno</title>
@@ -13,42 +15,7 @@
                 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body>
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-                <div class="container-fluid container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-                            <span class="sr-only">Toggle Navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a href="#" class="navbar-brand">{Logo}</a>
-                    </div>
-
-                    <div class="collapse navbar-collapse" id="navbar-collapse">
-                        <ul class="nav navbar-nav">
-                            <li><a href="../secretaria/index.php">Home</a></li>
-                            <li><a href="../secretaria/alunos.php">Alunos</a></li>
-                            <li><a href="../secretaria/turmas.php">Turmas</a></li>
-                            <li><a href="../secretaria/disciplinas.php">Disciplinas</a></li>
-                        </ul>
-
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> <?php echo $_SESSION['perfil']; ?> <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Editar Perfil</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="logado.php?logout=acessar">Sair <span class="glyphicon glyphicon-log-out"></span></a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-        </nav>
-
+    <body><?php require_once'../topo.php';?>
         <div class="wrapper" role="main">
             <div class="container container-fluid">
                 <div class="row">
@@ -57,20 +24,22 @@
                             <h3><span class="glyphicon glyphicon-th-list"></span> Cadastro de Disciplina</h3>
                         </div>
 
-                        <form method="post" action="banksdisciplina.php?acao=add" class="form-horizontal" role="form">
+                        <form method="post" action="banksdisciplina.php?acao=adicionar" class="form-horizontal" role="form">
                             <div class="row">
                                 <div class="col-md-8">
-                                    <div class="form-group">
-                                        <label for="inputCod" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Protocolo:</label>
-                                        <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-                                            <input type="text" name="codigo" class="form-control" id="inputCod" required="">
-                                        </div>
-                                    </div>
+                                    
 
                                     <div class="form-group">
                                         <label for="inputDisciplina" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Disciplina:</label>
                                         <div class="col-xs-6  col-sm-10 col-md-11 col-lg-10">
                                             <input type="text" name="disciplina" class="form-control" id="inputDisciplina" required="">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="inputSituacao" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Situação:</label>
+                                        <div class="col-xs-6  col-sm-10 col-md-11 col-lg-10">
+                                            <input type="text" name="situacao" class="form-control" id="inputDisciplina" required="">
                                         </div>
                                     </div>
 
@@ -80,6 +49,7 @@
                                             <input type="number" name="ch" class="form-control" id="inputCarga" required="">
                                         </div>
                                     </div>
+                                    
                                     <!--
                                     <div class="form-group">
                                         <label for="inputPeriodo" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Período Letivo:</label>
@@ -88,7 +58,7 @@
                                         </div>
                                     </div> -->
 
-                                    <div class="form-group">
+<!--                                    <div class="form-group">
                                         <label for="selectSerie" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Série:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
                                             <select name="selectSerie" id="selectSerie" class="form-control" required>
@@ -118,24 +88,8 @@
                                                 <option value="ster">STER</option>
                                             </select>
                                         </div>
-                                    </div>
+                                    </div>-->
 
-                                    <div class="form-group">
-                                        <label for="inputProfessor" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Professor:</label>
-                                        <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-                                            <select name="selectProfessor" id="selectProfessor" class="form-control" required="">
-                                                <option value="">Selecione</option>
-                                                <option value="Guilerme Costa">Guilherme Costa</option>
-                                                <option value="Fernando Goncalves">Fernando Gonçalves</option>
-                                                <option value="Wesley Tschiedel">Wesley Tschiedel</option>
-                                                <option value="Welton Dias">Welton Dias</option>
-                                                <option value="Rodrigo Porto">Rodrigo Porto</option>
-                                                <option value="Daniel Dantas">Daniel Dantas</option>
-                                                <option value="Jane">Jane</option>
-                                                <option value="Cíntia">Cíntia</option>
-                                            </select>
-                                        </div>
-                                    </div>
 
                                     <div class="pull-right">
                                         <button type="submit" class="btn btn-success">Cadastrar</button>

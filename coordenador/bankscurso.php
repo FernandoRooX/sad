@@ -1,18 +1,6 @@
 <?php
-#banco de dados para tabela curso
-#dados para conectar com o banco
+require_once '../conecta.php';
 
-$servidor = 'localhost';
-$usuario = 'root';
-$senhaa = '';
-$banco = 'sad';
-
-
-#Executa a conexão com o mysql
-$lig = mysql_connect($servidor, $usuario, $senhaa) or die('Não possível fazer a conexão: ' . mysql_error());
-
-#Seleciona o banco de dados que deseja utilizar
-$select = @mysql_select_db($banco);
 
 if ($_REQUEST["acao"] == "adicionar") {
     
