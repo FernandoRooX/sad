@@ -16,7 +16,7 @@ class conexao {
     private static function conectar() {
         try {
             if (self::$instance == null):
-                $isn = "mysql:host=localhost;dbname=sad2";
+                $isn = "mysql:host=localhost;dbname=sad4";
                 self::$instance = new PDO($isn, self::user, self::pass);
                 self::$instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 

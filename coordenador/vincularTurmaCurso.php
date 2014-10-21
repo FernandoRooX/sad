@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <?php 
+    <?php
     require_once '../conecta.php';
     $idCurso = $_REQUEST['idCurso'];
     $variavel = 'coordenador';
-    session_start(); 
+    session_start();
     require_once '../classes/validaAcesso.php';
     ?>
     <head>
@@ -21,7 +21,7 @@
         <![endif]-->
     </head>
     <body>
-        <?php        require_once '../topo.php';?>
+        <?php require_once '../topo.php'; ?>
         <div class="wrapper" role="main">
             <div class="container container-fluid">
                 <div class="row">
@@ -56,35 +56,29 @@
                                     </tr>
                                 </thead>
                                 <tbody class="h5">
-                                    <?php
-                                    $select = mysql_query("SELECT * FROM turma");
-                                    while ($dado = mysql_fetch_array($select)) {
-        	echo "<input type='checkbox' name='turma[]' id='".htmlentities($dado['periodo'])."' value='".htmlentities($dado['protocolo'])."' />" .htmlentities($dado['nome'])." " ;
-		}
-                ?>
                                     <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td><button type="button" class="btn btn-warning btn-xs">Editar</button> <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal-delete">Excluir</button></td>
-                                <div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="modal-delete" aria-hidden="true">
-                                    <div class="modal-dialog modal-sm">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Sair</span></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>Tem certeza que deseja remover essa turma?</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-default" data-dismiss="modal">Não</button>
-                                                <button type="button.btn.btn-danger">Sim</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                </tr>
+                                        <td><input type="checkbox" name="teste" value="alo"/> alo</td>
+                                    </tr>
+                                   
+                                    <?php
+                                    $select = mysql_query("SELECT * FROM turma")or die(mysql_error());
+                                    while ($dado = mysql_fetch_array($select)or die(mysql_error())) {
+                                        echo"<tr>";
+                                        echo"<td><input type='checkbox' name='turma[]' value'".$dado['cod']."'/>" . $dado['periodo'] . "</td>";
+                                        echo"</tr>";
+                                    }
+                                    ?>
+                                    <?php
+                                    $select = mysql_query("SELECT * FROM turma")or die(mysql_error());
+                                    while ($dado = mysql_fetch_array($select)) {
+                                        echo "<tr>";
+                                        echo "<td><input type='checkbox' name='turma[]' id='" . htmlentities($dado['periodo']) . "' value='" . htmlentities($dado['protocolo']) . "' />";
+                                        echo "" . htmlentities($dado['nome']) . " </td>";
+                                        echo "</tr>";
+                                    }
+                                    ?>
+
+
                                 </tbody>
                             </table>
                         </div>
@@ -107,7 +101,7 @@
 </div>
 <?php include_once '../inc/rodape.php'; ?>
 <script>
-    $(function() {
+    $(function () {
         $('#table').searchable({
             searchField: '#container-search',
         })

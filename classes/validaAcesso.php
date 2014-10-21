@@ -7,8 +7,8 @@ session_start();
     
     $idPessoa   = $_SESSION['idPESSOA'];
  
-    $nome       = mysql_query("SELECT nome FROM pessoa WHERE idPessoa = '$idPessoa'")or die(mysql_error());
-    $nome       = mysql_result($nome, 0);
+    $query       = mysql_query("SELECT nome FROM pessoa WHERE idPESSOA = '$idPessoa'")or die(mysql_error());
+    $nome       = mysql_result($query, 0)or die(mysql_error());
     
     $_SESSION['perfil'] = $nome; 
     
