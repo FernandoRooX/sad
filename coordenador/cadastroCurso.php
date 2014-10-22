@@ -51,7 +51,7 @@
                                                 <option value="">Selecione</option>
                                                 <option value="Presencial">Presencial</option>
                                                 <option value="Semi-Presencial">Semi-Presencial</option>
-                                                <option value="A Distancia">A Distancia</option>
+                                                <option value="À Distância">À Distância</option>
                                             </select>
                                         </div>
                                     </div>

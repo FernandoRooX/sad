@@ -106,7 +106,7 @@
                                                 <?php
                                                 $rs = mysql_query("SELECT cod, nome, modalidade FROM curso ORDER BY nome");
                                                 while ($obj = mysql_fetch_object($rs)) {
-                                                    echo("<option value='" . $obj->cod . "' > " . $obj->nome . "-" . $obj->modalidade . " </option>");
+                                                    echo("<option value='" . $obj->cod . "' > " . $obj->nome . " - " . $obj->modalidade . " </option>");
                                                 }
                                                 ?>
 

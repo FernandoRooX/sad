@@ -25,7 +25,7 @@ if ($_REQUEST["acao"] == "adicionar") {
 
         mysql_close();
 
-        header("refresh: 3; url=cadastroCurso.php");
+        header("refresh: 3; url=cadastroTurma.php");
     }
 }
 ?>
