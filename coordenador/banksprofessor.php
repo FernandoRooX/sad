@@ -29,7 +29,7 @@ if ($_REQUEST["acao"] == "adicionar") {
 
         mysql_close();
 
-        header("refresh: 3; url=cadastroAluno.php");
+        header("refresh: 3; url=cadastroProfessor.php");
     }
 }
 ?>

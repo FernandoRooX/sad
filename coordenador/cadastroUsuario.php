@@ -3,7 +3,6 @@
 <html lang="pt-BR">
     <?php
     $variavel = "coordenador";
-    session_start();
     require_once '../classes/validaAcesso.php';
     ?>
     <head>
@@ -14,6 +13,7 @@
 
     </head>
     <body>
+        <?php require_once '../topo.php';?>
 <?php        require_once '../conecta.php';?>;
         <div class="wrapper" roel="main">
             <div class="container container-fluid">
@@ -34,7 +34,13 @@
                                               <?php 
                                               $rs = mysql_query("SELECT idPESSOA, nome, cpf FROM pessoa ORDER BY nome");
                                               while ($obj = mysql_fetch_object($rs)) {
-                                            echo("<option value='" . $obj->idPESSOA . "' > " . $obj->nome . "-". $obj->cpf." </option>");
+                                                  $select = mysql_query("SELECT PESSOA_idPESSOA FROM aluno where PESSOA_idPESSOA ='".$obj->idPESSOA."'");
+                                                  if(mysql_num_rows($select)>0){
+                                                      continue;
+                                                  }else{
+                                                      echo("<option value='" . $obj->idPESSOA . "' > " . $obj->nome . "-". $obj->cpf." </option>");
+                                                  }
+                                            
                                               }?>
                                                
                                             </select>
