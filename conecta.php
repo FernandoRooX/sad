@@ -5,7 +5,7 @@
 $servidor = 'localhost';
 $usuario = 'root';
 $senha = '';
-$banco = 'sad4';
+$banco = 'sad5';
 
 #Executa a conexão com o mysql
 $lig = mysql_connect($servidor, $usuario, $senha) or die('Não possível fazer a conexão: '.mysql_error());
