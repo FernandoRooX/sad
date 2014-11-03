@@ -27,7 +27,7 @@
                             <h3><span class="glyphicon glyphicon-th-list"></span> Cadastro de Secretaria</h3>
                         </div>
 
-                        <form method="post" action="banksprofessor.php?acao=adicionar" class="form-horizontal" role="form">
+                        <form method="post" action="bankssecretaria.php?acao=adicionar" class="form-horizontal" role="form">
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="form-group">

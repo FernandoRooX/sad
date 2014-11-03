@@ -4,7 +4,11 @@ and open the template in the editor.
 -->
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <?php session_start(); ?>
+    <?php
+    session_start();
+    $variavel = "coordenador";
+    require_once '../classes/validaAcesso.php';
+    ?>
     <head>
         <?php include_once '../inc/head.php'; ?>
         <title>Usuários</title>
@@ -19,7 +23,7 @@ and open the template in the editor.
     </head>
     <body>
 
-        <?php require_once'../topo.php';?>
+        <?php require_once'../topo.php'; ?>
         <div class="wrapper" role="main">
             <div class="container-fluid container">
                 <div class="row">
@@ -47,48 +51,60 @@ and open the template in the editor.
                                 <thead class="h4">
                                     <tr>
                                         <th>Nome <span id="pesquisa" style="color:black; cursor:pointer;"><span class="glyphicon glyphicon-search"></span></span></th>
-                                        <th>Função</th>
-                                        <th>Ação</th>
+                                        <th>CPF</th>
+                                        <th>E-mail</th>
+                                        <th>Telefone</th>
+                                        <th>Perfil</th>
                                     </tr>
                                 </thead>
                                 <tbody class="h5">
-                                    <tr>
-                                        <td>Guilherme Parente Costa</td>
-                                        <td>Professor</td>
-                                        <td><button type="button" class="btn btn-warning btn-xs">Editar</button> <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal-delete">Excluir</button></td>
-                                <div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="modal-delete" aria-hidden="true">
-                                    <div class="modal-dialog modal-sm">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Sair</span></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>Tem certeza que deseja remover esse usuário?</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-default" data-dismiss="modal">Não</button>
-                                                <button type="button" class="btn btn-danger">Sim</button>
+                                    <?php
+                                    $rs = mysql_query("select usuario.*, pessoa.* FROM pessoa inner join usuario on usuario.PESSOA_idPESSOA = pessoa.idPESSOA ORDER BY nome");
+                                    while ($obj = mysql_fetch_object($rs)) {
+                                        ?>
+                                        <tr>
+
+                                            <td><?php echo $obj->nome; ?></td>
+                                            <td><?php echo $obj->cpf; ?></td>
+                                            <td><?php echo $obj->email; ?></td>
+                                            <td><?php echo $obj->telefone; ?></td>
+                                            <td><?php echo $obj->perfil; ?></td>
+
+                                            <td><button type="button" class="btn btn-warning btn-xs">Editar</button> <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal-delete">Excluir</button></td>
+                                    <div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="modal-delete" aria-hidden="true">
+                                        <div class="modal-dialog modal-sm">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Sair</span></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Tem certeza que deseja remover esse usuário?</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Não</button>
+                                                    <button type="button" class="btn btn-danger">Sim</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                                    </tr>
+                                    <?php }?>
+                                    </tbody>
+                                </table>
+                            </div>
 
-                        <div class="text-center">
-                            <ul class="pagination pagination-large">
-                                <li class="disabled"><a href="#">&laquo;</a></li>
-                                <li class="active"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">&raquo;</a></li>
-                            </ul>
+                            <div class="text-center">
+                                <ul class="pagination pagination-large">
+                                    <li class="disabled"><a href="#">&laquo;</a></li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">&raquo;</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <?php include_once '../inc/rodape.php'; ?>       
+            <?php include_once '../inc/rodape.php'; ?>       
     </body>
 </html>
