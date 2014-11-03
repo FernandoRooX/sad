@@ -20,6 +20,7 @@
                         <li><a href="../coordenador/usuarios.php">Usuários</a></li>
                         <li><a href="../coordenador/cadastroSecretaria.php">Secretaria</a></li>
                         <li><a href="../coordenador/cadastroProfessor.php">Professor</a></li>
+                        <li><a href="../coordenador/cadastroDependencia.php">Dependência</a></li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">

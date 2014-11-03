@@ -49,37 +49,46 @@
                                         ?>
                                     <form method="post" action="banksnota.php?acao=adicionar" class="form-horizontal" role="form" >
                                         <tr>
-                                        
-                                            <td><?php 
-                                                    $idAluno = $objTurma->ALUNO_cod;
-                                                    $rsPessoa = mysql_query("select * FROM aluno WHERE cod='$idAluno'");
-                                                    $objPessoa = mysql_fetch_object($rsPessoa)or die(mysql_error());
-                                                    $idPessoa = $objPessoa->PESSOA_idPESSOA;
-                                                    $rsAluno = mysql_query("select aluno.*, pessoa.* FROM aluno inner join pessoa on '$idPessoa' = pessoa.idPESSOA ORDER BY nome");
-                                                    $objAluno = mysql_fetch_object($rsAluno)or die(mysql_error());
-                                                        echo $objAluno->nome;
-                                            
-                                                    ?></td>
-                                            <input type="hidden" name='idAluno' value='<?php echo $idAluno;?>'/>
-                                            <input type="hidden" name='idTurma' value='<?php echo $idTurma;?>'/>
+
                                             <td><?php
-                                                echo"<input type='text' name='nota1' value='$objTurma->nota1'class='form-control'  id='inputName' maxlength='5'  size='2'>";
-                                                ?>
-                                                
-                                            </td>
-                                            <td><?php
-                                                echo"<input type='text' name='nota2' value='$objTurma->nota2' class='form-control'   id='inputName' maxlength='5'  size='2'>";
-                                                ?>
-                                            </td>
-                                            <td><?php
-                                                echo"<input type='text' name='notafinal' value='$objTurma->nota_final'class='form-control'  id='inputName' maxlength='5' size='2'>";
+                                                $idAluno = $objTurma->ALUNO_cod;
+                                                $rsPessoa = mysql_query("select * FROM aluno WHERE cod='$idAluno'");
+                                                $objPessoa = mysql_fetch_object($rsPessoa)or die(mysql_error());
+                                                $idPessoa = $objPessoa->PESSOA_idPESSOA;
+                                                $rsAluno = mysql_query("select aluno.*, pessoa.* FROM aluno inner join pessoa on '$idPessoa' = pessoa.idPESSOA ORDER BY nome");
+                                                $objAluno = mysql_fetch_object($rsAluno)or die(mysql_error());
+                                                echo $objAluno->nome;
+                                                ?></td>
+                                        <input type="hidden" name='idAluno' value='<?php echo $idAluno; ?>'/>
+                                        <input type="hidden" name='idTurma' value='<?php echo $idTurma; ?>'/>
+                                        <td><?php
+                                            echo"<input type='text' name='nota1' value='$objTurma->nota1'class='form-control'  id='inputName' maxlength='5'  size='2'>";
                                                 ?>
 
+                                        </td>
+                                        <td><?php
+                                        echo"<input type='text' name='nota2' value='$objTurma->nota2' class='form-control'   id='inputName' maxlength='5'  size='2'>";
+                                                ?>
+                                        </td>
+                                        <td><?php
+                                        if (($objTurma->nota2 == null) && ($objTurma->nota1 == null)) {
+                                            echo "Nenhuma nota cadastrada.";
+                                        } else if (($objTurma->nota1 != null) && ($objTurma->nota2 != null)) {
+                                            $nota_final = (($objTurma->nota2) + ($objTurma->nota1)) / 2;
+                                            if ($nota_final < 6) {
+                                                echo "<font color='red'>" . $nota_final . "</font>";
+                                            } else {
+                                                echo "<font color='green'>" . $nota_final . "</font>";
+                                            }
+                                        }
+                                        //  echo"<input type='text' name='notafinal' value='$objTurma->nota_final'class='form-control'  id='inputName' maxlength='5' size='2'>";
+                                                ?>
+                                            <input type='hidden' name='notafinal' value='<?php echo$nota_final;?>'class='form-control'  id='inputName' maxlength='5' size='2'>
 
-                                            </td>
-                                            <td><button type="submit"  class="btn btn-warning btn-xs">Salvar</button> </td>
-                                    
-                                    </tr>
+                                        </td>
+                                        <td><button type="submit"  class="btn btn-warning btn-xs">Salvar</button> </td>
+
+                                        </tr>
                                     </form>
                                 <?php } ?>
                                 </tbody>
