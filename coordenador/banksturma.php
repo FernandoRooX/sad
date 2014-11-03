@@ -10,9 +10,10 @@ if ($_REQUEST["acao"] == "adicionar") {
     $ano = $_REQUEST['ano'];
     $turno = $_REQUEST['turno'];
     $curso = $_REQUEST['curso'];
+    $professor = $_REQUEST['codProfessor'];
 
-    $sql = "INSERT INTO turma (periodo, protocolo, ano, turno, CURSO_cod) 
-            VALUES('$periodo', '$protocolo', '$ano', '$turno', '$curso')";
+    $sql = "INSERT INTO turma (periodo, protocolo, ano, turno, CURSO_cod, PROFESSOR_cod) 
+            VALUES('$periodo', '$protocolo', '$ano', '$turno', '$curso', '$professor')";
 
 
     $result = mysql_query($sql);

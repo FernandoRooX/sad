@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<?php session_start(); ?>
+    <?php session_start(); 
+    $variavel = "coordenador";
+    require_once '../classes/validaAcesso.php';
+    ?>
     <head>
-        <?php include_once '../inc/head.php'; ?>
+        <?php require_once '../inc/head.php'; ?>
         <title>Turmas</title>
 
         <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -14,41 +17,7 @@
         <![endif]-->
     </head>
     <body>
-
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="container-fluid container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a href="#" class="navbar-brand">{Logo}</a>
-                </div>
-
-                <div class="collapse navbar-collapse" id="navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a href="../coordenador/index.php">Home</a></li>
-                        <li><a href="../coordenador/alunos.php">Alunos</a></li>
-                        <li class="active"><a href="../coordenador/turmas.php">Turmas</a></li>
-                        <li><a href="../coordenador/disciplinas.php">Disciplinas</a></li>
-                        <li><a href="../coordenador/usuarios.php">Usuários</a></li>
-                    </ul>
-
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> <?php echo $_SESSION['perfil']; ?> <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                 <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Editar Perfil</a></li>
-                                <li class="divider"></li>
-                             <li><a href="../logado.php?logout=acessar"><span class="glyphicon glyphicon-log-out"> Sair</span></a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+<?php require_once '../topo.php'; ?>
 
         <div class="wrapper" role="main">
             <div class="container-fluid container">
@@ -83,10 +52,42 @@
                                     </tr>
                                 </thead>
                                 <tbody class="h5">
+                                    <?php
+                                                $rs = mysql_query("select turma.*, curso.* FROM turma inner join curso on turma.CURSO_cod = curso.cod ORDER BY nome");
+                                                while ($obj = mysql_fetch_object($rs)) {
+                                                    
+                                                ?>
                                     <tr>
-                                        <td>Turma TCC</td>
-                                        <td>Guilherme Parente Costa</td>
-                                        <td>Sim</td>
+                                        <td><?php echo("<a href='perfilTurma.php?idTurma=" . $obj->turma_cod . "' > " . $obj->periodo . "/" . $obj->ano . " - " . $obj->turno . " - " . $obj->nome." - " . $obj->modalidade." </a>");
+                                                ?></td>
+                                        <td><?php $codigo = $obj->PROFESSOR_cod;
+                                       $rsCodPessoa = mysql_query("SELECT PESSOA_idPESSOA FROM professor WHERE cod=$codigo");
+                                       $objCodPessoa = mysql_fetch_object($rsCodPessoa);
+                                       $codPessoa = $objCodPessoa->PESSOA_idPESSOA;
+                                        $rsProf = mysql_query("select professor.*, pessoa.* FROM professor inner join pessoa on $codPessoa= pessoa.idPESSOA ORDER BY nome");
+                                                  $objProf = mysql_fetch_object($rsProf);
+                                                  echo $objProf->nome;
+                                            ?>
+                                        </td>
+                                        <td><?php $mes = date('m');
+                                                  $ano = date('Y');
+                                                  if(($obj->periodo == 1)){
+                                                      if(($mes<7) &&($obj->ano ==$ano)){
+                                                          echo"Ativa";
+                                                      }else{
+                                                          echo"Inativa";
+                                                      }
+                                                  }else if(($obj->periodo == 2)){
+                                                      if(($mes>6)&&($obj->ano ==$ano)){
+                                                          echo"Ativa";
+                                                      }else{
+                                                          echo"Inativa";
+                                                      }
+                                                      }else{echo"nao deu";}
+                                                  ?>
+                                        
+                                        
+                                        </td>
                                         <td><button type="button" class="btn btn-warning btn-xs">Editar</button> <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal-delete">Excluir</button></td>
                                 <div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="modal-delete" aria-hidden="true">
                                     <div class="modal-dialog modal-sm">
@@ -105,6 +106,7 @@
                                     </div>
                                 </div>
                                 </tr>
+                                                <?php }?>
                                 </tbody>
                             </table>
                         </div>

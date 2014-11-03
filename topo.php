@@ -19,6 +19,7 @@
                         <li><a href="../coordenador/disciplinas.php">Disciplinas</a></li>
                         <li><a href="../coordenador/usuarios.php">Usuários</a></li>
                         <li><a href="../coordenador/cadastroSecretaria.php">Secretaria</a></li>
+                        <li><a href="../coordenador/cadastroProfessor.php">Professor</a></li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">

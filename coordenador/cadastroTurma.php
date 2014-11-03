@@ -6,8 +6,7 @@
     require_once '../classes/validaAcesso.php';
     ?>
     <head>
-<?php include_once '../inc/head.php';
-; ?>
+<?php include_once '../inc/head.php'; ?>
         <title>Cadastro de Turma</title>
         <link rel="stylesheet" href="../css/bootstrap.css">
         <link rel="stylesheet" href="../css/style.css">
@@ -107,6 +106,21 @@
                                                 $rs = mysql_query("SELECT cod, nome, modalidade FROM curso ORDER BY nome");
                                                 while ($obj = mysql_fetch_object($rs)) {
                                                     echo("<option value='" . $obj->cod . "' > " . $obj->nome . " - " . $obj->modalidade . " </option>");
+                                                }
+                                                ?>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="optionProfessor" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Professor:</label>
+                                        <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
+                                            <select name="codProfessor" id="idPessoa" class="form-control" required>
+                                                <option value="">Selecione o Professor</option>
+                                                <?php
+                                                $rs = mysql_query("select professor.*, pessoa.* FROM professor inner join pessoa on professor.PESSOA_idPESSOA = pessoa.idPESSOA ORDER BY nome");
+                                                while ($obj = mysql_fetch_object($rs)) {
+                                                    echo("<option value='" . $obj->cod . "' > " . $obj->nome . " - " . $obj->cpf . " - " . $obj->telefone . " </option>");
                                                 }
                                                 ?>
 
