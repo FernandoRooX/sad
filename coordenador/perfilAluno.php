@@ -86,10 +86,13 @@
 
                                 </div>";
                             } else {
+                                
                                 while ($objDep = mysql_fetch_object($rsDep)) {
+                                    $rsDisc = mysql_query("select disciplina.*, dependencia.* FROM dependencia inner join disciplina on disciplina.cod = dependencia.cod WHERE dependencia.DISCIPLINA_cod='$objDep->DISCIPLINA_cod'");
+                                    $objDisc = mysql_fetch_object($rsDisc);
                                     echo" <div class='form-group'>
                                     <label for='nome' class='col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label'>Nome:</label>
-                                    $objDep->dt_inicio;
+                                    $objDisc->nome
 
                                 </div>";
                                 }

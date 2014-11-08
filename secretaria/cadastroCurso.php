@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <?php session_start(); ?>
+    <?php
+    $variavel = 'secretaria';
+    session_start(); 
+    require_once '../classes/validaAcesso.php';
+    ?>
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <?php include_once '../inc/head.php'; ?>
         <title>Cadastro de Curso</title>
 
         <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -17,43 +18,7 @@
         <![endif]-->
     </head>
     <body>
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="container container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a href="#" class="navbar-brand">{Logo}</a>
-                </div>
-
-                <div class="collapse navbar-collapse" id="navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a href="../secretaria/index.php">Home</a></li>
-                        <li><a href="../secreataria/alunos.php">Alunos</a></li>
-                        <li><a href="../secretaria/turmas.php">Turmas</a></li>
-                        <li><a href="../secretaria/disciplinas.php">Disciplinas</a></li>
-                        <li><a href="../secretaria/cursos.php">Cursos</a></li>
-                    </ul>
-
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>
-                                <?php echo $_SESSION['perfil']; ?> 
-                                <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Editar Perfil</a></li>
-                                <li class="divider"></li>
-                                <li><a href="../logado.php?logout=acessar"><span class="glyphicon glyphicon-log-out"> Sair</span></a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
+        <?php require_once"../topo.php";?>
         <div class="wrapper" role="main">
             <div class="container container-fluid">
                 <div class="row">
@@ -62,8 +27,7 @@
                             <h3><span class="glyphicon glyphicon-th-list"></span> Cadastro de Curso</h3>
                         </div>
 
-                        <!--<form method="post" action="bankscurso.php?acao=controlando" class="form-horizontal" role="form">-->
-                        <form id="frmCadastroCurso" method="post" action="" class="form-horizontal" role="form">
+                        <form method="post" action="bankscurso.php?acao=adicionar" class="form-horizontal" role="form">
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="form-group">
@@ -87,20 +51,20 @@
                                                 <option value="">Selecione</option>
                                                 <option value="Presencial">Presencial</option>
                                                 <option value="Semi-Presencial">Semi-Presencial</option>
-                                                <option value="A Distancia"></option>
+                                                <option value="À Distância">À Distância</option>
                                             </select>
                                         </div>
                                     </div>
 
-                                    <div class="form-group">
+<!--                                    <div class="form-group">
                                         <label for="numberCarga" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Carga Horária:</label>
                                         <div class="col-xs-6 col-sm-5 col-md-7 col-lg-5">
-                                            <input type="number" name="ch" class="form-control" id="inputCarga" required="">
+                                            <input type="number" name="ch" class="form-control" id="inputCarga" required>
                                         </div>
-                                    </div>
+                                    </div>-->
 
                                     <div class="pull-right">
-                                        <button type="submit" class="btn btn-success btnCadastrarCurso">Cadastrar</button>
+                                        <button type="submit" class="btn btn-success">Cadastrar</button>
                                         <a href="javascript:window.history.go(-1)"><button type="submit" class="btn btn-warning">Cancelar</button></a>
                                     </div>
                                 </div>
@@ -111,27 +75,5 @@
             </div>
         </div>
         <?php include_once '../inc/rodape.php'; ?>
-        <script>
-            $('form').submit(function() {
-                $.ajax({
-                    url: "bankscurso.php",
-                    data:"acao=controlando"
-                }).success(function() {
-                    $(this).addClass("done");
-                    alert('sfsdfds');
-                });
-                
-                
-                
-            })
-//            document.getElementById("frmCadastroCurso").submit(function() {
-//                alert('Submit Feito');
-//                return false;
-//            });
-//        $('form').submit(function(){
-//            alert('Submit Feito');
-//            return false;
-//        })
-        </script>
     </body>
 </html>

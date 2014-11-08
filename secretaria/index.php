@@ -1,14 +1,12 @@
-<!Doctype html>
-
+<!doctype html>
 <html lang="pt-BR">
     <?php
-    $variavel = "secretaria";
+    $variavel = 'secretaria';
     require_once '../classes/validaAcesso.php';
     ?>
     <head>
-        <?php require_once '../inc/head.php'; ?>
-        <title>Secretaria</title>
-
+        <?php include_once '../inc/head.php'; ?>
+        <title>Coordenação</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/style.css" rel="stylesheet">
 
@@ -19,62 +17,33 @@
         <![endif]-->
     </head>
     <body>
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-		<div class="container-fluid container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-					<span class="sr-only">Toggle Navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a href="#" class="navbar-brand">{Logo}</a>
-			</div>
+<?php        require_once '../topo.php'; ?>
+        <div class="wrapper" role="main">
+            <div class="container container-fluid">
+                <div class="row">
+                    <div id="conteudo" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="page-header">
+                            <h3><span class="glyphicon glyphicon-th-list"></span> Home</h3>
+                        </div>
 
-			<div class="collapse navbar-collapse" id="navbar-collapse">
-				<ul class="nav navbar-nav">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="well">
+                                    <h1>Bem Vindo(a) Secretária(o)</h1>
 
-                <li class="active"><a href="../secretaria/index.php">Home</a></li>
-                <li><a href="../secretaria/alunos.php">Alunos</a></li>
-                <li><a href="../secretaria/turmas.php">Turmas</a></li>
-                <li><a href="../secretaria/disciplinas.php">Disciplinas</a></li>
-                <li><a href="../secretaria/cursos.php">Cursos</a></li>
-             </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>
-                        <?php echo $_SESSION['perfil'] ?>
-                       <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Editar Perfil</a></li>
-                        <li class="divider"></li>
-                        <li><a href="../logado.php?logout=acessar"><span class="glyphicon glyphicon-log-out">Sair</span></a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-    <div class="wrapper" role="main">
-        <div class="container container-fluid">
-            <div class="row">
-                <div id="conteudo" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="page-header">
-                        <h3><span class="glyphicon glyphicon-th-list"></span> Home</h3>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            <div class="well">
-                                <h1>Bem Vinda Secretária</h1>
+                                    <br/><?php echo $_SESSION['login'];?>
+                                    <br/><?php echo$_SESSION['perfilUsuario'] ;?>
+                                    <br/><?php echo$_SESSION['idPESSOA']  ;?>
+                                    <br/><?php echo$_SESSION['logado'] ;?>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div> <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /> <br /><br /><br />
-    <?php include_once '..../../../inc/rodape.php'; ?>
-    
-</body>
+        <?php include_once '../inc/rodape.php'; ?>
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+    </body>
 </html>

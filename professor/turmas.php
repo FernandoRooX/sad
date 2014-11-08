@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <?php session_start(); 
-    $variavel = "secretaria";
+    <?php 
+    
+    $variavel = "professor";
     require_once '../classes/validaAcesso.php';
+    session_start(); 
     ?>
     <head>
         <?php require_once '../inc/head.php'; ?>
@@ -52,8 +54,10 @@
                                     </tr>
                                 </thead>
                                 <tbody class="h5">
-                                    <?php
-                                                $rs = mysql_query("select turma.*, curso.* FROM turma inner join curso on turma.CURSO_cod = curso.cod ORDER BY nome");
+                                    <?php       $rsUmProf = mysql_query("select pessoa.*, professor.* FROM professor inner join pessoa on pessoa.idPESSOA = professor.PESSOA_idPESSOA WHERE professor.PESSOA_idPESSOA = $idPessoa");
+                                                $objUmProf = mysql_fetch_object($rsUmProf);
+                                                echo $objUmProf->cod;
+                                                $rs = mysql_query("select turma.*, curso.* FROM turma inner join curso on turma.CURSO_cod = curso.cod WHERE turma.PROFESSOR_cod = $objUmProf->cod");
                                                 while ($obj = mysql_fetch_object($rs)) {
                                                     
                                                 ?>

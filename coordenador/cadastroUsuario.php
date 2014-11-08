@@ -35,11 +35,11 @@
                                               $rs = mysql_query("SELECT idPESSOA, nome, cpf FROM pessoa ORDER BY nome");
                                               while ($obj = mysql_fetch_object($rs)) {
                                                   $select = mysql_query("SELECT PESSOA_idPESSOA FROM aluno where PESSOA_idPESSOA ='".$obj->idPESSOA."'");
-                                                  if(mysql_num_rows($select)>0){
-                                                      continue;
-                                                  }else{
+//                                                  if(mysql_num_rows($select)>0){
+//                                                      continue;
+//                                                  }else{
                                                       echo("<option value='" . $obj->idPESSOA . "' > " . $obj->nome . "-". $obj->cpf." </option>");
-                                                  }
+                                                  //}
                                             
                                               }?>
                                                

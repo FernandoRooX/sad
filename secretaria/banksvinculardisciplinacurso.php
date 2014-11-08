@@ -1,17 +1,18 @@
 <?php
+
 require_once '../conecta.php';
 
 
 if ($_REQUEST["acao"] == "adicionar") {
-    
-$nome = $_REQUEST['nome'] ;
- $orientador = $_REQUEST['orientador'];
- $selectTipo = $_REQUEST['selectTipo'];
-
-    $sql = "INSERT INTO curso (nome, orientador, modalidade) 
-            VALUES('$nome', '$orientador', '$selectTipo');";
 
     
+    $codDisciplina = $_REQUEST['codDisciplina'];
+    $codCurso = $_REQUEST['codCurso'];
+
+    $sql = "INSERT INTO curso_disciplina (CURSO_cod, DISCIPLINA_cod) 
+            VALUES('$codCurso', '$codDisciplina')";
+
+
     $result = mysql_query($sql);
 
     if (!$result) {
@@ -22,7 +23,7 @@ $nome = $_REQUEST['nome'] ;
 
         mysql_close();
 
-        header("refresh: 3; url=cadastroCurso.php");
+        header("refresh: 3; url=vincularDisciplinaCurso.php");
     }
 }
 ?>
