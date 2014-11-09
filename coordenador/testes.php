@@ -182,19 +182,13 @@
                                     </div>
                                     
                                     <div class="row">
-                            <div class="col-lg-4">
-                                <input type="search" id="container-search" class="form-control" placeholder="Search...">
-                            </div>
                         </div>
-                        <div class="table-responsive">
+                        <div class="table-responsive" data-spy="scroll">
                                         <table class="table table-striped bordered">
                                             <thead class="h4">
                                                 <tr>
-                                                    <th>Nome
-                                                    Matricula <tr>
-                                               
-                                                    <th>CPF</th>     
-                                             </tr>
+                                                    <th>Nome</th>
+                                                </tr>
                                             </thead>
 
                                             <tbody class="h5">
