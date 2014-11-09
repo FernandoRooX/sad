@@ -32,7 +32,7 @@
                                     <div class="form-group">
                                         <label for="inputDisciplina" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Disciplina:</label>
                                         <div class="col-xs-6  col-sm-10 col-md-11 col-lg-10">
-                                            <input type="text" name="disciplina" class="form-control" id="inputDisciplina" required="">
+                                            <input type="text" name="disciplina" class="form-control" id="inputDisciplina" maxlength="30" required="">
                                         </div>
                                     </div>
                                     
@@ -50,7 +50,7 @@
                                     <div class="form-group">
                                         <label for="numberCarga" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Carga Horária:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-                                            <input type="number" name="ch" class="form-control" id="inputCarga" required="">
+                                            <input type="number" name="ch" class="form-control" maxlength="3" id="inputCarga" required="">
                                         </div>
                                     </div>
                                     
