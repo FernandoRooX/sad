@@ -43,11 +43,11 @@ require_once '../classes/validaAcesso.php';
 
 				<ul class="nav navbar-nav navbar-right">
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Usuário <span class="caret"></span></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span><?php echo$_SESSION['perfil']; ?> <span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li><a href="#"><span class="glyphicon glyphicon-cog"></span> Alterar Senha</a></li>
 							<li class="divider"></li>
-							<li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Sair</a></li>
+                                                        <li><a href="../logado.php?logout=acessar"><span class="glyphicon glyphicon-log-out"></span> Sair</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -185,17 +185,6 @@ require_once '../classes/validaAcesso.php';
 		</div>
 	</div>
 
-	<footer class="copyright">
-		<div class="container container-fluid">
-			<div class="row">
-				<div class="col-md-12">
-					<p>&copy; Todos os direitos reservados</p>
-				</div>
-			</div>
-		</div>
-	</footer>
-
-	<script src="../js/jquery.min.js"></script>
-	<script src="../js/bootstrap.min.js"></script>
+	<?php include '../inc/rodape.php'; ?>
 </body>
 </html>

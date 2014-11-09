@@ -1,3 +1,4 @@
+<br /> <br />
 <footer class="navbar navbar-inverse navbar-fixed-bottom">
     <div class="copyright">
         <div class="container container-fluid">

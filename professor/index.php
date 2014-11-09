@@ -31,6 +31,10 @@
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="well">
                                     <h1>Bem Vindo(a) Professor(a)</h1>
+                                    <br/><?php echo $_SESSION['login'];?>
+                                    <br/><?php echo$_SESSION['perfilUsuario'] ;?>
+                                    <br/><?php echo$_SESSION['idPESSOA']  ;?>
+                                    <br/><?php echo$_SESSION['logado'] ;?>
                                 </div>
                             </div>
                         </div>
@@ -39,6 +43,6 @@
             </div>
         </div>
 
-        <?php include_once '....//../../inc/rodape.php'; ?>
+        <?php include_once '../inc/rodape.php'; ?>
     </body>
 </html>

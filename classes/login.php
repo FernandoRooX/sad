@@ -48,7 +48,7 @@ class login extends conexao {
         if (isset($_SESSION['logado'])):
             unset($_SESSION['logado']);
             session_destroy();
-            header("location:http://localhost/sad");
+            header("location:http://localhost/homolocacao/index.php");
         endif;
     }
 }

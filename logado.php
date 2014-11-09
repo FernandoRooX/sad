@@ -1,7 +1,7 @@
 <?php
 session_start();
-require_once "./classes/conexao.php";
-require_once "./classes/login.php";
+include "./classes/conexao.php";
+include "./classes/login.php";
 
 $perfil = $_SESSION['perfilUsuario'];
         if ($perfil == 'Secretaria') {

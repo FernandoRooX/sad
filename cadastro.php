@@ -43,13 +43,11 @@
 
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"><?php echo $_SESSION['perfil']?> ?></span>
-                                <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href=""><span class="glyphicon glyphicon-log-out"></span></a></li>
+                                <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Editar Perfil</a></li>
+                                <li class="divider"></li>
+                                <li><a href=""><span class="glyphicon glyphicon-log-out">Sair</span></a></li>
                             </ul>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </nav>

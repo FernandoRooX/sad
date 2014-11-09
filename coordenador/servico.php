@@ -20,8 +20,8 @@
 
 $servidor = 'localhost';
 $usuario = 'root';
-$senhaa = '';
-$banco = 'sad';
+$senhaa = '1010';
+$banco = 'sad9';
 
 #Executa a conexão com o mysql
 $lig = mysql_connect($servidor, $usuario, $senhaa) or die('Não possível fazer a conexão: '.mysql_error());

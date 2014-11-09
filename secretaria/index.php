@@ -6,7 +6,7 @@
     ?>
     <head>
         <?php include_once '../inc/head.php'; ?>
-        <title>Coordenação</title>
+        <title>Secretária</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/style.css" rel="stylesheet">
 

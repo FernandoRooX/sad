@@ -54,11 +54,11 @@
                                     </tr>
                                 </thead>
                                 <tbody class="h5">
-                                    <?php       $rsUmProf = mysql_query("select pessoa.*, professor.* FROM professor inner join pessoa on pessoa.idPESSOA = professor.PESSOA_idPESSOA WHERE professor.PESSOA_idPESSOA = $idPessoa");
-                                                $objUmProf = mysql_fetch_object($rsUmProf);
+                                    <?php       $rsUmProf = @mysql_query("select pessoa.*, professor.* FROM professor inner join pessoa on pessoa.idPESSOA = professor.PESSOA_idPESSOA WHERE professor.PESSOA_idPESSOA = '$idPessoa'");
+                                                $objUmProf = @mysql_fetch_object($rsUmProf);
                                                 echo $objUmProf->cod;
-                                                $rs = mysql_query("select turma.*, curso.* FROM turma inner join curso on turma.CURSO_cod = curso.cod WHERE turma.PROFESSOR_cod = $objUmProf->cod");
-                                                while ($obj = mysql_fetch_object($rs)) {
+                                                $rs = @mysql_query("select turma.*, curso.* FROM turma inner join curso on turma.CURSO_cod = curso.cod WHERE turma.PROFESSOR_cod = $objUmProf->cod");
+                                                while ($obj = @mysql_fetch_object($rs)) {
                                                     
                                                 ?>
                                     <tr>

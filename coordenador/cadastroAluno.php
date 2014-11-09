@@ -45,7 +45,7 @@
                                     <div class="form-group">
                                         <label for="inputMat" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Matrícula:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-                                            <input type="text" class="form-control" name="matricula" placeholder="Matricula" id="inputMat" required="">
+                                            <input type="text" class="form-control" name="matricula" placeholder="Matricula" id="inputMat" maxlength="11" required="">
                                         </div>
                                     </div>
 
@@ -104,7 +104,7 @@
                                     <div class="form-group">
                                         <label for="inputPhone" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Telefone:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-                                            <input type="text" class="form-control" name="telefone" id="inputPhone" placeholder="(00)00000-0000" maxlength="14" onkeypress="formatar('(##)#####-#####', this);" required="" />
+                                            <input type="text" class="form-control" name="telefone" id="inputPhone" placeholder="00-0000-0000" maxlength="14" onkeypress="formatar('##-####-####', this);" required="" />
                                         </div>
                                     </div>
 

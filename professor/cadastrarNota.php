@@ -43,7 +43,7 @@
                             <ul class="dropdown-menu">
                                 <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Editar Perfil</a></li>
                                 <li class="divider"></li>
-                                <li><a href="../logado.php?logout=acessar"><span class="glyphicon glyphicon-log-out">Sair</span></a></li>
+                                <li><a href="../logado.phplogout=acessar"><span class="glyphicon glyphicon-log-out">Sair</span></a></li>
                             </ul>
                         </li>
                     </ul>
