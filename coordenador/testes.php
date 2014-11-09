@@ -6,7 +6,7 @@
     require_once '../classes/validaAcesso.php';
     ?>
     <head>
-<?php include_once '../inc/head.php'; ?>
+        <?php include_once '../inc/head.php'; ?>
         <title>Cadastro de Turma</title>
         <link rel="stylesheet" href="../css/bootstrap.css">
         <link rel="stylesheet" href="../css/style.css">
@@ -17,7 +17,7 @@
 <![endif]-->
     </head>
     <body>
-<?php require_once '../topo.php';?>
+        <?php require_once '../topo.php'; ?>
         <div class="wrapper" role="main">
             <div class="container container-fluid">
                 <div class="row">
@@ -40,7 +40,7 @@
                                             </select>
                                         </div>
                                     </div>
-                                   
+
                                     <div class="form-group">
                                         <label for="inputProtocolo" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Protocolo:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
@@ -158,63 +158,84 @@
                                                 <option value="">Selecione a Turma</option>
                                                 <?php
                                                 $rs = mysql_query("select TURMA_cod, protocolo, periodo, turno, ano from turma order by turma_cod;");
-                                                while ($obj = mysql_fetch_object($rs)){
-                                                    echo ("<option value='" . $obj->Turma_cod ."' > ". $obj->protocolo. " . $obj->periodo ". $obj->turno. ". $obj->ano. </option>");
+                                                while ($obj = mysql_fetch_object($rs)) {
+                                                    echo ("<option value='" . $obj->Turma_cod . "' > " . $obj->protocolo . " . $obj->periodo " . $obj->turno . ". $obj->ano. </option>");
                                                 }
                                                 ?>
                                                 }
                                             </select>
                                         </div>
                                     </div>
-
                                     <div class="form-group">
                                         <label for="dt_inicio" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Data de Início:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
                                             <input type="date" name="dt_inicio" class="form-control" id="inputNac" required="">
                                         </div>
                                     </div>
-                                    
-                                    <div class="form-group">
-                                        <label for="dt_final" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Data Final:</label>
-                                        <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-                                            <input type="date" name="dt_final" class="form-control" id="inputNac" required="">
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="row">
-                        </div>
-                        <div class="table-responsive" data-spy="scroll">
-                                        <table class="table table-striped bordered">
-                                            <thead class="h4">
-                                                <tr>
-                                                    <th>Nome</th>
-                                                </tr>
-                                            </thead>
 
-                                            <tbody class="h5">
-                                                <?php
+                                    <div class="form-group">
+                                        <label for="alunos" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Alunos:</label>
+                                        <div class="col-xs-6 col-sm-10 col-md-11 col-lg-8">
+                                            <select name="optionAlunos" class="form-control" required="" >
+                                                <option value="">Selecione o Aluno</option>
+                                                 <?php
                                                     $rs = mysql_query("select aluno.*, pessoa.* FROM aluno inner join pessoa on aluno.PESSOA_idPESSOA = pessoa.idPESSOA ORDER BY nome");
                                                     while ($obj = mysql_fetch_object($rs)) {
-                                                ?>                                                <td><input type="checkbox">
-                              
-                                                   <?php echo ("<a href='perfilAluno.php?idAluno=" . $obj->PESSOA_idPESSOA . "' > " . $obj->nome . " - " . $obj->matricula . " - " . $obj->cpf . "</a>"); ?>
+                                                ?>
+                                                <?php  echo ("<option value='" . $obj->PESSOA_idPESSOA . "' > " . $obj->nome . " - " . $obj->matricula . " - " . $obj->cpf . "</a>"); ?></td>
                                                 </tr>
                                                 <?php } ?>
-                                            </tbody>
-                                        </table>
-                                    </div>
+                     
+                                                </select>
+                                            </div>
+                                            <p class="control-label"><a href="#"><u>+ Adicionar Aluno</u></a></p>
+                                        </div>
 
-                                    <div class="pull-right">
-                                        <button type="submit" class="btn btn-success">Cadastrar</button>
-                                        <a href="javascript:window.history.go(-1)"><button type="button" class="btn btn-warning">Cancelar</button></a>
+                                        <div class="table-responsive col-lg-offset-2 col-xs-6 col-sm-10 col-md-11 col-lg-8">
+                                            <table class="table table-striped">
+                                                <thead class="h5">
+                                                    <tr>
+                                                        <th>Alunos</th>
+                                                        <th>Ação</th>
+                                                    </tr>
+                                                </thead>
+
+                                                <tbody class="h5">
+                                                    <tr>
+                                                        <td></td>
+                                                        <td><button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal-delete">Remover</button></td>
+                                                <div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="modal-delete" aria-hidden="true">
+                                                    <div class="modal-dialog modal-sm">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only"></span></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <p>Tem certeza que deseja remover esse aluno da dependência?</p>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-default" data-dismiss="modal">Não</button>
+                                                                <button type="button" class="btn btn-danger">Sim</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                        <div class="pull-right">
+                                            <button type="submit" class="btn btn-success">Cadastrar</button>
+                                            <a href="javascript:window.history.go(-1)"><button type="button" class="btn btn-warning">Cancelar</button></a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-<?php include_once '../inc/rodape.php'; ?>       
-    </body>
-</html>
+            <?php include_once '../inc/rodape.php'; ?>       
+        </body>
+    </html>
