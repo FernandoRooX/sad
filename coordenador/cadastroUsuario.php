@@ -56,7 +56,7 @@
                                     <div class="form-group">
                                         <label for="inputsenha" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Senha</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-                                            <input type="password" class="form-control" value="pass"  name="senha" placeholder="Repita a senha aqui:" required="" autofocus="" />
+                                            <input type="password" class="form-control" value="pass"  name="senha" placeholder="Repita a senha aqui:" maxlength="8" required="" autofocus="" />
                                         </div>
                                     </div>
                                     <div class="form-group">
