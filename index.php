@@ -61,7 +61,7 @@ endif;
         <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container container-fluid">
                 <div class="navbar-header">
-                    <a href="#" class="navbar-brand">{Logo}</a>
+                    <img src="./img/Sad_logo.png" class="navbar-brand" alt="SAD" />
                 </div>
             </div>
         </div>
@@ -85,7 +85,7 @@ endif;
                             <div style="margin-bottom:25px;" class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                                 <!--<input class="form-control" type="login" id="input_login" placeholder="CPF" name="login" maxlength="14" onkeypress="formatar('###.###.###-##', this);" required="" /> -->
-                                <input class="form-control" type="login" id="input_login" placeholder="LOGIN" name="login"  maxlength="30"  required=""/>
+                                <input class="form-control" type="login" id="input_login" placeholder="LOGIN" name="login"  maxlength="30"  required autofocus/>
                             </div>
 
                             <div style="margin-bottom:25px;" class="input-group">
