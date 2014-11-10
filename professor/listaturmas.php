@@ -58,15 +58,6 @@
                             <div class="col-md-10">
                                 <button type="button" class="btn btn-success">Cadastrar Turma</button>
                             </div>
-
-                            <div class="col-md-2">
-                                <ul class="pagination">
-                                    <li><a href="#">&laquo;</a></li>
-                                    <li><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">&raquo;</a></li>
-                                </ul>
-                            </div>
                         </div>
 
                         <div class="clearfix"></div>
@@ -116,17 +107,6 @@
                                     </tr>
                                 </tbody>
                             </table>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-offset-10 col-md-2">
-                                <ul class="pagination">
-                                    <li><a href="#">&laquo;</a></li>
-                                    <li><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">&raquo;</a></li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
                 </div>
