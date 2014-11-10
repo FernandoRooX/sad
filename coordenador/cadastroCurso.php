@@ -40,7 +40,7 @@
                                     <div class="form-group">
                                         <label for="inputOrientador" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Orientador:</label>
                                         <div class="col-xs-6 col-sm-5 col-md-7 col-lg-5">
-                                            <input type="text" name="orientador" class="form-control"  id="inputOrientador" required="">
+                                            <input type="text" name="orientador" class="form-control" maxlength="30" id="inputOrientador" required="">
                                         </div>
                                     </div>
 
