@@ -99,7 +99,7 @@
                                     <div class="form-group">
                                         <label for="inputPhone" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Telefone:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-                                            <input type="text" class="form-control" name="telefone" id="inputPhone" placeholder="(00)00000-0000" maxlength="14" onkeypress="formatar('(##)#####-#####', this);" required="" />
+                                            <input type="text" class="form-control" name="telefone" id="inputPhone" placeholder="00-0000-0000" maxlength="14" onkeypress="formatar('##-####-####', this);" required="" />
                                         </div>
                                     </div>
 
@@ -139,7 +139,7 @@
                                     <div class="form-group">
                                         <label for="inputEmail" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">E-mail:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-                                            <input type="text" name="email" class="form-control" id="inputEmail" placeholder="Digite seu e-mail">
+                                            <input type="text" name="email" class="form-control" id="inputEmail" maxlength="50" placeholder="Digite seu e-mail">
                                         </div>
                                     </div>
 
