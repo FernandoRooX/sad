@@ -172,13 +172,14 @@
                                             <input type="date" name="dt_inicio" class="form-control" id="inputNac" required="">
                                         </div>
                                     </div>
-
+                                    
                                     <div class="form-group">
                                         <label for="alunos" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Alunos:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-8">
                                             <select name="optionAlunos" class="form-control" required="" >
                                                 <option value="">Selecione o Aluno</option>
-                                                 <?php
+                                               
+                                               <?php
                                                     $rs = mysql_query("select aluno.*, pessoa.* FROM aluno inner join pessoa on aluno.PESSOA_idPESSOA = pessoa.idPESSOA ORDER BY nome");
                                                     while ($obj = mysql_fetch_object($rs)) {
                                                 ?>
@@ -188,54 +189,55 @@
                      
                                                 </select>
                                             </div>
-                                            <p class="control-label"><a href="#"><u>+ Adicionar Aluno</u></a></p>
-                                        </div>
+                                        <p class="control-label"><a href="" onclick="$aluno"><u>+ Adicionar Aluno</u></a></p>
+                                    </div>
 
-                                        <div class="table-responsive col-lg-offset-2 col-xs-6 col-sm-10 col-md-11 col-lg-8">
-                                            <table class="table table-striped">
-                                                <thead class="h5">
-                                                    <tr>
-                                                        <th>Alunos</th>
-                                                        <th>Ação</th>
-                                                    </tr>
-                                                </thead>
+                                    <div class="table-responsive col-lg-offset-2 col-xs-6 col-sm-10 col-md-11 col-lg-8">
+                                        <table class="table table-striped">
+                                            <thead class="h5">
+                                                <tr>
+                                                    <th>Alunos</th>
+                                                    <td> <?php $aluno = $_GET['optionAlunos']; ?></td>
+                                                    <th>Ação</th>
+                                                </tr>
+                                            </thead>
 
-                                                <tbody class="h5">
-                                                    <tr>
-                                                        <td></td>
-                                                        <td><button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal-delete">Remover</button></td>
-                                                <div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="modal-delete" aria-hidden="true">
-                                                    <div class="modal-dialog modal-sm">
-                                                        <div class="modal-content">
-                                                            <div class="modal-header">
-                                                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only"></span></button>
-                                                            </div>
-                                                            <div class="modal-body">
-                                                                <p>Tem certeza que deseja remover esse aluno da dependência?</p>
-                                                            </div>
-                                                            <div class="modal-footer">
-                                                                <button type="button" class="btn btn-default" data-dismiss="modal">Não</button>
-                                                                <button type="button" class="btn btn-danger">Sim</button>
+                                            <tbody class="h5">
+                                                <tr>
+                                                    <td></td>
+                                                    <td><button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal-delete">Remover</button></td>
+                                                    <div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="modal-delete" aria-hidden="true">
+                                                        <div class="modal-dialog modal-sm">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only"></span></button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <p>Tem certeza que deseja remover esse aluno da dependência?</p>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Não</button>
+                                                                    <button type="button" class="btn btn-danger">Sim</button>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
                                                 </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
+                                            </tbody>
+                                        </table>
+                                    </div>
 
-                                        <div class="pull-right">
-                                            <button type="submit" class="btn btn-success">Cadastrar</button>
-                                            <a href="javascript:window.history.go(-1)"><button type="button" class="btn btn-warning">Cancelar</button></a>
-                                        </div>
+                                    <div class="pull-right">
+                                        <button type="submit" class="btn btn-success">Cadastrar</button>
+                                        <a href="javascript:window.history.go(-1)"><button type="button" class="btn btn-warning">Cancelar</button></a>
                                     </div>
                                 </div>
-                            </form>
-                        </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
-            <?php include_once '../inc/rodape.php'; ?>       
-        </body>
-    </html>
+        </div>
+<?php include '../inc/rodape.php'; ?>       
+    </body>
+</html>

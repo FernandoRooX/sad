@@ -29,7 +29,7 @@
 
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                <a href="../coordenador/cadastroTurma.php"><button type="button" class="btn btn-success">Nova Turma</button></a>
+                                <a href="cadastroTurma.php"><button type="button" class="btn btn-success">Nova Turma</button></a>
                             </div>
                         </div>
 

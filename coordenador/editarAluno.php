@@ -4,10 +4,7 @@ require_once '../classes/validaAcesso.php';
 ?>
 <html lang="pt-BR">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
+	<?php require_once '../inc/head.php';?>
 	<title>Editar Aluno</title>
 
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -93,9 +90,9 @@ require_once '../classes/validaAcesso.php';
 										</select>
 									</div>
 									
-									<label for="selectCurso" class="col-md-1 control-label">Curso:</label>
+									<label for="selectDisciplina" class="col-md-1 control-label">Curso:</label>
 									<div class="col-md-3">
-										<select name="selectCurso" id="selectCurso" class="form-control" required>
+										<select name="selectDisciplina" id="selectCurso" class="form-control" required>
 											<option value=""></option>
 											<option value="prog-estruturada">Programação Estruturada</option>
 											<option value="poo">Programação Orientada a Objetos</option>
@@ -142,7 +139,7 @@ require_once '../classes/validaAcesso.php';
 								<div class="form-group row">
 									<label for="inputPhone" class="col-md-1 control-label">Telefone:</label>
 									<div class="col-md-2">
-										<input type="phone" class="form-control" id="inputPhone" required>
+										<input type="phone" class="form-control" id="inputPhone" placeholder="00-0000-0000" maxlength="14" onkeypress="formatar('## ####-#####', this)">
 									</div>
 
 									<label for="inputEmail" class="col-md-1 control-label">Email:</label>

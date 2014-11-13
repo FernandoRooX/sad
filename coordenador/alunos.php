@@ -72,7 +72,7 @@
                                     <tr>
                                         <td><?php echo("<a href='perfilAluno.php?idAluno=" . $obj->PESSOA_idPESSOA . "' > " . $obj->nome . " - " . $obj->matricula . " - " . $obj->cpf . " </a>");
                                                 ?></td>
-                                        <td><button type="button" class="btn btn-warning btn-xs">Editar</button> <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal-delete">Excluir</button></td>
+                                        <td><a href="editarAluno.php" /> <button type="button" class="btn btn-warning btn-xs">Editar</button>  <a href="excluirAluno.php"/><button  type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal-delete">Excluir</button></td>
                                 <div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="modal-delete" aria-hidden="true">
                                     <div class="modal-dialog modal-sm">
                                         <div class="modal-content">

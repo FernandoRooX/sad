@@ -39,7 +39,7 @@
                                     <div class="form-group">
                                         <label for="inputCpf" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">CPF:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-                                            <input type="text" class="form-control" name="cpf" id="inputCpf" placeholder="000.000.000-00" maxlength="14" onkeypress="formatar('###.###.###-##', this);" required="" />
+                                            <input type="text" class="form-control" name="cpf" id="inputCpf" placeholder="000.000.000-00" maxlength="14" onload="valida(this.form)" onkeypress="formatar('###.###.###-##', this);" required="" />
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -48,92 +48,6 @@
                                             <input type="text" class="form-control" name="matricula" placeholder="Matricula" id="inputMat" maxlength="11" required="">
                                         </div>
                                     </div>
-
-                                    <!--								<div class="form-group">
-                                                                                                            <label for="curso" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Curso:</label>
-                                                                                                            <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-                                                                                                                <select name="curso" id="selectCurso" name="curso" class="form-control" required="">
-                                                                                                                            <option>Componente Curricular</option>
-                                                                                                                            <option value="Programacao Estruturada">Programação Estruturada</option>
-                                                                                                                            <option value="Programacao Orientada a Objeto">Programação Orientada a Objetos</option>
-                                                                                                                            <option value="Java">Java</option>
-                                                                                                                            <option value="Sistemas de Banco de Dados">Sistemas de Banco de Dados</option>
-                                                                                                                            <option value="Programacao de Banco de Dados">Programação de Banco de Dados</option>
-                                                                                                                            <option value="Redes de Computadores">Redes de Computadores</option>
-                                                                                                                            <option value="Programacao Comercial">Programação Comercial</option>
-                                                                                                                            <option value="Inteligencia Artificial">Inteligência Artificial</option>
-                                                                                                                            <option value="Interface Homem-Maquina">Interface Homem-Máquina</option>
-                                                                                                                            <option value="Progamacao Concorrente">Programação Concorrente</option>
-                                                                                                                            <option value="Xml">XML</option>
-                                                                                                                    </select>
-                                                                                                            </div>
-                                                                                                    </div>
-                                    
-                                                                                                    <div class="form-group">
-                                                                                                            <label for="selectDependencia" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Dependência:</label>
-                                                                                                            <div class="col-xs-6-col-sm-10 col-md-11 col-lg-10">
-                                                                                                                    <select name="selectDependencia" id="selectDependencia" class="form-control" required>
-                                                                                                                        <option> Dependencia </option>
-                                                                                                                            <option value="RDR">RDR</option>
-                                                                                                                            <option value="STR">STR</option>
-                                                                                                                            <option value="GTR">GTR</option>
-                                                                                                                            <option value="TRT">TRT</option>
-                                                                                                                            <option value="STER">STER</option>
-                                                                                                                    </select>
-                                                                                                            </div>
-                                                                                                    </div>
-                                    
-                                                                                                    <div class="form-group">
-                                                                                                            <label for="semestre" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Semestre:</label>
-                                                                                                            <div class="col-xs-6 col-sm-10 col-sm-11 col-lg-10">
-                                                                                                                <select name="semestre" id="selectSemestre" class="form-control" required="">
-                                                                                                                            <option>Semestres</option>
-                                                                                                                            <option value="1°">1º</option>
-                                                                                                                            <option value="2°">2º</option>
-                                                                                                                            <option value="3°">3º</option>
-                                                                                                                            <option value="4°">4º</option>
-                                                                                                                            <option value="5°">5º</option>
-                                                                                                                            <option value="6°">6º</option>
-                                                                                                                            <option value="7°">7º</option>
-                                                                                                                            <option value="8°">8º</option>
-                                                                                                                            <option value="9°">9º</option>
-                                                                                                                    </select>
-                                                                                                            </div>
-                                                                                                    </div>-->
-
-                                    <div class="form-group">
-                                        <label for="inputPhone" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Telefone:</label>
-                                        <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-                                            <input type="text" class="form-control" name="telefone" id="inputPhone" placeholder="00-0000-0000" maxlength="14" onkeypress="formatar('##-####-####', this);" required="" />
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="radioSexo" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Sexo:</label>
-                                        <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-                                            <label class="btn btn-primary">
-                                                <input type="radio" name="sexo" id="optionMasculino" value="Masculino"> Masculino
-                                            </label>
-
-                                            <label class="btn btn-primary">
-                                                <input type="radio" name="sexo" id="optionFeminino" value="Feminino"> Feminino
-                                            </label>
-                                        </div>
-                                    </div>
-
-                                    <!--<div class="form-group">
-                                            <label for="radioSexo" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Sexo:</label>
-                                            <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-                                                    <label class="radio-inline">
-                                                            <input type="radio" name="optionSexo" id="optionMasculino" value="masculino">Masculino
-                                                    </label>
-
-                                                    <label class="radio-inline">
-                                                            <input type="radio" name="optionSexo" id="optionFeminino" value="feminino">Feminino
-                                                    </label>
-                                            </div>
-                                    </div>-->
-
                                     <div class="form-group">
                                         <label for="inputNasc" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Nascimento:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
@@ -160,6 +74,13 @@
             </div>
         </div>
         <br /> <br />
-<?php require_once '../inc/rodape.php'; ?>
+<?php include '../inc/rodape.php'; ?>
     </body>
+    <script>
+        var email = document.forms['radioSexo'].CAMPO_EMAIL,value;
+        if(email.lenght <5 || email.lenght > 128 || email.indexOf('@') == -1 || email.indexOf('.') == -1 )
+            {
+                alert("O campo E-mail deve ser preenchido corretamente.");
+            }
+    </script>
 </html>

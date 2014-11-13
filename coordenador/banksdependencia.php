@@ -27,7 +27,7 @@ if ($_REQUEST["acao"] == "adicionar"){
 
 //        echo $obj->ALUNO_cod. " ". $obj->TURMA_cod;
         echo"<script> history.back(-1); </script>";
-        exit();
+        #exit();
     }
     }
  

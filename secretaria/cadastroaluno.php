@@ -6,7 +6,7 @@
     ?>
     
     <head>
-        <?php require_once '..//inc/head.php'; ?>
+        <?php require_once '../inc/head.php'; ?>
         <title>Cadastro de Aluno</title>
 
         <link rel="stylesheet" href="../css/bootstrap.css">
@@ -142,7 +142,7 @@
                             </div>
                             
                             <div class="pull-right">
-                                <button type="submit" class="btn btn-success">Cadastrar</button>
+                                <button type="submit" onClick="" class="btn btn-success">Cadastrar</button>
                                 <a href="javascript:window.history.go(-1)"><button type="button" class="btn btn-warning">Cancelar</button></a>
                             </div>
                     </div>

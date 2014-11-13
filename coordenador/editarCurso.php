@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <?php
+session_start();
+$variavel = "coordenador";
 require_once '../classes/validaAcesso.php';
 ?>
 <html lang="pt-BR">
@@ -10,7 +12,7 @@ require_once '../classes/validaAcesso.php';
 
 	<title>Editar Curso</title>
 
-	<link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/style.css" rel="stylesheet">
 
 	<!--[if lt IE 9]>
@@ -43,7 +45,7 @@ require_once '../classes/validaAcesso.php';
 
 				<ul class="nav navbar-nav navbar-right">
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Usuário <span class="caret"></span></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> <?php echo $_SESSION['perfil']; ?><span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li><a href="#"><span class="glyphicon glyphicon-cog"></span> Alterar Senha</a></li>
 							<li class="divider"></li>
@@ -126,18 +128,6 @@ require_once '../classes/validaAcesso.php';
 			</div>
 		</div>
 	</div>
-
-	<footer class="copyright">
-		<div class="container container-fluid">
-			<div class="row">
-				<div class="col-md-12">
-					<p>&copy; Todos os direitos reservados</p>
-				</div>
-			</div>
-		</div>
-	</footer>
-
-	<script src="../js/jquery.min.js"></script>
-	<script src="../js/bootstrap.min.js"></script>
+<?php require_once '../inc/rodape.php'; ?>
 </body>
 </html>

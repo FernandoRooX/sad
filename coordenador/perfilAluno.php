@@ -86,7 +86,6 @@
 
                                 </div>";
                             } else {
-                                
                                 while ($objDep = mysql_fetch_object($rsDep)) {
                                     $rsDisc = mysql_query("select disciplina.*, dependencia.* FROM dependencia inner join disciplina on disciplina.cod = dependencia.cod WHERE dependencia.DISCIPLINA_cod='$objDep->DISCIPLINA_cod'");
                                     $objDisc = mysql_fetch_object($rsDisc);
