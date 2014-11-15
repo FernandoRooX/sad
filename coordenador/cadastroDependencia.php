@@ -80,13 +80,13 @@
                                     <div class="form-group">
                                         <label for="dt_inicio" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Data de Início:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-                                            <input type="date" name="dt_inicio" class="form-control" id="inputNac" required="">
+                                            <input type="date" name="dt_inicio" class="form-control" id="inputNac" required>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="dt_final" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Data Final:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-                                            <input type="date" name="dt_final" class="form-control" id="inputNac" required="">
+                                            <input type="date" name="dt_final" class="form-control" id="inputNac" required>
                                         </div>
                                     </div>
                                     
@@ -119,7 +119,7 @@
                                     <div class="form-group">
                                         <label for="selectDependencia" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Dependência:</label>
                                         <div class="col-xs-6-col-sm-10 col-md-11 col-lg-10">
-                                            <select name="selectDependencia" id="selectDependencia" class="form-control" required="">
+                                            <select name="selectDependencia" id="selectDependencia" class="form-control" required>
                                                 <option value="">Selecione</option>
                                                 <option value="rdr">RDR</option>
                                                 <option value="str">STR</option>

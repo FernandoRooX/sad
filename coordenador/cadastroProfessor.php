@@ -33,13 +33,13 @@
                                     <div class="form-group">
                                         <label for="inputName" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Nome:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-                                            <input type="text" class="form-control" name="nome" placeholder="Digite seu nome completo" maxlength="50" id="inputName" required="">
+                                            <input type="text" class="form-control" name="nome" placeholder="Digite seu nome completo" maxlength="50" id="inputName" required>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="inputCpf" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">CPF:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-                                            <input type="text" class="form-control" name="cpf" id="inputCpf" placeholder="000.000.000-00" maxlength="14" onkeypress="formatar('###.###.###-##', this);" required="" />
+                                            <input type="text" class="form-control" name="cpf" id="inputCpf" placeholder="000.000.000-00" maxlength="14" onkeypress="formatar('###.###.###-##', this);" required />
                                         </div>
                                     </div>
 
@@ -47,7 +47,7 @@
                                     <!--								<div class="form-group">
                                                                                                             <label for="curso" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Curso:</label>
                                                                                                             <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-                                                                                                                <select name="curso" id="selectCurso" name="curso" class="form-control" required="">
+                                                                                                                <select name="curso" id="selectCurso" name="curso" class="form-control" required>
                                                                                                                             <option>Componente Curricular</option>
                                                                                                                             <option value="Programacao Estruturada">Programação Estruturada</option>
                                                                                                                             <option value="Programacao Orientada a Objeto">Programação Orientada a Objetos</option>
@@ -81,7 +81,7 @@
                                                                                                     <div class="form-group">
                                                                                                             <label for="semestre" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Semestre:</label>
                                                                                                             <div class="col-xs-6 col-sm-10 col-sm-11 col-lg-10">
-                                                                                                                <select name="semestre" id="selectSemestre" class="form-control" required="">
+                                                                                                                <select name="semestre" id="selectSemestre" class="form-control" required>
                                                                                                                             <option>Semestres</option>
                                                                                                                             <option value="1°">1º</option>
                                                                                                                             <option value="2°">2º</option>
@@ -99,7 +99,7 @@
                                     <div class="form-group">
                                         <label for="inputPhone" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Telefone:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-                                            <input type="text" class="form-control" name="telefone" id="inputPhone" placeholder="00-0000-0000" maxlength="14" onkeypress="formatar('##-####-####', this);" required="" />
+                                            <input type="text" class="form-control" name="telefone" id="inputPhone" placeholder="00-0000-0000" maxlength="14" onkeypress="formatar('##-####-####', this);" required />
                                         </div>
                                     </div>
 
@@ -132,7 +132,7 @@
                                     <div class="form-group">
                                         <label for="inputNasc" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Nascimento:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-                                            <input type="date" name="nascimento" class="form-control" id="inputNac" required="">
+                                            <input type="date" name="nascimento" class="form-control" id="inputNac" required>
                                         </div>
                                     </div>
 

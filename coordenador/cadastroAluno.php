@@ -54,7 +54,7 @@
                                     <!--								<div class="form-group">
                                                                                                             <label for="curso" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Curso:</label>
                                                                                                             <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-                                                                                                                <select name="curso" id="selectCurso" name="curso" class="form-control" required="">
+                                                                                                                <select name="curso" id="selectCurso" name="curso" class="form-control" required>
                                                                                                                             <option>Componente Curricular</option>
                                                                                                                             <option value="Programacao Estruturada">Programação Estruturada</option>
                                                                                                                             <option value="Programacao Orientada a Objeto">Programação Orientada a Objetos</option>
@@ -88,7 +88,7 @@
                                                                                                     <div class="form-group">
                                                                                                             <label for="semestre" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Semestre:</label>
                                                                                                             <div class="col-xs-6 col-sm-10 col-sm-11 col-lg-10">
-                                                                                                                <select name="semestre" id="selectSemestre" class="form-control" required="">
+                                                                                                                <select name="semestre" id="selectSemestre" class="form-control" required>
                                                                                                                             <option>Semestres</option>
                                                                                                                             <option value="1°">1º</option>
                                                                                                                             <option value="2°">2º</option>
