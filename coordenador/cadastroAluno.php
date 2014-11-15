@@ -33,19 +33,21 @@
                                     <div class="form-group">
                                         <label for="inputName" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Nome:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-                                            <input type="text" class="form-control" name="nome" placeholder="Digite seu nome completo" maxlength="50" id="inputName" required="">
+                                            <input type="text" class="form-control" name="nome" placeholder="Digite seu nome completo" maxlength="50" id="inputName" required>
                                         </div>
                                     </div>
-                                    <div class="form-group">
+                                    <div class="form-group has-error">
                                         <label for="inputCpf" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">CPF:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-                                            <input type="text" class="form-control" name="cpf" id="inputCpf" placeholder="000.000.000-00" maxlength="14" onkeypress="formatar('###.###.###-##', this);" required="" />
+                                            <input type="text" class="form-control" name="cpf" id="inputCpf" placeholder="000.000.000-00" maxlength="14" onkeypress="formatar('###.###.###-##', this);" required />
+                                            <br>
+                                            <div class="alert alert-warning" role="alert">CPF inválido!</div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="inputMat" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Matrícula:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-                                            <input type="text" class="form-control" name="matricula" placeholder="Matricula" id="inputMat" maxlength="11" required="">
+                                            <input type="text" class="form-control" name="matricula" placeholder="Matricula" id="inputMat" maxlength="11" required>
                                         </div>
                                     </div>
 
@@ -104,7 +106,7 @@
                                     <div class="form-group">
                                         <label for="inputPhone" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Telefone:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-                                            <input type="text" class="form-control" name="telefone" id="inputPhone" placeholder="00-0000-0000" maxlength="14" onkeypress="formatar('##-####-####', this);" required="" />
+                                            <input type="text" class="form-control" name="telefone" id="inputPhone" placeholder="00-0000-0000" maxlength="14" onkeypress="formatar('##-####-####', this);" required />
                                         </div>
                                     </div>
 
@@ -137,7 +139,7 @@
                                     <div class="form-group">
                                         <label for="inputNasc" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Nascimento:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-                                            <input type="date" name="nascimento" class="form-control" id="inputNac" required="">
+                                            <input type="date" name="nascimento" class="form-control" id="inputNac" required>
                                         </div>
                                     </div>
 
