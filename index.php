@@ -17,9 +17,9 @@ if (isset($_POST['Entrar'])):
         header('Location: logado.php');
     else:
         $erro = '<div class="alert alert-warning alert-dismissible" role="alert">
-				
-				<strong>Usuário ou senha incorreto!</strong>
-			</div>';
+                    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>				
+                    <strong>Usuário ou senha incorreto!</strong>
+                </div>';
     endif;
 endif;
 
