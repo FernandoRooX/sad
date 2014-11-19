@@ -1,187 +1,100 @@
 <!DOCTYPE html>
+
 <?php
+$id = $_GET['idAluno'];
+session_start();
 require_once '../classes/validaAcesso.php';
+$variavel = "coordenador";
 ?>
 <html lang="pt-BR">
-<head>
-	<?php require_once '../inc/head.php';?>
-	<title>Editar Aluno</title>
+    <head>
+        <?php require_once '../inc/head.php'; ?>
+        <title>Editar Aluno</title>
 
-	<link href="../css/bootstrap.min.css" rel="stylesheet">
-	<link href="../css/style.css" rel="stylesheet">
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/style.css" rel="stylesheet">
 
-	<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-	<![endif]-->
-</head>
-<body>
-	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-		<div class="container container-fluid">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-					<span class="sr-only">Toggle Navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a href="#" class="navbar-brand">{Logo}</a>
-			</div>
+        <!--[if lt IE 9]>
+                <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+                <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
 
-			<div class="collapse navbar-collapse" id="navbar-collapse">
-				<ul class="nav navbar-nav">
-					<li><a href="../coordenador/index.php">Home</a></li>
-					<li><a href="../coordenador/alunos.php">Alunos</a></li>
-					<li><a href="../coordenador/turmas.php">Turmas</a></li>
-					<li><a href="../coordenador/disciplinas.php">Disciplinas</a></li>
-					<li><a href="../coordenador/cursos.php">Cursos</a></li>
-					<li><a href="../coordenador/usuarios.php">Usuários</a></li>
-				</ul>
+        <?php require_once '../topo.php'; ?>
+        <?php
+        $rs = mysql_query("select aluno.*, pessoa.* FROM aluno inner join pessoa on $id = pessoa.idPESSOA");
+        if ($rs) {
+            $row = mysql_fetch_array($rs);
+        };
+        {
+            ?>
+        <tr>
+            <td><?php echo("<a href='perfilAluno.php?idAluno=" . $obj->PESSOA_idPESSOA . "' > " . $obj->nome . " - " . $obj->matricula . " - " . $obj->cpf . " </a>");
+            ?></td>
+        <div class="wrapper" role="main">
+            <div class="container container-fluid">
+                <div class="row">
+                    <div id="conteudo" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="page-header">
+                            <h3><span class="glyphicon glyphicon-th-list"></span> Edição de Aluno:</h3>
+                        </div>
 
-				<ul class="nav navbar-nav navbar-right">
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span><?php echo$_SESSION['perfil']; ?> <span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="#"><span class="glyphicon glyphicon-cog"></span> Alterar Senha</a></li>
-							<li class="divider"></li>
-                                                        <li><a href="../logado.php?logout=acessar"><span class="glyphicon glyphicon-log-out"></span> Sair</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+                        <form method="post" action="banksaluno.php?acao=adicionar" class="form-horizontal" role="form">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label for="inputName" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Nome:</label>
+                                        <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
+                                            <input type="text" class="form-control" name="nome" placeholder="Digite seu nome completo" maxlength="50" id="inputName" value="<?php echo $obj->nome; ?>" required="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputCpf" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">CPF:</label>
+                                        <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
+                                            <input type="text" class="form-control" name="cpf" id="inputCpf" placeholder="000.000.000-00" maxlength="14" onload="valida(this.form)" onkeypress="formatar('###.###.###-##', this);" required="" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputMat" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Matrícula:</label>
+                                        <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
+                                            <input type="text" class="form-control" name="matricula" placeholder="Matricula" id="inputMat" maxlength="11" required="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputNasc" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Nascimento:</label>
+                                        <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
+                                            <input type="date" name="nascimento" class="form-control" id="inputNac" required="">
+                                        </div>
+                                    </div>
 
-	<div class="wrapper" role="main">
-		<div class="container container-fluid">
-			<div class="row">
-				<div id="conteudo" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-					<div class="page-header">
-						<h3><span class="glyphicon glyphicon-th-list"></span> Editar Aluno</h3>
-					</div>
+                                    <div class="form-group">
+                                        <label for="inputEmail" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">E-mail:</label>
+                                        <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
+                                            <input type="text" name="email" class="form-control" id="inputEmail" maxlength="50" placeholder="Digite seu e-mail">
+                                        </div>
+                                    </div>
 
-					<form method="post" action="" class="form-horizontal" role="form">
-						<div class="form-group">
-							<div class="col-md-12">
-								<div class="form-group row">
-									<label for="inputCod" class="col-md-1 control-label">Código Aluno:</label>
-									<div class="col-md-2">
-										<input type="text" class="form-control" id="inputCod" disabled required>
-									</div>
-
-									<label for="inputRa" class="col-md-1 control-label">RA:</label>
-									<div class="col-md-2">
-										<input type="text" class="form-control" id="inputRa" required>
-									</div>
-
-									<label for="inputName" class="col-md-1 control-label">Nome:</label>
-									<div class="col-md-5">
-										<input type="text" class="form-control" id="inputName" required>
-									</div>
-								</div>
-
-								<div class="form-group row">
-									<label for="sexo" class="col-md-1 control-label">Sexo:</label>
-									<div class="col-md-2">
-										<select name="sexo" class="form-control">
-											<option value=""></option>
-											<option value="feminino">Feminino</option>
-											<option value="masculino">Masculino</option>
-										</select>
-									</div>
-									
-									<label for="selectDisciplina" class="col-md-1 control-label">Curso:</label>
-									<div class="col-md-3">
-										<select name="selectDisciplina" id="selectCurso" class="form-control" required>
-											<option value=""></option>
-											<option value="prog-estruturada">Programação Estruturada</option>
-											<option value="poo">Programação Orientada a Objetos</option>
-											<option value="java">Java</option>
-											<option value="sgbd">Sistemas de Banco de Dados</option>
-											<option value="prog-bd">Programação de Banco de Dados</option>
-											<option value="redes">Redes</option>
-											<option value="c#">Programação Comercial</option>
-											<option value="ia">Inteligência Artificial</option>
-											<option value="ihm">Interface Homem-Máquina</option>
-											<option value="prog-concorrente">Programação Concorrente</option>
-											<option value="xml">XML</option>
-										</select>
-									</div>
-
-									<label for="selectDependencia" class="col-md-1 control-label">Dependência:</label>
-									<div class="col-md-2">
-										<select name="selectDependencia" id="selectDependencia" class="form-control" required>
-											<option value=""></option>
-											<option value="rdr">RDR</option>
-											<option value="str">STR</option>
-											<option value="gtr">GTR</option>
-											<option value="trt">TRT</option>
-											<option value="ster">STER</option>
-										</select>
-									</div>
-
-									<label for="selectSemestre" class="col-md-1 control-label">Semestre:</label>
-									<div class="col-md-1">
-										<select name="selectSemestre" id="selectSemestre" class="form-control" required>
-											<option value=""></option>
-											<option value="1">1º</option>
-											<option value="2">2º</option>
-											<option value="3">3º</option>
-											<option value="4">4º</option>
-											<option value="5">5º</option>
-											<option value="6">6º</option>
-											<option value="7">7º</option>
-											<option value="8">8º</option>
-										</select>
-									</div>
-								</div>
-
-								<div class="form-group row">
-									<label for="inputPhone" class="col-md-1 control-label">Telefone:</label>
-									<div class="col-md-2">
-										<input type="phone" class="form-control" id="inputPhone" placeholder="00-0000-0000" maxlength="14" onkeypress="formatar('## ####-#####', this)">
-									</div>
-
-									<label for="inputEmail" class="col-md-1 control-label">Email:</label>
-									<div class="col-md-3">
-										<input type="email" class="form-control" id="inputEmail">
-									</div>
-								</div>
-
-								<div class="form-group row">
-									<label for="inputNasc" class="col-md-1 control-label">Nascimento:</label>
-									<div class="col-md-2">
-										<input type="date" class="form-control" id="inputNac" required>
-									</div>
-								</div>
-
-								<div class="col-md-offset-7">
-									<button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#editar-success">Alterar</button>
-									<div class="modal fade" id="editar-success" tabindex="-1" role="dialog" aria-labelledby="editar-success" aria-hidden="true">
-										<div class="modal-dialog modal">
-											<div class="modal-content">
-												<div class="modal-header">
-													<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Sair</span></button>
-												</div>
-												<div class="modal-body">
-													<p>Alteração realizada com sucesso!</p>
-												</div>
-												<div class="modal-footer">
-													<button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
-												</div>
-											</div>
-										</div>
-									</div>
-									<a href="javascript:window.history.go(-1)"><button type="button" class="btn btn-primary">Cancelar</button></a>
-								</div>
-							</div>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<?php include '../inc/rodape.php'; ?>
+                                    <div class="pull-right">
+                                        <button type="submit" class="btn btn-success">Editar</button>
+                                        <a href="javascript:window.history.go(-1)"><button type="button" class="btn btn-warning">Cancelar</button></a>
+                                    </div>
+                                </div>
+                            </div>
+<?php } ?>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br /> <br />
+<?php include '../inc/rodape.php'; ?>
 </body>
+<script>
+                                            var email = document.forms['radioSexo'].CAMPO_EMAIL, value;
+                                            if (email.lenght < 5 || email.lenght > 128 || email.indexOf('@') == -1 || email.indexOf('.') == -1)
+                                            {
+                                                alert("O campo E-mail deve ser preenchido corretamente.");
+                                            }
+</script>
 </html>
