@@ -84,14 +84,14 @@ endif;
                         <form method="post" action="" class="form-horizontal" role="form">
                             <div style="margin-bottom:25px;" class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <!--<input class="form-control" type="login" id="input_login" placeholder="CPF" name="login" maxlength="14" onkeypress="formatar('###.###.###-##', this);" required="" /> -->
+                                <!--<input class="form-control" type="login" id="input_login" placeholder="CPF" name="login" maxlength="14" onkeypress="formatar('###.###.###-##', this);" required /> -->
                                 <input class="form-control" type="login" id="input_login" placeholder="LOGIN" name="login"  maxlength="30"  required autofocus/>
                             </div>
 
                             <div style="margin-bottom:25px;" class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                <!-- <input class="form-control" type="password" id="input_senha" name="senha" maxlength="11" placeholder="SENHA" required="">-->
-                                <input class="form-control" type="password" id="input_senha"  name="senha" maxlength="11" placeholder="SENHA" required="">
+                                <!-- <input class="form-control" type="password" id="input_senha" name="senha" maxlength="11" placeholder="SENHA" required>-->
+                                <input class="form-control" type="password" id="input_senha"  name="senha" maxlength="11" placeholder="SENHA" required>
                             </div>
 
                             <div style="margin-top:10px" class="form-group">
