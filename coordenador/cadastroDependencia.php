@@ -26,6 +26,9 @@
                         </div>
 
                         <form method="post" action="banksdependencia.php?acao=adicionar" class="form-horizontal" role="form">
+                            
+                            
+	
                             <div class="row">
                                 <div class="col-md-8">
                                     
@@ -90,45 +93,7 @@
                                         </div>
                                     </div>
                                     
-                                    <!--
-                                    <div class="form-group">
-                                        <label for="inputPeriodo" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Período Letivo:</label>
-                                        <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-                                            <input type="text" class="form-control" id="inputPeriodo" required>
-                                        </div>
-                                    </div> -->
-
-<!--                                    <div class="form-group">
-                                        <label for="selectSerie" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Série:</label>
-                                        <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-                                            <select name="selectSerie" id="selectSerie" class="form-control" required>
-                                                <option value="">Selecione</option>
-                                                <option value="1">1º</option>
-                                                <option value="2">2º</option>
-                                                <option value="3">3º</option>
-                                                <option value="4">4º</option>
-                                                <option value="5">5º</option>
-                                                <option value="6">6º</option>
-                                                <option value="7">7º</option>
-                                                <option value="8">8º</option>
-                                                <option value="9">9º</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="selectDependencia" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Dependência:</label>
-                                        <div class="col-xs-6-col-sm-10 col-md-11 col-lg-10">
-                                            <select name="selectDependencia" id="selectDependencia" class="form-control" required="">
-                                                <option value="">Selecione</option>
-                                                <option value="rdr">RDR</option>
-                                                <option value="str">STR</option>
-                                                <option value="gtr">GTR</option>
-                                                <option value="trt">TRT</option>
-                                                <option value="ster">STER</option>
-                                            </select>
-                                        </div>
-                                    </div>-->
+                                    
 
 
                                     <div class="pull-right">
@@ -138,6 +103,27 @@
                                 </div>
                             </div>
                         </form>
+                        <h2>Dados Inseridos</h2>
+	<div style="margin-bottom:20px">
+		<a href="#" onclick="getSelected()">GetSelected</a>
+		<a href="#" onclick="getSelections()">GetSelections</a>
+	</div>
+	<table id="tt" class="easyui-datagrid" style="width:600px;height:250px"
+			url="data/datagrid_data.json"
+			title="Load Data" iconCls="icon-save" fitColumns="true">
+		<thead>
+			<tr>
+				<th field="itemid" width="80">Item ID</th>
+				<th field="productid" width="80">Product ID</th>
+				<th field="listprice" width="80" align="right">List Price</th>
+				<th field="unitcost" width="80" align="right">Unit Cost</th>
+				<th field="attr1" width="150">Attribute</th>
+				<th field="status" width="60" align="center">Stauts</th>
+			</tr>
+		</thead>
+	</table>
+
+                        
                     </div>
                 </div>
             </div>
