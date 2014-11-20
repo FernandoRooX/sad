@@ -65,11 +65,9 @@
                                             <td>
                                                 <?php
                                                     echo"<input type='text' name='notafinal' value='$objTurma->nota_final'class='form-control'  id='inputName' maxlength='5' size='2'>";
-                                                    if (($objTurma->nota2 == null) && ($objTurma->nota1 == null)) {
+                                                    if ($nota_final == null) {
                                                         echo "Nenhuma nota cadastrada.";
-                                                    } else if (($objTurma->nota1 != null) && ($objTurma->nota2 != null)) {
-                                                        $nota_final = (($objTurma->nota2) + ($objTurma->nota1)) / 2;
-                                                        if ($nota_final < 6) {
+                                                    } else if ($nota_final < 5) {
                                                             echo "<font color='red'>" . $nota_final . "</font>";
                                                         } else {
                                                             echo "<font color='green'>" . $nota_final . "</font>";
