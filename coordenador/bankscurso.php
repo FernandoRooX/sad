@@ -22,7 +22,7 @@ $nome = $_REQUEST['nome'] ;
 
         mysql_close();
 
-        header("refresh: 3; url=cadastroCurso.php");
+        header("refresh: 3; url=cursos.php");
     }
 }
 ?>

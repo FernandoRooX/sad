@@ -172,6 +172,12 @@
                                             <input type="date" name="dt_inicio" class="form-control" id="inputNac" required="">
                                         </div>
                                     </div>
+                                    <div class="form-group">
+                                        <label for="dt_inicio" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Data final</label>
+                                        <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
+                                            <input type="date" name="dt_final" class="form-control" id="inputNac" required="">
+                                        </div>
+                                    </div>
                                     
                                     <div class="form-group">
                                         <label for="alunos" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Alunos:</label>
