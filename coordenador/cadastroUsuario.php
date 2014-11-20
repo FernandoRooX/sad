@@ -56,22 +56,22 @@
                                     <div class="form-group">
                                         <label for="inputsenha" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Senha</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-                                            <input type="password" class="form-control" value="pass"  name="senha" placeholder="Repita a senha aqui:" maxlength="8" required="" autofocus="" />
+                                            <input type="password" class="form-control" name="senha" maxlength="8" required />
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="radioPerfil" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Perfil</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
                                             <label class="btn btn-primary">
-                                                <input type="radio" name="optionPerfil" id="optionProfessor" required="" value="Professor"> Professor
+                                                <input type="radio" name="optionPerfil" id="optionProfessor" required value="Professor"> Professor
                                             </label>
 
                                             <label class="btn btn-primary">
-                                                <input type="radio" name="optionPerfil" id="optionCoordenador" required="" value="Coordenador"> Coordenador
+                                                <input type="radio" name="optionPerfil" id="optionCoordenador" required value="Coordenador"> Coordenador
                                             </label>
 
                                             <label class="btn btn-primary">
-                                                <input type="radio" name="optionPerfil" id="optionSecretaria" required="" value="Secretaria"> Secretária
+                                                <input type="radio" name="optionPerfil" id="optionSecretaria" required value="Secretaria"> Secretária
                                             </label>
 
                                         </div>

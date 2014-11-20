@@ -4,7 +4,7 @@
     require_once '../classes/validaAcesso.php';
     ?>
     <head>
-        <?php require_once '..../../../inc/head.php'; ?>
+        <?php require_once '../inc/head.php'; ?>
 
         <title>Sistema de Apoio a Dependencia</title>
 
@@ -58,24 +58,13 @@
                             <div class="col-md-10">
                                 <button type="button" class="btn btn-success">Cadastrar Turma</button>
                             </div>
-
-                            <div class="col-md-2">
-                                <ul class="pagination">
-                                    <li><a href="#">&laquo;</a></li>
-                                    <li><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">&raquo;</a></li>
-                                </ul>
-                            </div>
                         </div>
-
-                        <div class="clearfix"></div>
 
                         <div class="table-responsive">
                             <table class="table table-striped bordered">
                                 <thead class="h4">
                                     <tr>
-                                        <th>Nome <span class="glyphicon glyphicon-search"></span></th>
+                                        <th>Nome</th>
                                         <th>Ação</th>
                                     </tr>
                                 </thead>
@@ -89,25 +78,24 @@
                                         <td></td>
                                         <td></td>
                                         <td></td>
-
                                         <td><button type="button" class="btn btn-warning btn-xs">Editar</button> <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal-delete">Excluir</button></td>
-                                <div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="modal-delete" aria-hidden="true">
-                                    <div class="modal-dialog modal-sm">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Sair</span></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>Tem certeza que deseja remover essa turma?</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-default" data-dismiss="modal">Não</button>
-                                                <button type="button" class="btn btn-danger">Sim</button>
+                                        <div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="modal-delete" aria-hidden="true">
+                                            <div class="modal-dialog modal-sm">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Sair</span></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>Tem certeza que deseja remover essa turma?</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Não</button>
+                                                        <button type="button" class="btn btn-danger">Sim</button>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                </tr>
+                                    </tr>
                                 </tbody>
                                 <tbody class="h5">
                                     <tr>
@@ -116,17 +104,6 @@
                                     </tr>
                                 </tbody>
                             </table>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-offset-10 col-md-2">
-                                <ul class="pagination">
-                                    <li><a href="#">&laquo;</a></li>
-                                    <li><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">&raquo;</a></li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
                 </div>

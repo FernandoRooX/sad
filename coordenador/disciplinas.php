@@ -49,17 +49,16 @@
 								<tr>
 									<th>Disciplina <span class="glyphicon glyphicon-search"></span></th>
 									<th>Situação</th>
-									
-                                                                        <th>Carga-Horária</th>
-                                                                        <th>Ação</th>
+									<th>Carga-Horária</th>
+									<th>Ação</th>
 								</tr>
 							</thead>
 							<tbody class="h5">
-                                                            <?php
-                                                $rs = mysql_query("select * FROM disciplina ORDER BY nome");
-                                                while ($obj = mysql_fetch_object($rs)) {
-                                                    
-                                                ?>
+                                <?php
+                                    $rs = mysql_query("select * FROM disciplina ORDER BY nome");
+                                    while ($obj = mysql_fetch_object($rs)) {
+                                ?>
+                                
 								<tr>
 									
 									<td><?php echo $obj->nome;?></td>
@@ -83,18 +82,9 @@
 										</div>
 									</div>
 								</tr>
-                                                <?php }?>
+                                <?php }?>
 							</tbody>
 						</table>
-					</div>
-
-					<div class="text-center">
-						<ul class="pagination pagination-large">
-							<li class="disabled"><a href="#">&laquo;</a></li>
-							<li class="active"><a href="#">1</a></li>
-							<li><a href="#">2</a></li>
-							<li><a href="#">&raquo;</a></li>
-						</ul>
 					</div>
 				</div>
 			</div>

@@ -7,7 +7,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
+<<<<<<< HEAD
             <img src="img/Sad_logo.png" class="navbar-brand" />
+=======
+            <img src="./img/favicon.png" alt="SAD" />
+>>>>>>> eee3e07ae9bb400b887a85f73c5616b96c24db1a
         </div>
 
         <div class="collapse navbar-collapse" id="navbar-collapse">
@@ -29,6 +33,7 @@
                //     echo"<li><a href='../professor/alunos.php'>Alunos</a></li>";
                     echo"<li><a href='../professor/turmas.php'>Turmas</a></li>";
                     echo"<li><a href='../professor/cadastroProfessor.php'>Professor</a></li>";
+                    echo "<li><a href='../professor/listaRelatorio.php'>Relatório</a></li>";
                 } else if ($_SESSION['perfilUsuario'] == "Secretaria") {
 
                     echo" <li><a href='../secretaria/index.php'>Home</a></li>";
@@ -46,7 +51,7 @@
                     <ul class="dropdown-menu">
                         <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Editar Perfil</a></li>
                         <li class="divider"></li>
-                        <li><a href="logado.php?logout=acessar"><span class="glyphicon glyphicon-log-out">Sair</span></a></li>
+                        <li><a href="logado.php?logout=acessar"><span class="glyphicon glyphicon-log-out"> Sair</span></a></li>
                     </ul>
                 </li>
             </ul>

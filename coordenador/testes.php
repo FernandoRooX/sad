@@ -12,9 +12,9 @@
         <link rel="stylesheet" href="../css/style.css">
 
         <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
     </head>
     <body>
         <?php require_once '../topo.php'; ?>
@@ -44,7 +44,7 @@
                                     <div class="form-group">
                                         <label for="inputProtocolo" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Protocolo:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-                                            <input type="text" name="protocolo" class="form-control"  id="inputName" placeholder="Protocolo" maxlength="50" required="">
+                                            <input type="text" name="protocolo" class="form-control"  id="inputName" placeholder="Protocolo" maxlength="50" required>
                                         </div>
                                     </div>
                                     <!--
@@ -169,7 +169,7 @@
                                     <div class="form-group">
                                         <label for="dt_inicio" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Data de Início:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-                                            <input type="date" name="dt_inicio" class="form-control" id="inputNac" required="">
+                                            <input type="date" name="dt_inicio" class="form-control" id="inputNac" required>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -182,7 +182,7 @@
                                     <div class="form-group">
                                         <label for="alunos" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Alunos:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-8">
-                                            <select name="optionAlunos" class="form-control" required="" >
+                                            <select name="optionAlunos" class="form-control" required >
                                                 <option value="">Selecione o Aluno</option>
                                                
                                                <?php

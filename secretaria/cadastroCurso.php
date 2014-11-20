@@ -40,14 +40,14 @@
                                     <div class="form-group">
                                         <label for="inputOrientador" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Orientador:</label>
                                         <div class="col-xs-6 col-sm-5 col-md-7 col-lg-5">
-                                            <input type="text" name="orientador" class="form-control"  id="inputOrientador" required="">
+                                            <input type="text" name="orientador" class="form-control"  id="inputOrientador" required>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="selectTipo" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Tipo:</label>
                                         <div class="col-xs-6 col-sm-5 col-md-7 col-lg-5">
-                                            <select name="selectTipo" id="selectTipo" class="form-control" required="">
+                                            <select name="selectTipo" id="selectTipo" class="form-control" required>
                                                 <option value="">Selecione</option>
                                                 <option value="Presencial">Presencial</option>
                                                 <option value="Semi-Presencial">Semi-Presencial</option>

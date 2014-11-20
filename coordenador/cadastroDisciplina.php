@@ -32,7 +32,7 @@
                                     <div class="form-group">
                                         <label for="inputDisciplina" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Disciplina:</label>
                                         <div class="col-xs-6  col-sm-10 col-md-11 col-lg-10">
-                                            <input type="text" name="disciplina" class="form-control" id="inputDisciplina" maxlength="30" required="">
+                                            <input type="text" name="disciplina" class="form-control" id="inputDisciplina" maxlength="30" required>
                                         </div>
                                     </div>
                                     
@@ -50,7 +50,11 @@
                                     <div class="form-group">
                                         <label for="numberCarga" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Carga Horária:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
+<<<<<<< HEAD
                                             <input type="number" name="ch" maxlength="3" class="form-control" id="inputCarga" required="">
+=======
+                                            <input type="number" name="ch" class="form-control" maxlength="3" id="inputCarga" required>
+>>>>>>> eee3e07ae9bb400b887a85f73c5616b96c24db1a
                                         </div>
                                     </div>
                                     
@@ -83,7 +87,7 @@
                                     <div class="form-group">
                                         <label for="selectDependencia" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Dependência:</label>
                                         <div class="col-xs-6-col-sm-10 col-md-11 col-lg-10">
-                                            <select name="selectDependencia" id="selectDependencia" class="form-control" required="">
+                                            <select name="selectDependencia" id="selectDependencia" class="form-control" required>
                                                 <option value="">Selecione</option>
                                                 <option value="rdr">RDR</option>
                                                 <option value="str">STR</option>

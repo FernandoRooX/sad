@@ -24,7 +24,7 @@
                 <div class="row">
                     <div id="conteudo" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="page-header">
-                            <h3><span class="glyphicon glyphicon-th-list"></span> Home</h3>
+                            <h3><span class="glyphicon glyphicon-home"></span> Home</h3>
                         </div>
 
                         <div class="row">

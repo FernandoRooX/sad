@@ -83,17 +83,59 @@
                                     <div class="form-group">
                                         <label for="dt_inicio" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Data de Início:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-                                            <input type="date" name="dt_inicio" class="form-control" id="inputNac" required="">
+                                            <input type="date" name="dt_inicio" class="form-control" id="inputNac" required>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="dt_final" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Data Final:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-                                            <input type="date" name="dt_final" class="form-control" id="inputNac" required="">
+                                            <input type="date" name="dt_final" class="form-control" id="inputNac" required>
                                         </div>
                                     </div>
                                     
+<<<<<<< HEAD
                                     
+=======
+                                    <!--
+                                    <div class="form-group">
+                                        <label for="inputPeriodo" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Período Letivo:</label>
+                                        <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
+                                            <input type="text" class="form-control" id="inputPeriodo" required>
+                                        </div>
+                                    </div> -->
+
+<!--                                    <div class="form-group">
+                                        <label for="selectSerie" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Série:</label>
+                                        <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
+                                            <select name="selectSerie" id="selectSerie" class="form-control" required>
+                                                <option value="">Selecione</option>
+                                                <option value="1">1º</option>
+                                                <option value="2">2º</option>
+                                                <option value="3">3º</option>
+                                                <option value="4">4º</option>
+                                                <option value="5">5º</option>
+                                                <option value="6">6º</option>
+                                                <option value="7">7º</option>
+                                                <option value="8">8º</option>
+                                                <option value="9">9º</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="selectDependencia" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Dependência:</label>
+                                        <div class="col-xs-6-col-sm-10 col-md-11 col-lg-10">
+                                            <select name="selectDependencia" id="selectDependencia" class="form-control" required>
+                                                <option value="">Selecione</option>
+                                                <option value="rdr">RDR</option>
+                                                <option value="str">STR</option>
+                                                <option value="gtr">GTR</option>
+                                                <option value="trt">TRT</option>
+                                                <option value="ster">STER</option>
+                                            </select>
+                                        </div>
+                                    </div>-->
+>>>>>>> eee3e07ae9bb400b887a85f73c5616b96c24db1a
 
 
                                     <div class="pull-right">

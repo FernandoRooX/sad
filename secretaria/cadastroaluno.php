@@ -79,7 +79,7 @@
                                     </div>
                                     <label for="selectCurso" class="col-md-1 control-label">Curso:</label>
                                     <div class="col-md-3">
-                                        <select name="curso" id="curso" class="form-control" required="">
+                                        <select name="curso" id="curso" class="form-control" required>
                                             <option>Componente Curricular</option>
                                             <option value="Programacao Estruturada">Programação Estruturada</option>
                                             <option value="Programacao Orientada a Objeto">Programacao Orientada a Objetos</option>
@@ -115,7 +115,7 @@
                                 <div class="form-group row">
                                     <label for="inputPhone" class="col-md-1 control-label">Telefone:</label>
                                     <div class="col-md-2">
-                                        <input type="phone" class="form-control" id="inputPhone" name="telefone" placeholder="00-0000-0000" maxlength="12" required="" onkeypress="formatar('##-####-####', this);" required />
+                                        <input type="phone" class="form-control" id="inputPhone" name="telefone" placeholder="00-0000-0000" maxlength="12" required onkeypress="formatar('##-####-####', this);" required />
                                     </div>
 
                                     <label for="sexo" class="col-md-1 control-label">Sexo:</label>

@@ -32,21 +32,21 @@
                                     <div class="form-group">
                                         <label for="inputDisciplina" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Disciplina:</label>
                                         <div class="col-xs-6  col-sm-10 col-md-11 col-lg-10">
-                                            <input type="text" name="disciplina" class="form-control" id="inputDisciplina" required="">
+                                            <input type="text" name="disciplina" class="form-control" id="inputDisciplina" required>
                                         </div>
                                     </div>
                                     
                                     <div class="form-group">
                                         <label for="inputSituacao" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Situação:</label>
                                         <div class="col-xs-6  col-sm-10 col-md-11 col-lg-10">
-                                            <input type="text" name="situacao" class="form-control" id="inputDisciplina" required="">
+                                            <input type="text" name="situacao" class="form-control" id="inputDisciplina" required>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="numberCarga" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Carga Horária:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-                                            <input type="number" name="ch" class="form-control" id="inputCarga" required="">
+                                            <input type="number" name="ch" class="form-control" id="inputCarga" required>
                                         </div>
                                     </div>
                                     
@@ -79,7 +79,7 @@
                                     <div class="form-group">
                                         <label for="selectDependencia" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Dependência:</label>
                                         <div class="col-xs-6-col-sm-10 col-md-11 col-lg-10">
-                                            <select name="selectDependencia" id="selectDependencia" class="form-control" required="">
+                                            <select name="selectDependencia" id="selectDependencia" class="form-control" required>
                                                 <option value="">Selecione</option>
                                                 <option value="rdr">RDR</option>
                                                 <option value="str">STR</option>

@@ -86,15 +86,15 @@
                                         <label for="radioPerfil" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Perfil:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
                                             <label class="btn btn-primary">
-                                                <input type="radio" name="optionPerfil" id="optionProfessor" required="" value="professor"> Professor
+                                                <input type="radio" name="optionPerfil" id="optionProfessor" required value="professor"> Professor
                                             </label>
 
                                             <label class="btn btn-primary">
-                                                <input type="radio" name="optionPerfil" id="optionCoordenador" required="" value="coordenador"> Coordenador
+                                                <input type="radio" name="optionPerfil" id="optionCoordenador" required value="coordenador"> Coordenador
                                             </label>
 
                                             <label class="btn btn-primary">
-                                                <input type="radio" name="optionPerfil" id="optionSecretaria" required="" value="secretaria"> Secretária
+                                                <input type="radio" name="optionPerfil" id="optionSecretaria" required value="secretaria"> Secretária
                                             </label>
 
                                             <!--<label class="radio-inline">
