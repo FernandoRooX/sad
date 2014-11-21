@@ -63,11 +63,24 @@
                                             <input type="hidden" name='idTurma' value='<?php echo $idTurma; ?>'/>
 
                                             <td>
-                                                <?php
+                                                <!--<?php
                                                     echo"<input type='text' name='notafinal' value='$objTurma->nota_final'class='form-control'  id='inputName' maxlength='5' size='2'>";
                                                     if ($nota_final == null) {
                                                         echo "Nenhuma nota cadastrada.";
                                                     } else if ($nota_final < 5) {
+                                                            echo "<font color='red'>" . $nota_final . "</font>";
+                                                        } else {
+                                                            echo "<font color='green'>" . $nota_final . "</font>";
+                                                        }
+                                                    }
+                                                ?>-->
+
+                                                <?php
+                                                    echo"<input type='text' name='notafinal' value='$objTurma->nota_final'class='form-control'  id='inputName' maxlength='5' size='2'>";
+                                                    if($objTurma == null) {
+                                                        if($nota_final == null) {
+                                                            echo "Nenhuma nota cadastrada";
+                                                        } else if ($nota_final < 5) {
                                                             echo "<font color='red'>" . $nota_final . "</font>";
                                                         } else {
                                                             echo "<font color='green'>" . $nota_final . "</font>";
