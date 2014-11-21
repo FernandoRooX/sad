@@ -91,7 +91,7 @@ require_once '../classes/validaAcesso.php';
 		</div>
 	</div>
 
-	<?php include '../inc/rodape.php'; ?>
+	<?php include_once '../inc/rodape.php'; ?>
 
 	<script src="../js/jquery.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
