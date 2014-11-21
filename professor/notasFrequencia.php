@@ -70,8 +70,7 @@
                                     <tr>
                                         <th>Nome</th>
                                         <th>Disciplina</th>
-                                        <th>Nota</th>
-                                        <th>Frequência</th>
+                                        <th>Nota Final</th>
                                         <th>Ação</th>
                                     </tr>
                                 </thead>
@@ -80,7 +79,6 @@
                                         <td>Reuel Scarabele Cardoso</td>
                                         <td>Trabalho de Conclusão de Curso II</td>
                                         <td>6,0</td>
-                                        <td>%</td>
                                         <td><button type="button" class="btn btn-warning btn-xs">Alterar Nota</button> <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal-delete">Excluir Nota</button></td>
                                 <div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="modal-delete" aria-hidden="true">
                                     <div class="modal-dialog modal-sm">
