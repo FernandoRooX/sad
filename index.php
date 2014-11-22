@@ -63,7 +63,7 @@ endif;
         <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container container-fluid">
                 <div class="navbar-header">
-                    <img src="./img/Sad_logo.png" class="navbar-brand" alt="SAD" />
+                    <div class="navbar-brand" alt="SAD" />SAD</div>
                 </div>
             </div>
         </div>
@@ -110,12 +110,7 @@ endif;
             </div>
         </div>
     </div>
-
     <?php require_once './inc/rodape.php'; ?>
-	
-	<script src="../js/jquery.min.js"></script>
-	<script src="../js/bootstrap.min.js"></script>
-
 	<script>
 		$('#pesquisa').popover({
 			container: 'body',
