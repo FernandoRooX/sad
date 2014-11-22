@@ -2,7 +2,7 @@
 
 <html>
     <head>
-        <?php require_once '..../../../inc/head.php'; ?>
+        <?php require_once '../inc/head.php'; ?>
         <title>Sad - Sistema de Apoio ao Docente</title>
         
         <link rel="stylesheet" href="../css/bootstrap.css">
@@ -61,7 +61,7 @@ $select = @mysql_select_db($banco);
     
 ?>
 
-<?php require_once '..../../../inc/rodape.php';  ?>
+<?php require_once '../inc/rodape.php';  ?>
 
     </body>
 </html>

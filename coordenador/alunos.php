@@ -17,7 +17,7 @@
 <![endif]-->
     </head>
     <body>
-       <?php        require_once '../topo.php'; ?>
+       <?php require_once '../topo.php'; ?>
 
         <div class="wrapper" role="main">
             <div class="container-fluid container">

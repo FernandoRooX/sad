@@ -1,7 +1,7 @@
 <!Doctype>
 <html>
     <head>
-        <?php require_once '..../../../inc/head.php'; ?>
+        <?php require_once '../inc/head.php'; ?>
         <title>Sad - Sistema de Apoio a Dependencia</title>
         
         <link rel="stylesheet" href="../css/bootstrap.css">
