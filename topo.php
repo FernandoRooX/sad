@@ -20,8 +20,6 @@
                     echo"<li><a href='../coordenador/cursos.php'>Cursos</a></li>";
                     echo"<li><a href='../coordenador/disciplinas.php'>Disciplinas</a></li>";
                     echo"<li><a href='../coordenador/usuarios.php'>Usuários</a></li>";
-                    echo"<li><a href='../coordenador/cadastroSecretaria.php'>Secretaria</a></li>";
-                    echo"<li><a href='../coordenador/cadastroProfessor.php'>Professor</a></li>";
                     echo"<li><a href='../coordenador/cadastroDependencia.php'>Dependência</a></li>";
                 } else if ($_SESSION['perfilUsuario'] == "Professor") {
 
