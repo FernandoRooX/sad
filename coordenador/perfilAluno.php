@@ -93,8 +93,23 @@
                                     echo" <div class='form-group'>
                                     <label for='nome' class='col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label'>Nome:</label>
                                     $objDisc->nome
-                                    <button type='button' class='btn btn-danger btn-xs'>Excluir</button>
-
+                                    <button type='button' class='btn btn-danger btn-xs' data-toggle='modal' data-target='#modal-delete'>Excluir</button>
+                                    <div class='modal fade' id='modal-delete' tabindex='-1' role='dialog' aria-labelledby='modal-delete' aria-hidden='true'>
+                                        <div class='modal-dialog modal-sm'>
+                                            <div class='modal-content'>
+                                                <div class='modal-header'>
+                                                    <button type='button' class='close' data-dismiss='modal'<span aria-hidden='true'>&times;</span><span class='sr-only'>Sair</span></button>
+                                                </div>
+                                                <div class='modal-body'>
+                                                    <p>Tem certeza que deseja remover o aluno da dependência?</p>
+                                                </div>
+                                                <div class='modal-footer'>
+                                                    <button type='button' class='btn btn-default' data-dismiss='modal'>Não</button>
+                                                    <button type='button' class='btn btn-danger'>Sim</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>";
                                 }
                             }
