@@ -17,7 +17,7 @@
         <![endif]-->
     </head>
     <body>
-<?php require_once '../topo.php'; ?>
+        <?php require_once '../topo.php'; ?>
 
         <div class="wrapper" role="main">
             <div class="container-fluid container">
@@ -58,16 +58,21 @@
                                     ?>
 
                                     <tr>
-                                        <td><?php echo("<a href='perfilTurma.php?idTurma=" . $obj->turma_cod . "' > " . $obj->periodo . "/" . $obj->ano . " - " . $obj->turno . " - " . $obj->nome." - " . $obj->modalidade." </a>"); ?></td>
-                                        <td><?php $codigo = $obj->PROFESSOR_cod;
-                                       $rsCodPessoa = mysql_query("SELECT PESSOA_idPESSOA FROM professor WHERE cod=$codigo");
-                                       $objCodPessoa = mysql_fetch_object($rsCodPessoa);
-                                       $codPessoa = $objCodPessoa->PESSOA_idPESSOA;
-                                        $rsProf = mysql_query("select professor.*, pessoa.* FROM professor inner join pessoa on $codPessoa= pessoa.idPESSOA ORDER BY nome");
-                                                  $objProf = mysql_fetch_object($rsProf);
-                                                  echo $objProf->nome;
+                                        <td>
+                                            <?php echo("<a href='perfilTurma.php?idTurma=" . $obj->turma_cod . "' > " . $obj->periodo . "/" . $obj->ano . " - " . $obj->turno . " - " . $obj->nome." - " . $obj->modalidade." </a>"); ?>
+                                        </td>
+                                        <td>
+                                            <?php
+                                                $codigo = $obj->PROFESSOR_cod;
+                                                $rsCodPessoa = mysql_query("SELECT PESSOA_idPESSOA FROM professor WHERE cod=$codigo");
+                                                $objCodPessoa = mysql_fetch_object($rsCodPessoa);
+                                                $codPessoa = $objCodPessoa->PESSOA_idPESSOA;
+                                                $rsProf = mysql_query("select professor.*, pessoa.* FROM professor inner join pessoa on $codPessoa= pessoa.idPESSOA ORDER BY nome");
+                                                $objProf = mysql_fetch_object($rsProf);
+                                                echo $objProf->nome;
                                             ?>
                                         </td>
+
                                         <td><?php $mes = date('m');
                                                   $ano = date('Y');
                                                   if(($obj->periodo == 1)){
@@ -103,8 +108,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                </tr>
-                                                <?php }?>
+                                    </tr>
+                                    <?php } ?>
                                 </tbody>
                             </table>
                         </div>
