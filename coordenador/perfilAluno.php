@@ -92,6 +92,7 @@
                                     $objDisc = mysql_fetch_object($rsDisc);
                                     echo" <div class='form-group'>
                                     <label for='nome' class='col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label'>Nome:</label>
+                                    <button type='button' class='btn btn-danger btn-xs'></button>
                                     $objDisc->nome
 
                                 </div>";
