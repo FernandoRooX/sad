@@ -35,6 +35,7 @@ and open the template in the editor.
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <a href="../coordenador/cadastroUsuario.php"><button type="button" class="btn btn-success">Novo Usuário</button></a>
+                                <a href="../coordenador/cadastroSecretaria.php"><button type="button" class="btn btn-success">Nova Secretária</button></a>
                             </div>
                         </div>
                         <hr>
