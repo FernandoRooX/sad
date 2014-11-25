@@ -7,7 +7,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <img src="./img/favicon.png" alt="SAD" />
+            <div class="navbar-brand" alt="SAD">SAD</div>
         </div>
 
         <div class="collapse navbar-collapse" id="navbar-collapse">
@@ -20,15 +20,12 @@
                     echo"<li><a href='../coordenador/cursos.php'>Cursos</a></li>";
                     echo"<li><a href='../coordenador/disciplinas.php'>Disciplinas</a></li>";
                     echo"<li><a href='../coordenador/usuarios.php'>Usuários</a></li>";
-                    echo"<li><a href='../coordenador/cadastroSecretaria.php'>Secretaria</a></li>";
-                    echo"<li><a href='../coordenador/cadastroProfessor.php'>Professor</a></li>";
                     echo"<li><a href='../coordenador/cadastroDependencia.php'>Dependência</a></li>";
                 } else if ($_SESSION['perfilUsuario'] == "Professor") {
 
                     echo"<li><a href='../professor/index.php'>Home</a></li>";
                //     echo"<li><a href='../professor/alunos.php'>Alunos</a></li>";
                     echo"<li><a href='../professor/turmas.php'>Turmas</a></li>";
-                    echo"<li><a href='../professor/cadastroProfessor.php'>Professor</a></li>";
                     echo "<li><a href='../professor/listaRelatorio.php'>Relatório</a></li>";
                 } else if ($_SESSION['perfilUsuario'] == "Secretaria") {
 

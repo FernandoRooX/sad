@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <?php session_start(); 
+    <?php
+    session_start();
     $variavel = "coordenador";
     require_once '../classes/validaAcesso.php';
     ?>
@@ -17,7 +18,7 @@
 <![endif]-->
     </head>
     <body>
-       <?php require_once '../topo.php'; ?>
+        <?php require_once '../topo.php'; ?>
 
         <div class="wrapper" role="main">
             <div class="container-fluid container">
@@ -64,14 +65,18 @@
                                 </tr>
                                 </thead>
                                 <tbody class="h5">
-                                        <?php
-                                            $rs = mysql_query("select aluno.*, pessoa.* FROM aluno inner join pessoa on aluno.PESSOA_idPESSOA = pessoa.idPESSOA ORDER BY nome");
-                                            while ($obj = mysql_fetch_object($rs)) {
+                                    <?php
+                                    $rs = mysql_query("select aluno.*, pessoa.* FROM aluno inner join pessoa on aluno.PESSOA_idPESSOA = pessoa.idPESSOA ORDER BY nome");
+                                    
+                                    while ($obj = mysql_fetch_object($rs)) {
                                         ?>
-                                    <tr>
-                                        <td><?php echo("<a href='perfilAluno.php?idAluno=" . $obj->PESSOA_idPESSOA . "' > " . $obj->nome . " - " . $obj->matricula . " - " . $obj->cpf . " </a>");
-                                                ?></td>
-                                        <td><button type="button" class="btn btn-warning btn-xs">Editar</button> <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal-delete">Excluir</button></td>
+
+
+                                        <tr>
+                                            <td><?php echo("<a href='perfilAluno.php?idAluno=" . $obj->PESSOA_idPESSOA . "' > " . $obj->nome . " - " . $obj->matricula . " - " . $obj->cpf . " </a>");
+                                        ?></td>
+                                            <td><input type="button" value="Editar"class="btn btn-warning btn-xs" onclick="location.href = 'perfilAluno.php?idAluno=<?php echo $obj->PESSOA_idPESSOA ?>'" </a>
+                                              <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal-delete">Excluir</button></td>
                                         <div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="modal-delete" aria-hidden="true">
                                             <div class="modal-dialog modal-sm">
                                                 <div class="modal-content">
@@ -79,17 +84,17 @@
                                                         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Sair</span></button>
                                                     </div>
                                                     <div class="modal-body">
-                                                        <p>Tem certeza que deseja remover esse aluno?</p>
+                                                        <p>Tem certeza que deseja remover esse curso?</p>
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-default" data-dismiss="modal">Não</button>
-                                                        <button type="button" class="btn btn-danger">Sim</button>
+                                                        <button type="button" class="btn btn-danger" onclick="location.href = 'banksaluno.php?acao=excluir&idPessoa=<?php echo $obj->PESSOA_idPESSOA ?>'">Sim</button>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </tr>
-                                    <?php }?>
+                                <?php } ?>   
                                 </tbody>
                             </table>
                         </div>
@@ -98,5 +103,12 @@
             </div>
         </div>
         <?php require_once '../inc/rodape.php'; ?>
+        <script>
+            $(function() {
+                $('#table').searchable({
+                    searchField: '#container-search',
+                })
+            });
+        </script>
     </body>
 </html>

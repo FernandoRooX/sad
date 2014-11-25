@@ -63,7 +63,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="optionAluno" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Turma/Curso:</label>
+                                        <label for="optionAluno" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Turma:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
                                             <select name="codTurma" id="idPessoa" class="form-control" required>
                                                 <option value="">Selecione a Turma</option>

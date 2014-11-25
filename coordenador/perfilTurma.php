@@ -21,8 +21,8 @@
     <body>
         <?php require_once '../topo.php'; ?>
         <?php
-        $rs = mysql_query("select turma.*, curso.* FROM turma inner join curso on turma.CURSO_cod = curso.cod WHERE turma_cod='$idTurma'");
-        $obj = mysql_fetch_object($rs);
+            $rs = mysql_query("select turma.*, curso.* FROM turma inner join curso on turma.CURSO_cod = curso.cod WHERE turma_cod='$idTurma'");
+            $obj = mysql_fetch_object($rs);
         ?>
         <div class="wrapper" role="main">
             <div class="container-fluid container">
@@ -36,64 +36,55 @@
                             <table class="table table-striped bordered">
                                 <thead class="h4">
                                     <tr>
-                                        <th>Alunos <span class="glyphicon glyphicon-search"></span></th>
-                                        <th>Nota Final</th>
+                                        <th>Alunos</th>
+                                        <th>Nota</th>
+                                        <th>Frequência</th>
                                     </tr>
                                 </thead>
                                 <tbody class="h5">
-                                    <?php
-                                    $rsTurma = mysql_query("select * FROM dependencia WHERE TURMA_cod='$idTurma'");
-                                    while ($objTurma = mysql_fetch_object($rsTurma)or die(mysql_error())) {
-                                        ?>
                                     <form method="post" action="banksnota.php?acao=adicionar" class="form-horizontal" role="form" >
                                         <tr>
-
+                                            <td>Teste</td>
+                                            
+                                            <input type="hidden" name='idAluno' value='<?php echo $idAluno;?>'/>
+                                            <input type="hidden" name='idTurma' value='<?php echo $idTurma;?>'/>
+                                            
                                             <td>
-                                                <?php
-                                                    $idAluno = $objTurma->ALUNO_cod;
-                                                    $rsPessoa = mysql_query("select * FROM aluno WHERE cod='$idAluno'");
-                                                    $objPessoa = mysql_fetch_object($rsPessoa)or die(mysql_error());
-                                                    $idPessoa = $objPessoa->PESSOA_idPESSOA;
-                                                    $rsAluno = mysql_query("select aluno.*, pessoa.* FROM aluno inner join pessoa on '$idPessoa' = pessoa.idPESSOA ORDER BY nome");
-                                                    $objAluno = mysql_fetch_object($rsAluno)or die(mysql_error());
-                                                    echo $objAluno->nome;
-                                                ?>
-                                            </td>
-                                            <input type="hidden" name='idAluno' value='<?php echo $idAluno; ?>'/>
-                                            <input type="hidden" name='idTurma' value='<?php echo $idTurma; ?>'/>
-
-                                            <td>
-                                                <!--<?php
-                                                    echo"<input type='text' name='notafinal' value='$objTurma->nota_final'class='form-control'  id='inputName' maxlength='5' size='2'>";
-                                                    if ($nota_final == null) {
-                                                        echo "Nenhuma nota cadastrada.";
-                                                    } else if ($nota_final < 5) {
-                                                            echo "<font color='red'>" . $nota_final . "</font>";
-                                                        } else {
-                                                            echo "<font color='green'>" . $nota_final . "</font>";
-                                                        }
-                                                    }
-                                                ?>-->
-
-                                                <?php
-                                                    echo"<input type='text' name='notafinal' value='$objTurma->nota_final'class='form-control'  id='inputName' maxlength='5' size='2'>";
-                                                    if($objTurma == null) {
-                                                        if($nota_final == null) {
-                                                            echo "Nenhuma nota cadastrada";
-                                                        } else if ($nota_final < 5) {
-                                                            echo "<font color='red'>" . $nota_final . "</font>";
-                                                        } else {
-                                                            echo "<font color='green'>" . $nota_final . "</font>";
-                                                        }
-                                                    }
-                                                ?>
-                                                <input type='hidden' name='notafinal' value='<?php echo $nota_final; ?>'class='form-control'  id='inputName' maxlength='5' size='2'>
+                                                <div class="row">
+                                                    <div class="col-xs-6">
+                                                        <input type='text' name='nota-final' class="form-control" id='inputName' maxlenght='5' size='2'>
+                                                    </div>
+                                                </div>
                                             </td>
                                             
-                                            <td><button type="submit"  class="btn btn-success btn-xs">Salvar</button> </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <div class="controls">
+                                                        <label class="btn btn-primary">
+                                                            <input type="checkbox" id="freq1" value="option1"> Aula 1
+                                                        </label>
+
+                                                        <label class="btn btn-primary">
+                                                            <input type="checkbox" id="freq2" value="option2"> Aula 2
+                                                        </label>
+                                                        
+                                                        <label class="btn btn-primary">
+                                                            <input type="checkbox" id="freq3" value="option3"> Aula 3
+                                                        </label>
+                                                        
+                                                        <label class="btn btn-primary">
+                                                            <input type="checkbox" id="freq4" value="option4"> Aula 4
+                                                        </label>
+                                                        
+                                                        <label class="btn btn-primary">
+                                                            <input type="checkbox" id="freq5" value="option5"> Aula 5
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td><button type="submit"  class="btn btn-success btn-xs">Salvar</button></td>
                                         </tr>
                                     </form>
-                                <?php } ?>
                                 </tbody>
                             </table>
                         </div>
