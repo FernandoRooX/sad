@@ -49,6 +49,7 @@ class login extends conexao {
             unset($_SESSION['logado']);
             session_destroy();
             header("location:http://localhost/homologacao/index.php");
+            
         endif;
     }
 }

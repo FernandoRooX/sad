@@ -6,7 +6,7 @@
     require_once '../classes/validaAcesso.php';
     ?>
     <head> 
-<?php require_once '../inc/head.php'; ?>
+        <?php require_once '../inc/head.php'; ?>
         <title>Cadastro de Aluno</title>
 
         <link rel="stylesheet" href="../css/bootstrap.css">
@@ -18,7 +18,7 @@
         <![endif]-->
     </head>
     <body>
-<?php        require_once '../topo.php';?>
+        <?php require_once '../topo.php'; ?>
         <div class="wrapper" role="main">
             <div class="container container-fluid">
                 <div class="row">
@@ -39,13 +39,59 @@
                                     <div class="form-group has-error">
                                         <label for="inputCpf" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">CPF:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-<<<<<<< HEAD
-                                            <input type="text" class="form-control" name="cpf" id="inputCpf" placeholder="000.000.000-00" maxlength="14" onload="valida(this.form)" onkeypress="formatar('###.###.###-##', this);" required="" />
-=======
-                                            <input type="text" class="form-control" name="cpf" id="inputCpf" placeholder="000.000.000-00" maxlength="14" onkeypress="formatar('###.###.###-##', this);" required />
+                                            <input type="text" class="form-control" name="cpf" id="inputCpf" placeholder="000.000.000-00" maxlength="14" onkeypress="formatar('###.###.###-##', this);" required=""/>
                                             <br>
+                                            <?php
+                                            function verifyCPF($cpf) {
+                                                $cpf = "$cpf";
+                                                if (strpos($cpf, "-") !== false) {
+                                                    $cpf = str_replace("-", "", $cpf);
+                                                }
+                                                if (strpos($cpf, ".") !== false) {
+                                                    $cpf = str_replace(".", "", $cpf);
+                                                }
+                                                $sum = 0;
+                                                $cpf = str_split($cpf);
+                                                $cpftrueverifier = array();
+                                                $cpfnumbers = array_splice($cpf, 0, 9);
+                                                $cpfdefault = array(10, 9, 8, 7, 6, 5, 4, 3, 2);
+                                                for ($i = 0; $i <= 8; $i++) {
+                                                    $sum += $cpfnumbers[$i] * $cpfdefault[$i];
+                                                }
+                                                $sumresult = $sum % 11;
+                                                if ($sumresult < 2) {
+                                                    $cpftrueverifier[0] = 0;
+                                                } else {
+                                                    $cpftrueverifier[0] = 11 - $sumresult;
+                                                }
+                                                $sum = 0;
+                                                $cpfdefault = array(11, 10, 9, 8, 7, 6, 5, 4, 3, 2);
+                                                $cpfnumbers[9] = $cpftrueverifier[0];
+                                                for ($i = 0; $i <= 9; $i++) {
+                                                    $sum += $cpfnumbers[$i] * $cpfdefault[$i];
+                                                }
+                                                $sumresult = $sum % 11;
+                                                if ($sumresult < 2) {
+                                                    $cpftrueverifier[1] = 0;
+                                                } else {
+                                                    $cpftrueverifier[1] = 11 - $sumresult;
+                                                }
+                                                $returner = false;
+                                                if ($cpf == $cpftrueverifier) {
+                                                    $returner = true;
+                                                }
+
+
+                                                $cpfver = array_merge($cpfnumbers, $cpf);
+
+                                                if (count(array_unique($cpfver)) == 1 || $cpfver == array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0)) {
+
+                                                    $returner = false;
+                                                }
+                                                return $returner;
+                                            }
+                                            ?>
                                             <div class="alert alert-warning" role="alert">CPF inválido!</div>
->>>>>>> eee3e07ae9bb400b887a85f73c5616b96c24db1a
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -54,8 +100,6 @@
                                             <input type="text" class="form-control" name="matricula" placeholder="Matricula" id="inputMat" maxlength="11" required>
                                         </div>
                                     </div>
-<<<<<<< HEAD
-=======
 
                                     <!--								<div class="form-group">
                                                                                                             <label for="curso" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Curso:</label>
@@ -142,7 +186,6 @@
                                             </div>
                                     </div>-->
 
->>>>>>> eee3e07ae9bb400b887a85f73c5616b96c24db1a
                                     <div class="form-group">
                                         <label for="inputNasc" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Nascimento:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
@@ -169,13 +212,6 @@
             </div>
         </div>
         <br /> <br />
-<?php include '../inc/rodape.php'; ?>
+<?php require_once '../inc/rodape.php'; ?>
     </body>
-    <script>
-        var email = document.forms['radioSexo'].CAMPO_EMAIL,value;
-        if(email.lenght <5 || email.lenght > 128 || email.indexOf('@') == -1 || email.indexOf('.') == -1 )
-            {
-                alert("O campo E-mail deve ser preenchido corretamente.");
-            }
-    </script>
 </html>

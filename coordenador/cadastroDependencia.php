@@ -26,9 +26,6 @@
                         </div>
 
                         <form method="post" action="banksdependencia.php?acao=adicionar" class="form-horizontal" role="form">
-                            
-                            
-	
                             <div class="row">
                                 <div class="col-md-8">
                                     
@@ -66,7 +63,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="optionAluno" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Turma/Curso:</label>
+                                        <label for="optionAluno" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Turma:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
                                             <select name="codTurma" id="idPessoa" class="form-control" required>
                                                 <option value="">Selecione a Turma</option>
@@ -93,9 +90,6 @@
                                         </div>
                                     </div>
                                     
-<<<<<<< HEAD
-                                    
-=======
                                     <!--
                                     <div class="form-group">
                                         <label for="inputPeriodo" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Período Letivo:</label>
@@ -135,7 +129,6 @@
                                             </select>
                                         </div>
                                     </div>-->
->>>>>>> eee3e07ae9bb400b887a85f73c5616b96c24db1a
 
 
                                     <div class="pull-right">
@@ -145,27 +138,6 @@
                                 </div>
                             </div>
                         </form>
-                        <h2>Dados Inseridos</h2>
-	<div style="margin-bottom:20px">
-		<a href="#" onclick="getSelected()">GetSelected</a>
-		<a href="#" onclick="getSelections()">GetSelections</a>
-	</div>
-	<table id="tt" class="easyui-datagrid" style="width:600px;height:250px"
-			url="data/datagrid_data.json"
-			title="Load Data" iconCls="icon-save" fitColumns="true">
-		<thead>
-			<tr>
-				<th field="itemid" width="80">Item ID</th>
-				<th field="productid" width="80">Product ID</th>
-				<th field="listprice" width="80" align="right">List Price</th>
-				<th field="unitcost" width="80" align="right">Unit Cost</th>
-				<th field="attr1" width="150">Attribute</th>
-				<th field="status" width="60" align="center">Stauts</th>
-			</tr>
-		</thead>
-	</table>
-
-                        
                     </div>
                 </div>
             </div>

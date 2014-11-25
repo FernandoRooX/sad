@@ -12,29 +12,40 @@ $banco = 'sad9';
 $lig = mysql_connect($servidor, $usuario, $senha) or die('Não possível fazer a conexão: ' . mysql_error());
 
 #Seleciona o banco de dados que deseja utilizar
-$select = @mysql_select_db($banco);
+$select = mysql_select_db($banco);
 
 
-$logado = $_SESSION['logado'];
-$perfil = $_SESSION['perfilUsuario'];
+$logado = @$_SESSION['logado'];
+$perfil = @$_SESSION['perfilUsuario'];
 
-$idPessoa = $_SESSION['idPESSOA'];
+$idPessoa = @$_SESSION['idPESSOA'];
 
-$query = mysql_query("SELECT nome FROM pessoa WHERE idPESSOA = '$idPessoa'") or die(mysql_error());
-$nome = mysql_result($query, 0) or die(mysql_error());
+$query = @mysql_query("SELECT nome FROM pessoa WHERE idPESSOA = '$idPessoa'") or die(mysql_error());
+$nome = @mysql_result($query, 0) or die(mysql_error());
+
+
+#var_dump($_SESSION);
+if (isset($_SESSION['logado'])):
+    
+else: 
+    echo '<h1>Você não tem permissão de acesso ao sistema SAD!</h1><hr><br /> <br />
+                    <a href="javascript:history.back(1)">Voltar</a>';
+#exit;
+endif;
 
 $_SESSION['perfil'] = $nome;
+
 
 if ($logado != true) {
     echo"<script>alert('Você não está logado.')</script>";
     echo"<script>location.href='../index.php'</script>";
 }
 
-if (@$perfil == 'Professor' && ($variavel == "secretaria" || $variavel == "coordenador")) {
+if ($perfil == 'Professor' && ($variavel == "secretaria" || $variavel == "coordenador")) {
     echo"<script>alert('Você não tem permissão para acessar este conteúdo. Acesso negado.')</script>";
     echo"<script>location.href='../professor/index.php'</script>";
 }
-if (@$perfil == 'Coordenador' && (@$variavel == "secretaria" || @$variavel == "professor")) {
+if ($perfil == 'Coordenador' && ($variavel == "secretaria" || $variavel == "professor")) {
     echo"<script>alert('Você não tem permissão para acessar este conteúdo. Acesso negado.')</script>";
     echo"<script>location.href='../coordenador/index.php'</script>";
 }

@@ -32,6 +32,8 @@ endif;
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Sistema de Apoio a Dependência">
+
+    <title>SAD</title>
     <script type="text/javascript">
         //adiciona mascara a telefone 
         function formatar(mascara, documento) {
@@ -61,7 +63,7 @@ endif;
         <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container container-fluid">
                 <div class="navbar-header">
-                    <img src="./img/Sad_logo.png" class="navbar-brand" alt="SAD" />
+                    <div class="navbar-brand" alt="SAD" />SAD</div>
                 </div>
             </div>
         </div>
@@ -108,32 +110,7 @@ endif;
             </div>
         </div>
     </div>
-
-    <footer class="navbar navbar-inverse navbar-fixed-bottom">
-		<div class="copyright">
-			<div class="container container-fluid">
-			  <div class="row">
-				<div class="col-md-12">
-				  <p>&copy; Todos os direitos reservados</p>
-				</div>
-			  </div>
-			</div>
-		</div>
-	<footer class="navbar navbar-inverse navbar-fixed-bottom">
-		<div class="copyright">
-			<div class="container container-fluid">
-			  <div class="row">
-				<div class="col-md-12">
-				  <p>&copy; Todos os direitos reservados</p>
-				</div>
-			  </div>
-			</div>
-		</div>
-	</footer>
-	
-	<script src="../js/jquery.min.js"></script>
-	<script src="../js/bootstrap.min.js"></script>
-
+    <?php require_once './inc/rodape.php'; ?>
 	<script>
 		$('#pesquisa').popover({
 			container: 'body',

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <?php
+    <?php 
     $variavel = 'coordenador';
-    session_start();
+    session_start(); 
     require_once '../classes/validaAcesso.php';
     ?>
     <head>
@@ -19,7 +19,7 @@
         <![endif]-->
     </head>
     <body>
-        <?php require_once '../topo.php'; ?>
+        <?php        require_once '../topo.php';?>
         <div class="wrapper" role="main">
             <div class="container container-fluid">
                 <div class="row">
@@ -51,8 +51,7 @@
                                         <th>Tipo</th>
                                         <th>Carga Horária</th>
                                         <th></th>
-                                    <tr>
-
+                                    </tr>
                                 </thead>
                                 <tbody class="h5">
                                     <tr>

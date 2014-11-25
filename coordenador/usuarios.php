@@ -35,6 +35,8 @@ and open the template in the editor.
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <a href="../coordenador/cadastroUsuario.php"><button type="button" class="btn btn-success">Novo Usuário</button></a>
+                                <a href="../coordenador/cadastroSecretaria.php"><button type="button" class="btn btn-success">Nova Secretária</button></a>
+                                <a href="../coordenador/cadastroProfessor.php"><button type="button" class="btn btn-success">Novo Professor</button></a>
                             </div>
                         </div>
                         <hr>
@@ -70,7 +72,7 @@ and open the template in the editor.
                                             <td><?php echo $obj->telefone; ?></td>
                                             <td><?php echo $obj->perfil; ?></td>
 
-                                            <td> <a href="editarUsuario.php"/><button type="button" class="btn btn-warning btn-xs">Editar</button> <!--<a href="../"/><button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal-delete">Excluir</button>--></td>
+                                            <td><button type="button" class="btn btn-warning btn-xs">Editar</button> <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal-delete">Excluir</button></td>
                                     <div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="modal-delete" aria-hidden="true">
                                         <div class="modal-dialog modal-sm">
                                             <div class="modal-content">

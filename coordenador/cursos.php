@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <?php
-    session_start();
+    <?php session_start();
     $variavel = "Coordenador";
     require_once '../classes/validaAcesso.php';
     ?>
     <head>
-<?php include_once '../inc/head.php'; ?>
+        <?php include_once '../inc/head.php'; ?>
 
         <title>Cursos</title>
 
@@ -19,7 +18,7 @@
         <![endif]-->
     </head>
     <body>
-<?php require_once '../topo.php'; ?>
+        <?php        require_once '../topo.php';?>
         <div class="wrapper" role="main">
             <div class="container container-fluid">
                 <div class="row">
@@ -45,40 +44,37 @@
                             <table class="table bordered">
                                 <thead class="h4">
                                     <tr>
-                                        <th>Nome</th>
+                                        <th>Curso</th>
                                         <th>Orientador</th>
-                                        <th>Modalidade</th>
+                                        <th>Tipo</th>
+                                        <th>Carga Horária</th>
+                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody class="h5">
-                                    <?php
-                                    $rs = mysql_query("select * FROM curso ORDER BY nome");
-                                    while ($obj = mysql_fetch_object($rs)) {
-                                        ?>
-                                        <tr>
-
-                                            <td><?php echo $obj->nome; ?></td>
-                                            <td><?php echo $obj->orientador; ?></td>
-                                            <td><?php echo $obj->modalidade; ?></td>
-                                            <td><a href="../coordenador/editarCurso.php" type="button" class="btn btn-warning btn-xs">Editar</a> <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal-delete">Excluir</button></td>
-                                    <div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="modal-delete" aria-hidden="true">
-                                        <div class="modal-dialog modal-sm">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Sair</span></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <p>Tem certeza que deseja remover esse curso?</p>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Não</button>
-                                                    <button type="button" class="btn btn-danger">Sim</button>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><a href="../coordenador/editarCurso.php" type="button" class="btn btn-warning btn-xs">Editar</a> <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal-delete">Excluir</button></td>
+                                        <div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="modal-delete" aria-hidden="true">
+                                            <div class="modal-dialog modal-sm">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Sair</span></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>Tem certeza que deseja remover esse curso?</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Não</button>
+                                                        <button type="button" class="btn btn-danger">Sim</button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
                                     </tr>
-                                <?php } ?>
                                 </tbody>
                             </table>
                         </div>

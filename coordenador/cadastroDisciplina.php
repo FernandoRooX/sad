@@ -50,11 +50,7 @@
                                     <div class="form-group">
                                         <label for="numberCarga" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Carga Horária:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-<<<<<<< HEAD
-                                            <input type="number" name="ch" maxlength="3" class="form-control" id="inputCarga" required="">
-=======
                                             <input type="number" name="ch" class="form-control" maxlength="3" id="inputCarga" required>
->>>>>>> eee3e07ae9bb400b887a85f73c5616b96c24db1a
                                         </div>
                                     </div>
                                     

@@ -65,7 +65,6 @@
                                 </tr>
                                 </thead>
                                 <tbody class="h5">
-<<<<<<< HEAD
                                     <?php
                                     $rs = mysql_query("select aluno.*, pessoa.* FROM aluno inner join pessoa on aluno.PESSOA_idPESSOA = pessoa.idPESSOA ORDER BY nome");
                                     while ($obj = mysql_fetch_object($rs)){
@@ -75,7 +74,9 @@
                                                 <tr>
                                                     <td><?php echo("<a href='perfilAluno.php?idAluno=" . $obj->PESSOA_idPESSOA . "' > " . $obj->nome . " - " . $obj->matricula . " - " . $obj->cpf . " </a>");
                                     ?></td>
-                                                    <td><a href="editarAluno.php" /><button type="button" class="btn btn-warning btn-xs">Editar</button>  <a href="excluirAluno.php"/><button  type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal-delete">Excluir</button></td>
+                                                    <!--<td><a onclick="location.href='editarAluno.php?idAluno'" /><button type="button" value="Editar" class="btn btn-warning btn-xs">Editar</button> -->
+                                                      <td><input type="button" value="Editar"class="btn btn-warning btn-xs" onclick="location.href='editarAluno.php?idAluno'" </a>
+                                                      <a href="excluirAluno.php"/><button  type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal-delete">Excluir</button></td>
                                             <div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="modal-delete" aria-hidden="true">
                                                 <div class="modal-dialog modal-sm">
                                                     <div class="modal-content">
@@ -94,34 +95,6 @@
                                             </div>
                                             </tr>
                                     <?php }?>   
-=======
-                                        <?php
-                                            $rs = mysql_query("select aluno.*, pessoa.* FROM aluno inner join pessoa on aluno.PESSOA_idPESSOA = pessoa.idPESSOA ORDER BY nome");
-                                            while ($obj = mysql_fetch_object($rs)) {
-                                        ?>
-                                    <tr>
-                                        <td><?php echo("<a href='perfilAluno.php?idAluno=" . $obj->PESSOA_idPESSOA . "' > " . $obj->nome . " - " . $obj->matricula . " - " . $obj->cpf . " </a>");
-                                                ?></td>
-                                        <td><button type="button" class="btn btn-warning btn-xs">Editar</button> <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal-delete">Excluir</button></td>
-                                        <div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="modal-delete" aria-hidden="true">
-                                            <div class="modal-dialog modal-sm">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Sair</span></button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <p>Tem certeza que deseja remover esse aluno?</p>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Não</button>
-                                                        <button type="button" class="btn btn-danger">Sim</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </tr>
-                                    <?php }?>
->>>>>>> eee3e07ae9bb400b887a85f73c5616b96c24db1a
                                 </tbody>
                             </table>
                         </div>

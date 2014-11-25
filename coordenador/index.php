@@ -17,8 +17,7 @@
         <![endif]-->
     </head>
     <body>
-        <?php require_once '../topo.php'; ?>
-
+<?php        require_once '../topo.php'; ?>
         <div class="wrapper" role="main">
             <div class="container container-fluid">
                 <div class="row">
@@ -32,14 +31,10 @@
                                 <div class="well">
                                     <h1>Bem Vindo(a) Coordenador(a)</h1>
 
-                                    <br/><?php echo $_SESSION['login']; ?>
-                                    <br/><?php echo$_SESSION['perfilUsuario']; ?>
-                                    <br/><?php echo$_SESSION['idPESSOA']; ?>
-                                    <br/><?php echo$_SESSION['logado']; ?>
-                                    <br /> Fuso horario <?php
-                                    $data = date('d/m/Y - H:i:s a' );
-                                    echo $data . '<br>';
-                                    ?>
+                                    <br/><?php echo $_SESSION['login'];?>
+                                    <br/><?php echo$_SESSION['perfilUsuario'] ;?>
+                                    <br/><?php echo$_SESSION['idPESSOA']  ;?>
+                                    <br/><?php echo$_SESSION['logado'] ;?>
                                 </div>
                             </div>
                         </div>
@@ -48,7 +43,5 @@
             </div>
         </div>
         <?php include_once '../inc/rodape.php'; ?>
-        <script src="../js/jquery.min.js"></script>
-        <script src="../js/bootstrap.min.js"></script>
     </body>
 </html>

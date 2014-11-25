@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+<?php
+require_once '../classes/validaAcesso.php';
+?>
 <html lang="pt-BR">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<?php require_once "../inc/head.php"; ?>
 
 	<title>Editar Curso</title>
 
@@ -16,40 +17,8 @@
 	<![endif]-->
 </head>
 <body>
-	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-		<div class="container container-fluid">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-					<span class="sr-only">Toggle Navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a href="#" class="navbar-brand">{Logo}</a>
-			</div>
-
-			<div class="collapse navbar-collapse" id="navbar-collapse">
-				<ul class="nav navbar-nav">
-					<li><a href="../secretaria/index.php">Home</a></li>
-					<li><a href="../secretaria/alunos.php">Alunos</a></li>
-					<li><a href="../secretaria/turmas.php">Turmas</a></li>
-					<li><a href="../secretaria/disciplinas.php">Disciplinas</a></li>
-					<li><a href="../secretaria/cursos.php">Cursos</a></li>
-				</ul>
-
-				<ul class="nav navbar-nav navbar-right">
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Usuário <span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="#"><span class="glyphicon glyphicon-cog"></span> Alterar Senha</a></li>
-							<li class="divider"></li>
-							<li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Sair</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+	
+	<?php require_once "../topo.php"; ?>
 
 	<div class="wrapper" role="main">
 		<div class="container container-fluid">
@@ -62,19 +31,16 @@
 					<form method="post" action="" class="form-horizontal" role="form">
 						<div class="form-group">
 							<div class="col-md-12">
-								<div class="form-group row">
-									<label for="inputCod" class="col-md-1 control-label">Código Curso:</label>
-									<div class="col-md-2">
-										<input type="text" class="form-control" id="inputCod" disabled required>
-									</div>
-
-									<label for="inputNome" class="col-md-1 control-label">Nome:</label>
-									<div class="col-md-3">
+								<div class="form-group">
+									<label for="inputNome" class="col-xs-3 col-sm-2 col-md-1 control-label">Nome:</label>
+									<div class="col-xs-8 col-sm-5 col-md-3">
 										<input type="text" class="form-control" id="inputNome" required>
 									</div>
+								</div>
 
-									<label for="selectTipo" class="col-md-1 control-label">Tipo:</label>
-									<div class="col-md-2">
+								<div class="form-group">
+									<label for="selectTipo" class="col-xs-3 col-sm-2 col-md-1 control-label">Tipo:</label>
+									<div class="col-xs-8 col-sm-5 col-md-3">
 										<select name="selectTipo" id="selectTipo" class="form-control" required>
 											<option value=""></option>
 											<option value="">Presencial</option>
@@ -84,20 +50,22 @@
 									</div>
 								</div>
 
-								<div class="form-group row">
-									<label for="inputOrientador" class="col-md-1 control-label">Orientador:</label>
-									<div class="col-md-3">
+								<div class="form-group">
+									<label for="inputOrientador" class="col-xs-3 col-sm-2 col-md-1 control-label">Orientador:</label>
+									<div class="col-xs-8 col-sm-5 col-md-3">
 										<input type="text" class="form-control" id="inputOrientador" required>
 									</div>
+								</div>
 
-									<label for="numberCH" class="col-md-1 control-label">Carga Horária:</label>
-									<div class="col-md-2">
+								<div class="form-group">
+									<label for="numberCH" class="col-xs-3 col-sm-2 col-md-1 control-label">Carga Horária:</label>
+									<div class="col-xs-8 col-sm-5 col-md-3">
 										<input type="number" class="form-control" id="inputCarga" required>
 									</div>
 								</div>
 
-								<div class="col-md-offset-8">
-									<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editar-success">Alterar</button>
+								<div class="pull-right col-sm-8 col-md-10">
+									<button type="button" class="btn btn-success" data-toggle="modal" data-target="#editar-success">Alterar</button>
 										<div class="modal fade" id="editar-success" tabindex="-1" role="dialog" aria-labelledby="editar-success" aria-hidden="true">
 											<div class="modal-dialog modal">
 												<div class="modal-content">
@@ -113,7 +81,7 @@
 												</div>
 											</div>
 										</div>
-									<a href="javascript:window.history.go(-1)"><button type="button" class="btn btn-primary">Cancelar</button></a>
+									<a href="javascript:window.history.go(-1)"><button type="button" class="btn btn-warning">Cancelar</button></a>
 								</div>
 							</div>
 						</div>
@@ -123,17 +91,6 @@
 		</div>
 	</div>
 
-	<footer class="copyright">
-		<div class="container container-fluid">
-			<div class="row">
-				<div class="col-md-12">
-					<p>&copy; Todos os direitos reservados</p>
-				</div>
-			</div>
-		</div>
-	</footer>
-
-	<script src="../js/jquery.min.js"></script>
-	<script src="../js/bootstrap.min.js"></script>
+	<?php include_once '../inc/rodape.php'; ?>
 </body>
 </html>
