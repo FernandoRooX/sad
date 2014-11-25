@@ -2,7 +2,7 @@
 	<div class="container container-fluid">
 		<div class="row">
 			<div class="col-md-12">
-				<p>&copy; Todos os direitos reservados</p>
+				<p>Sistema de Apoio a Dependência</p>
 			</div>
 		</div>
 	</div>
