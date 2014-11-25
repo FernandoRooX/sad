@@ -6,7 +6,7 @@
     require_once '../classes/validaAcesso.php';
     ?>
     <head>
-<?php require_once '../inc/head.php'; ?>
+        <?php require_once '../inc/head.php'; ?>
         <title>Alunos</title>
 
         <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -18,7 +18,7 @@
 <![endif]-->
     </head>
     <body>
-<?php require_once '../topo.php'; ?>
+        <?php require_once '../topo.php'; ?>
 
         <div class="wrapper" role="main">
             <div class="container-fluid container">
@@ -67,34 +67,34 @@
                                 <tbody class="h5">
                                     <?php
                                     $rs = mysql_query("select aluno.*, pessoa.* FROM aluno inner join pessoa on aluno.PESSOA_idPESSOA = pessoa.idPESSOA ORDER BY nome");
-                                    while ($obj = mysql_fetch_object($rs)){
-                                                 ?>
+                                    
+                                    while ($obj = mysql_fetch_object($rs)) {
+                                        ?>
 
 
-                                                <tr>
-                                                    <td><?php echo("<a href='perfilAluno.php?idAluno=" . $obj->PESSOA_idPESSOA . "' > " . $obj->nome . " - " . $obj->matricula . " - " . $obj->cpf . " </a>");
-                                    ?></td>
-                                                    <!--<td><a onclick="location.href='editarAluno.php?idAluno'" /><button type="button" value="Editar" class="btn btn-warning btn-xs">Editar</button> -->
-                                                      <td><input type="button" value="Editar"class="btn btn-warning btn-xs" onclick="location.href='editarAluno.php?idAluno'" </a>
-                                                      <a href="excluirAluno.php"/><button  type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal-delete">Excluir</button></td>
-                                            <div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="modal-delete" aria-hidden="true">
-                                                <div class="modal-dialog modal-sm">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Sair</span></button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            <p>Tem certeza que deseja remover esse aluno?</p>
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Não</button>
-                                                            <button type="button" class="btn btn-danger">Sim</button>
-                                                        </div>
+                                        <tr>
+                                            <td><?php echo("<a href='perfilAluno.php?idAluno=" . $obj->PESSOA_idPESSOA . "' > " . $obj->nome . " - " . $obj->matricula . " - " . $obj->cpf . " </a>");
+                                        ?></td>
+                                            <td><input type="button" value="Editar"class="btn btn-warning btn-xs" onclick="location.href = 'perfilAluno.php?idAluno=<?php echo $obj->PESSOA_idPESSOA ?>'" </a>
+                                              <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal-delete">Excluir</button></td>
+                                        <div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="modal-delete" aria-hidden="true">
+                                            <div class="modal-dialog modal-sm">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Sair</span></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>Tem certeza que deseja remover esse curso?</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Não</button>
+                                                        <button type="button" class="btn btn-danger" onclick="location.href = 'banksaluno.php?acao=excluir&idPessoa=<?php echo $obj->PESSOA_idPESSOA ?>'">Sim</button>
                                                     </div>
                                                 </div>
                                             </div>
-                                            </tr>
-                                    <?php }?>   
+                                        </div>
+                                    </tr>
+                                <?php } ?>   
                                 </tbody>
                             </table>
                         </div>
@@ -103,5 +103,12 @@
             </div>
         </div>
         <?php require_once '../inc/rodape.php'; ?>
+        <script>
+            $(function() {
+                $('#table').searchable({
+                    searchField: '#container-search',
+                })
+            });
+        </script>
     </body>
 </html>
