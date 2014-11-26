@@ -36,7 +36,14 @@ and open the template in the editor.
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <a href="../coordenador/cadastroUsuario.php"><button type="button" class="btn btn-success">Novo Usuário</button></a>
                                 <a href="../coordenador/cadastroSecretaria.php"><button type="button" class="btn btn-success">Nova Secretária</button></a>
+<<<<<<< HEAD
                                 <a href="../coordenador/cadastroProfessor.php"><button type="button" class="btn btn-success">Novo Professor</button></a>
+=======
+<<<<<<< HEAD
+=======
+                                <a href="../coordenador/cadastroProfessor.php"><button type="button" class="btn btn-success">Novo Professor</button></a>
+>>>>>>> 0dce01eec12a57a621a2e33447f104227d4e16aa
+>>>>>>> 41c89ff57a1e255f6d5c8307caaf5d59d970ab8d
                             </div>
                         </div>
                         <hr>

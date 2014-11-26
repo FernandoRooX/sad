@@ -4,7 +4,7 @@
 
 $servidor = 'localhost';
 $usuario = 'root';
-$senha = '';
+$senha = '1010';
 $banco = 'sad9';
 
 #Executa a conexão com o mysql

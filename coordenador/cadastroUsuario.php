@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="pt-BR">
     <?php
@@ -92,6 +91,4 @@
 <?php include_once '../inc/rodape.php'; ?>
     </body>
 </html>
-
-
 ?>

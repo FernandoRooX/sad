@@ -36,14 +36,68 @@
                             <table class="table table-striped bordered">
                                 <thead class="h4">
                                     <tr>
+<<<<<<< HEAD
+                                        <th>Alunos <span class="glyphicon glyphicon-search"></span></th>
+                                        <th>Nota</th>
+                                        <!--<th>Nota 2</th>-->
+                                        <th>Nota Final</th>
+=======
                                         <th>Alunos</th>
                                         <th>Nota</th>
                                         <th>Frequência</th>
+>>>>>>> 41c89ff57a1e255f6d5c8307caaf5d59d970ab8d
                                     </tr>
                                 </thead>
                                 <tbody class="h5">
                                     <form method="post" action="banksnota.php?acao=adicionar" class="form-horizontal" role="form" >
                                         <tr>
+<<<<<<< HEAD
+
+                                            <td><?php
+                                                $idAluno = $objTurma->ALUNO_cod;
+                                                $rsPessoa = mysql_query("select * FROM aluno WHERE cod='$idAluno'");
+                                                $objPessoa = mysql_fetch_object($rsPessoa)or die(mysql_error());
+                                                $idPessoa = $objPessoa->PESSOA_idPESSOA;
+                                                $rsAluno = mysql_query("select aluno.*, pessoa.* FROM aluno inner join pessoa on '$idPessoa' = pessoa.idPESSOA ORDER BY nome");
+                                                $objAluno = mysql_fetch_object($rsAluno)or die(mysql_error());
+                                                echo $objAluno->nome;
+                                                ?></td>
+                                        <input type="hidden" name='idAluno' value='<?php echo $idAluno; ?>'/>
+                                        <input type="hidden" name='idTurma' value='<?php echo $idTurma; ?>'/>
+                                        <td><?php
+                                            echo"<input type='text' name='nota' value='$objTurma->Nota 'class='form-control'  id='inputName' maxlength='5'  size='2'>";
+                                                ?>
+
+                                        </td>
+                                        <td><?php
+                                        #echo"<input type='text' name='nota2' value='$objTurma->nota2' class='form-control'   id='inputName' maxlength='5'  size='2'>";
+                                                ?>
+                                        </td>
+                                        <td><?php
+                                        #if (($objTurma->Nota = null) && ($objTurma->nota1 == null)) {
+                                        if ($objTurma->Nota = null) {
+                                            echo "Nenhuma nota cadastrada.";
+                                        } 
+                                        #else if (($objTurma->nota != null) && ($objTurma->nota2 != null)) {
+                                            #$nota_final = (($objTurma->nota2) + ($objTurma->nota1)) / 2;
+                                            $nota_final = $objTurma->Nota;
+                                            if ($nota_final < 6) {
+                                                echo "<font color='red'>" . $nota_final . "</font>";
+                                            } else {
+                                                echo "<font color='green'>" . $nota_final . "</font>";
+                                            }
+                                    }
+                                        //  echo"<input type='text' name='notafinal' value='$objTurma->nota_final'class='form-control'  id='inputName' maxlength='5' size='2'>";
+                                                ?>
+                                            <input type='hidden' name='notafinal' value='<?php echo $nota_final; ?>'class='form-control'  id='inputName' maxlength='5' size='2'>
+
+                                        </td>
+                                        <td><button type="submit"  class="btn btn-warning btn-xs">Salvar</button> </td>
+
+                                        </tr>
+                                    </form>
+                                 } ?>
+=======
                                             <td>Teste</td>
                                             
                                             <input type="hidden" name='idAluno' value='<?php echo $idAluno;?>'/>
@@ -85,8 +139,18 @@
                                             <td><button type="submit"  class="btn btn-success btn-xs">Salvar</button> </td>
                                         </tr>
                                     </form>
+>>>>>>> 41c89ff57a1e255f6d5c8307caaf5d59d970ab8d
                                 </tbody>
                             </table>
+                        </div>
+
+                        <div class="text-center">
+                            <ul class="pagination pagination-large">
+                                <li class="disabled"><a href="#">&laquo;</a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">&raquo;</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>

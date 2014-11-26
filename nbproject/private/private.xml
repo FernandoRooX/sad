@@ -1,4 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+<<<<<<< HEAD
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
+        <file>file:/C:/xampp/htdocs/homologacao/coordenador/editarAluno.php</file>
+        <file>file:/C:/xampp/htdocs/homologacao/coordenador/cadastroAluno.php</file>
+        <file>file:/C:/xampp/htdocs/homologacao/coordenador/perfilAluno.php</file>
+        <file>file:/C:/xampp/htdocs/homologacao/coordenador/usuarios.php</file>
+        <file>file:/C:/xampp/htdocs/homologacao/coordenador/editarUsuario.php</file>
+        <file>file:/C:/xampp/htdocs/homologacao/coordenador/editarCurso.php</file>
+        <file>file:/C:/xampp/htdocs/homologacao/coordenador/excluirDisciplina.php</file>
+        <file>file:/C:/xampp/htdocs/homologacao/coordenador/testes.php</file>
+        <file>file:/C:/xampp/htdocs/homologacao/coordenador/editarDisciplina.php</file>
+        <file>file:/C:/xampp/htdocs/homologacao/index.php</file>
+        <file>file:/C:/xampp/htdocs/homologacao/coordenador/alunos.php</file>
+        <file>file:/C:/xampp/htdocs/homologacao/coordenador/disciplinas.php</file>
+        <file>file:/C:/xampp/htdocs/homologacao/coordenador/cursos.php</file>
+        <file>file:/C:/xampp/htdocs/homologacao/secretaria/Curso.php</file>
+        <file>file:/C:/xampp/htdocs/homologacao/classes/login.php</file>
+        <file>file:/C:/xampp/htdocs/homologacao/coordenador/turmas.php</file>
+=======
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/xampp/htdocs/sad/coordenador/perfilAluno.php</file>
+            <file>file:/C:/xampp/htdocs/sad/coordenador/turmas.php</file>
+            <file>file:/C:/xampp/htdocs/sad/coordenador/banksturma.php</file>
+            <file>file:/C:/xampp/htdocs/sad/coordenador/alunos.php</file>
+            <file>file:/C:/xampp/htdocs/sad/coordenador/cadastroTurma.php</file>
+            <file>file:/C:/xampp/htdocs/sad/coordenador/editarTurma.php</file>
+        </group>
+>>>>>>> 41c89ff57a1e255f6d5c8307caaf5d59d970ab8d
+    </open-files>
 </project-private>

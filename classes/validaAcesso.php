@@ -5,7 +5,7 @@
 
 $servidor = 'localhost';
 $usuario = 'root';
-$senha = '';
+$senha = '1010';
 $banco = 'sad9';
 
 #Executa a conexão com o mysql
@@ -15,15 +15,26 @@ $lig = mysql_connect($servidor, $usuario, $senha) or die('Não possível fazer a
 $select = mysql_select_db($banco);
 
 
-$logado = $_SESSION['logado'];
-$perfil = $_SESSION['perfilUsuario'];
+$logado = @$_SESSION['logado'];
+$perfil = @$_SESSION['perfilUsuario'];
 
-$idPessoa = $_SESSION['idPESSOA'];
+$idPessoa = @$_SESSION['idPESSOA'];
 
-$query = mysql_query("SELECT nome FROM pessoa WHERE idPESSOA = '$idPessoa'") or die(mysql_error());
-$nome = mysql_result($query, 0) or die(mysql_error());
+$query = @mysql_query("SELECT nome FROM pessoa WHERE idPESSOA = '$idPessoa'") or die(mysql_error());
+$nome = @mysql_result($query, 0) or die(mysql_error());
+
+
+#var_dump($_SESSION);
+if (isset($_SESSION['logado'])):
+    
+else: 
+    echo '<h1>Você não tem permissão de acesso ao sistema SAD!</h1><hr><br /> <br />
+                    <a href="javascript:history.back(1)">Voltar</a>';
+#exit;
+endif;
 
 $_SESSION['perfil'] = $nome;
+
 
 if ($logado != true) {
     echo"<script>alert('Você não está logado.')</script>";
