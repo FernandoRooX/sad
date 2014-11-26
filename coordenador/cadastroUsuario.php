@@ -27,8 +27,8 @@
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="form-group">
-                                        <label for="optionEstado" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Pessoa</label>
-                                        <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
+                                        <label for="optionEstado" class="col-xs-3 col-sm-2 col-md-2 control-label">Pessoa</label>
+                                        <div class="col-xs-8 col-sm-5 col-md-6">
                                             <select name="selectPessoa" id="idPessoa" class="form-control" required>
                                                 <option value="">Selecione</option>
                                               <?php 
@@ -47,21 +47,21 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="inputLogin" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Login</label>
-                                        <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
+                                        <label for="inputLogin" class="col-xs-3 col-sm-2 col-md-2 control-label">Login</label>
+                                        <div class="col-xs-8 col-sm-5 col-md-6">
                                             <input type="text" class="form-control" name="login" placeholder="Digite o login a ser utilizado" maxlength="50"  id="inputLogin" required>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="inputsenha" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Senha</label>
-                                        <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
+                                        <label for="inputsenha" class="col-xs-3 col-sm-2 col-md-2 control-label">Senha</label>
+                                        <div class="col-xs-8 col-sm-5 col-md-6">
                                             <input type="password" class="form-control" name="senha" maxlength="8" required />
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="radioPerfil" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Perfil</label>
-                                        <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
+                                        <label for="radioPerfil" class="col-xs-3 col-sm-2 col-md-2 control-label">Perfil</label>
+                                        <div class="col-xs-8 col-sm-5 col-md-6">
                                             <label class="btn btn-primary">
                                                 <input type="radio" name="optionPerfil" id="optionProfessor" required value="Professor"> Professor
                                             </label>
@@ -77,8 +77,9 @@
                                         </div>
                                     </div>
                                     
-                                    <div class="pull-right">
+                                    <div class="col-md-offset-5">
                                         <button type="submit" class="btn btn-success">Cadastrar</button>
+                                        <a href="javascript:window.history.go(-1)"><button type="button" class="btn btn-warning">Cancelar</button></a>
                                     </div>
                                 </div>
                             </div>

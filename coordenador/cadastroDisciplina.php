@@ -27,18 +27,16 @@
                         <form method="post" action="banksdisciplina.php?acao=adicionar" class="form-horizontal" role="form">
                             <div class="row">
                                 <div class="col-md-8">
-                                    
-
                                     <div class="form-group">
-                                        <label for="inputDisciplina" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Disciplina:</label>
-                                        <div class="col-xs-6  col-sm-10 col-md-11 col-lg-10">
+                                        <label for="inputDisciplina" class="col-xs-3 col-sm-2 col-md-2 control-label">Disciplina:</label>
+                                        <div class="col-xs-8 col-sm-5 col-md-5">
                                             <input type="text" name="disciplina" class="form-control" id="inputDisciplina" maxlength="30" required>
                                         </div>
                                     </div>
                                     
                                     <div class="form-group">
-                                        <label for="inputSituacao" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Situação:</label>
-                                        <div class="col-xs-6  col-sm-10 col-md-11 col-lg-10">
+                                        <label for="inputSituacao" class="col-xs-3 col-sm-2 col-md-2 control-label">Situação:</label>
+                                        <div class="col-xs-8 col-sm-5 col-md-5">
                                              <select name="situacao" id="idPessoa" class="form-control" required>
                                                 <option value="Ativa">Ativa</option>
                                                 <option value="Inativa">Inativa</option>
@@ -48,8 +46,8 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="numberCarga" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Carga Horária:</label>
-                                        <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
+                                        <label for="numberCarga" class="col-xs-3 col-sm-2 col-md-2 control-label">Carga Horária:</label>
+                                        <div class="col-xs-8 col-sm-5 col-md-5">
                                             <input type="number" name="ch" class="form-control" maxlength="3" id="inputCarga" required>
                                         </div>
                                     </div>
@@ -95,7 +93,7 @@
                                     </div>-->
 
 
-                                    <div class="pull-right">
+                                    <div class="col-md-offset-4">
                                         <button type="submit" class="btn btn-success">Cadastrar</button>
                                         <a href="javascript:window.history.go(-1)"><button type="button" class="btn btn-warning">Cancelar</button></a>
                                     </div>

@@ -30,8 +30,8 @@
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="form-group">
-                                        <label for="selectTurno" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Turno:</label>
-                                        <div class="col-xs-6-col-sm-10 col-md-11 col-lg-10">
+                                        <label for="selectTurno" class="col-xs-3 col-sm-2 col-md-2 control-label">Turno:</label>
+                                        <div class="col-xs-8 col-sm-5 col-md-5">
                                             <select name="turno" id="selectDependencia" class="form-control" required>
                                                 <option>Turno</option>
                                                 <option value="Matutino">Matutino</option>
@@ -41,8 +41,8 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="inputProtocolo" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Protocolo:</label>
-                                        <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
+                                        <label for="inputProtocolo" class="col-xs-3 col-sm-2 col-md-2 control-label">Protocolo:</label>
+                                        <div class="col-xs-8 col-sm-5 col-md-5">
                                             <input type="text" name="protocolo" class="form-control"  id="inputName" placeholder="Protocolo" maxlength="50" required>
                                         </div>
                                     </div>
@@ -76,8 +76,8 @@
 
 
                                     <div class="form-group">
-                                        <label for="selectAno" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Ano:</label>
-                                        <div class="col-xs-6-col-sm-10 col-md-11 col-lg-10">
+                                        <label for="selectAno" class="col-xs-3 col-sm-2 col-md-2 control-label">Ano:</label>
+                                        <div class="col-xs-8 col-sm-5 col-md-5">
                                             <select name="ano" id="selectDependencia" class="form-control" required>
                                                 <option>Ano</option>
                                                 <option value="2015">2015</option>
@@ -88,8 +88,8 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="selectPeriodo" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Semestre:</label>
-                                        <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
+                                        <label for="selectPeriodo" class="col-xs-3 col-sm-2 col-md-2 control-label">Semestre:</label>
+                                        <div class="col-xs-8 col-sm-5 col-md-5">
                                             <select name="periodo" id="selectHabilitado" class="form-control">
                                                 <option>Semestre/Período</option>
                                                 <option value="1">1º</option>
@@ -98,8 +98,8 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="optionCurso" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Curso:</label>
-                                        <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
+                                        <label for="optionCurso" class="col-xs-3 col-sm-2 col-md-2 control-label">Curso:</label>
+                                        <div class="col-xs-8 col-sm-5 col-md-5">
                                             <select name="curso" id="idPessoa" class="form-control" required>
                                                 <option value="">Selecione o Curso</option>
                                                 <?php
@@ -113,8 +113,8 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="optionProfessor" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Professor:</label>
-                                        <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
+                                        <label for="optionProfessor" class="col-xs-3 col-sm-2 col-md-2 control-label">Professor:</label>
+                                        <div class="col-xs-8 col-sm-5 col-md-5">
                                             <select name="codProfessor" id="idPessoa" class="form-control" required>
                                                 <option value="">Selecione o Professor</option>
                                                 <?php
@@ -128,7 +128,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="pull-right">
+                                    <div class="col-md-offset-4">
                                         <button type="submit" class="btn btn-success">Cadastrar</button>
                                         <a href="javascript:window.history.go(-1)"><button type="button" class="btn btn-warning">Cancelar</button></a>
                                     </div>

@@ -31,8 +31,8 @@
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="form-group">
-                                        <label for="inputNome" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Nome:</label>
-                                        <div class="col-xs-6 col-sm-5 col-md-7 col-lg-5">
+                                        <label for="inputNome" class="col-xs-3 col-sm-2 col-md-2 control-label">Nome:</label>
+                                        <div class="col-xs-8 col-sm-5 col-md-5">
                                             <input type="text" class="form-control" name="nome" id="inputNome" required>
                                         </div>
                                     </div>
@@ -63,7 +63,7 @@
                                         </div>
                                     </div>-->
 
-                                    <div class="pull-right">
+                                    <div class="col-md-offset-4">
                                         <button type="submit" class="btn btn-success">Cadastrar</button>
                                         <a href="javascript:window.history.go(-1)"><button type="submit" class="btn btn-warning">Cancelar</button></a>
                                     </div>

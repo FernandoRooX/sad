@@ -32,15 +32,15 @@ require_once '../classes/validaAcesso.php';
 						<div class="form-group">
 							<div class="col-md-12">
 								<div class="form-group">
-									<label for="inputName" class="col-xs-3 col-sm-2 col-md-1 control-label">Nome:</label>
-									<div class="col-xs-8 col-sm-5 col-md-3">
+									<label for="inputName" class="col-xs-3 col-sm-2 col-md-2 control-label">Nome:</label>
+									<div class="col-xs-8 col-sm-5 col-md-5">
 										<input type="text" class="form-control" id="inputName" required>
 									</div>
 								</div>
 
 								<div class="form-group">
-									<label for="selectPerfil" class="col-xs-3 col-sm-2 col-md-1 control-label">Perfil:</label>
-									<div class="col-xs-8 col-sm-5 col-md-3">
+									<label for="selectPerfil" class="col-xs-3 col-sm-2 col-md-2 control-label">Perfil:</label>
+									<div class="col-xs-8 col-sm-5 col-md-5">
 										<select name="perfil" class="form-control">
 											<option value=""></option>
 											<option value="coordenador">Coordenador</option>
@@ -51,50 +51,50 @@ require_once '../classes/validaAcesso.php';
 								</div>
 
 								<div class="form-group">
-									<label for="inputCPF" class="col-xs-3 col-sm-2 col-md-1 control-label">CPF:</label>
-									<div class="col-xs-8 col-sm-5 col-md-3">
+									<label for="inputCPF" class="col-xs-3 col-sm-2 col-md-2 control-label">CPF:</label>
+									<div class="col-xs-8 col-sm-5 col-md-5">
 										<input type="text" class="form-control" required>
 									</div>
 								</div>
 
 								<div class="form-group">
-									<label for="inputNasc" class="col-xs-3 col-sm-2 col-md-1 control-label">Nascimento:</label>
-									<div class="col-xs-8 col-sm-5 col-md-3">
+									<label for="inputNasc" class="col-xs-3 col-sm-2 col-md-2 control-label">Nascimento:</label>
+									<div class="col-xs-8 col-sm-5 col-md-5">
 										<input type="text" class="form-control" id="inputNasc" required>
 									</div>
 								</div>
 
 								<div class="form-group">
-									<label for="inputPhone" class="col-xs-3 col-sm-2 col-md-1 control-label">Telefone:</label>
-									<div class="col-xs-8 col-sm-5 col-md-3">
+									<label for="inputPhone" class="col-xs-3 col-sm-2 col-md-2 control-label">Telefone:</label>
+									<div class="col-xs-8 col-sm-5 col-md-5">
 										<input type="phone" class="form-control" id="inputPhone" required>
 									</div>
 								</div>
 
 								<div class="form-group">
-									<label for="inputEndereco" class="col-xs-3 col-sm-2 col-md-1 control-label">Endereço:</label>
-									<div class="col-xs-8 col-sm-5 col-md-3">
+									<label for="inputEndereco" class="col-xs-3 col-sm-2 col-md-2 control-label">Endereço:</label>
+									<div class="col-xs-8 col-sm-5 col-md-5">
 										<input type="text" class="form-control" id="inputEndereco" required>
 									</div>
 								</div>
 
 								<div class="form-group">
-									<label for="inputComplemento" class="col-xs-3 col-sm-2 col-md-1 control-label">Complemento:</label>
-									<div class="col-xs-8 col-sm-5 col-md-3">
+									<label for="inputComplemento" class="col-xs-3 col-sm-2 col-md-2 control-label">Complemento:</label>
+									<div class="col-xs-8 col-sm-5 col-md-5">
 										<input type="text" class="form-control" id="inputComplemento" required>
 									</div>
 								</div>
 
 								<div class="form-group">
-									<label for="inputCidade" class="col-xs-3 col-sm-2 col-md-1 control-label">Cidade:</label>
-									<div class="col-xs-8 col-sm-5 col-md-3">
+									<label for="inputCidade" class="col-xs-3 col-sm-2 col-md-2 control-label">Cidade:</label>
+									<div class="col-xs-8 col-sm-5 col-md-5">
 										<input type="text" class="form-control" id="inputCidade" required>
 									</div>
 								</div>
 
 								<div class="form-group">
-									<label for="optionEstado" class="col-xs-3 col-sm-2 col-md-1 control-label">Estado:</label>
-									<div class="col-xs-8 col-sm-5 col-md-3">
+									<label for="optionEstado" class="col-xs-3 col-sm-2 col-md-2 control-label">Estado:</label>
+									<div class="col-xs-8 col-sm-5 col-md-5">
 										<select name="selectEstado" id="selectEstado" class="form-control" required>
 											<option></option>
 											<option>AM</option>
@@ -112,7 +112,7 @@ require_once '../classes/validaAcesso.php';
 							</div>
 						</div>
 
-						<div class="pull-right col-sm-8 col-md-10">
+						<div class="col-md-offset-4">
 							<button type="submit" class="btn btn-success" data-toggle="modal" data-target="#editar-success">Alterar</button>
 							<div class="modal fade" id="editar-success" tabindex="-1" role="dialog" aria-labelledby="editar-success" aria-hidden="true">
 								<div class="modal-dialog modal">
