@@ -1,8 +1,13 @@
 <?php
-/* Cleynaldo Carvalho 
- * Sistema de Apoio a Dependencia
- * 
+/**
+ * Classe para interação com a interface do usuário envolvento javascript
+ * @author Emanuel Sampaio
+ * @since 10/03/2009
+ * @version 1.0
+ * @copyright © 2009 Emanuel Sampaio - Todos os direitos reservados.
+ * @package class
  */
+
 class JS
 {
 	/**
@@ -29,6 +34,20 @@ class JS
 	public static function exibeMSG($msg)
 	{
 		echo "<script type=\"text/javascript\">alert(\"" . $msg . "\")</script><noscript>" . $msg . "<br /></noscript>";
+	}
+	
+	
+	
+	/**
+	 * Volta para a página anterior
+	 *
+	 * @access public
+	 * @return string
+	 * @param string
+	 */
+	public static function voltar()
+	{
+		echo "<script type=\"text/javascript\">history.go(-1);</script>";
 	}
 } // fecha class
 ?>
