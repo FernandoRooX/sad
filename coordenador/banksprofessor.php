@@ -1,14 +1,31 @@
 <?php
 require_once '../conecta.php';
+require_once '../classes/Seguranca.class.php';
+require_once '../classes/Validacao.class.php';
+require_once '../classes/JS.class.php';
 
 if ($_REQUEST["acao"] == "adicionar") {
     
  $nome = $_REQUEST['nome'] ;
- $cpf  = $_REQUEST['cpf'];
+ $cpf  = str_replace(".", "", $_REQUEST['cpf']);
+ $cpf  = str_replace("-", "", $cpf);
  $telefone = $_REQUEST['telefone'];
  $sexo = $_REQUEST['sexo'];
  $nascimento = $_REQUEST['nascimento'];
  $email = $_REQUEST['email'];
+ 
+ if (!Validacao::validarCPF($cpf))
+ {
+	JS::exibeMSG(Seguranca::tratarVarAjaxBasico("CPF inválido!"));
+	JS::voltar();
+ }
+ 
+ $verificarDuplicidade = mysql_query("SELECT cpf FROM pessoa WHERE cpf = " . $cpf);
+ if (mysql_num_rows($verificarDuplicidade) > 0)
+ {
+	JS::exibeMSG(Seguranca::tratarVarAjaxBasico("Já existe um usuário cadastrado com o CPF informado!"));
+	JS::voltar();
+ }
 
  
     $sql = mysql_query("INSERT INTO pessoa (nome, cpf, dt_nascimento, telefone, email, sexo) 
