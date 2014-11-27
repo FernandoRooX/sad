@@ -30,6 +30,8 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <a href="../coordenador/cadastroTurma.php"><button type="button" class="btn btn-success">Nova Turma</button></a>
+                                <a href="vincularAlunoTurma.php"><button type="button" class="btn btn-success">Adicionar Aluno</button></a>
+
                             </div>
                         </div>
 
@@ -91,8 +93,7 @@
                                                   ?>
                                         </td>
                                         
-                                        <td><button type="button" class="btn btn-warning btn-xs" onclick="location.href = 'editarTurma.php?idTurma=<?php echo $obj->turma_cod ?>'">Editar</button> 
-                                            <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal-delete">Excluir</button></td>
+                                        <td><button type="button" class="btn btn-warning btn-xs">Editar</button> <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal-delete">Excluir</button></td>
                                         <div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="modal-delete" aria-hidden="true">
                                             <div class="modal-dialog modal-sm">
                                                 <div class="modal-content">
