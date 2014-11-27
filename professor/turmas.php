@@ -2,7 +2,7 @@
 <html lang="pt-br">
     <?php 
     session_start();
-    $variavel = "professor";
+    $variavel = "Professor";
     require_once '../classes/validaAcesso.php';
     ?>
     <head>
@@ -53,17 +53,14 @@
                                 </thead>
                                 <tbody class="h5">
                                     <?php
-                                        $rsUmProf = @mysql_query("select pessoa.*, professor.* FROM professor inner join pessoa on pessoa.idPESSOA = professor.PESSOA_idPESSOA WHERE professor.PESSOA_idPESSOA = '$idPessoa'");
-                                        $objUmProf = @mysql_fetch_object($rsUmProf);
-                                        echo $objUmProf->cod;
-                                        $rs = @mysql_query("select turma.*, curso.* FROM turma inner join curso on turma.CURSO_cod = curso.cod WHERE turma.PROFESSOR_cod = $objUmProf->cod");
-                                        while ($obj = @mysql_fetch_object($rs)) {
+                                        $rs = mysql_query("select turma.*, curso.* FROM turma inner join curso on turma.CURSO_cod = curso.cod ORDER BY nome");
+                                        while ($obj = mysql_fetch_object($rs)) {
                                     ?>
+
                                     <tr>
                                         <td>
                                             <?php echo("<a href='perfilTurma.php?idTurma=" . $obj->turma_cod . "' > " . $obj->periodo . "/" . $obj->ano . " - " . $obj->turno . " - " . $obj->nome." - " . $obj->modalidade." </a>"); ?>
                                         </td>
-                                        
                                         <td>
                                             <?php
                                                 $codigo = $obj->PROFESSOR_cod;
@@ -93,7 +90,7 @@
                                                       }else{echo"nao deu";}
                                                   ?>
                                         </td>
-                                        <td><button type="button" class="btn btn-warning btn-xs">Editar</button> <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal-delete">Excluir</button></td>
+                                        <!--<td><button type="button" class="btn btn-warning btn-xs">Editar</button> <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal-delete">Excluir</button></td>-->
                                         <div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="modal-delete" aria-hidden="true">
                                             <div class="modal-dialog modal-sm">
                                                 <div class="modal-content">
