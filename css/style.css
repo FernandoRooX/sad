@@ -4,12 +4,8 @@
 }
 
 html, body, .wrapper {
-<<<<<<< HEAD
-  height: 100%;
-=======
   height: auto;
   min-height: 100%;
->>>>>>> 41c89ff57a1e255f6d5c8307caaf5d59d970ab8d
 }
 
 footer {
