@@ -7,12 +7,11 @@ if ($_REQUEST["acao"] == "adicionar") {
     $idAluno = $_REQUEST['idAluno'];
     
     $idTurma = $_REQUEST['idTurma'];
-    $nota1 = $_REQUEST['nota1'];
-    $nota2 = $_REQUEST['nota2'];
-    $nota_final = $_REQUEST['notafinal'];
+    $nota = $_REQUEST['nota'];
+    $notafinal = $_REQUEST['notafinal'];
 
 //echo $idAluno." turma:". $idTurma. " nota1:".$nota1. " nota2:".$nota2. " nota final:".$nota_final;
-    $sql = "UPDATE dependencia SET nota1='$nota1', nota2='$nota2',nota_final='$nota_final' "
+    $sql = "UPDATE dependencia SET nota='$nota',notafinal='$notafinal' "
             . "WHERE ALUNO_cod='$idAluno' AND TURMA_cod='$idTurma'";
 
 
