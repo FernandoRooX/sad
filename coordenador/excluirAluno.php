@@ -4,7 +4,8 @@ and open the template in the editor.
 -->
 <!DOCTYPE html>
 <html lang="pt-br">
-    <?php session_start(); ?>
+    <?php 
+    session_start(); ?>
     <head>
         <?php require_once '../inc/head.php'; ?>
         <title>Excluir Aluno</title>
@@ -19,8 +20,16 @@ and open the template in the editor.
         
         </head>
     <body>
-        <?php require_once '../topo.php'; ?>
+        <?php require_once '../inc/topo.php'; ?>
+		<?php 
+        require_once '../conecta.php';
+	
+	require_once '../classes/JS.class.php';
         
-        <?php require_once '../inc/rodape.php'; ?>
+		mysql_query("DELETE FROM aluno WHERE PESSOA_idPESSOA = " . $_GET['id']);
+	mysql_query("DELETE FROM pessoa WHERE cod = " . $_GET['id']);
+JS::exibeMSG("Exclusão efetuada com sucesso!");	
+JS::redirecionaURL("alunos.php"); ?>
+        <?php require_once '../inc/rodape.php';?>
     </body>
 </html>
