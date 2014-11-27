@@ -1,4 +1,8 @@
 <?php
+/**
+ * Cleynaldo Carvalho
+ * Sistema de Apoio ao Docente
+ */
 
 class Validacao
 {
