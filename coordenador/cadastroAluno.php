@@ -4,6 +4,7 @@
     $variavel = 'coordenador';
     session_start();
     require_once '../classes/validaAcesso.php';
+    require_once '../classes/Validacao.class.php';
     ?>
     <head> 
         <?php require_once '../inc/head.php'; ?>
