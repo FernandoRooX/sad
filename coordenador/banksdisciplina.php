@@ -1,5 +1,8 @@
 <?php
 require_once '../conecta.php';
+require_once '../classes/Seguranca.class.php';
+require_once '../classes/Validacao.class.php';
+require_once '../classes/JS.class.php';
 
 if ($_REQUEST["acao"] == "adicionar"){ 
 
@@ -7,7 +10,12 @@ if ($_REQUEST["acao"] == "adicionar"){
  $situacao  = $_REQUEST['situacao'];
  $ch = $_REQUEST['ch'];
 
-
+ $verificarDuplicidade = mysql_query("SELECT nome FROM disciplina WHERE nome = '" . $nome . "'");
+ if (mysql_num_rows($verificarDuplicidade) > 0)
+ {
+	JS::exibeMSG(Seguranca::tratarVarAjaxBasico("Já existe uma disciplina cadastrada com o nome informado!"));
+	JS::voltar();
+ }
  
     $sql = mysql_query("INSERT INTO disciplina (nome, situacao, carga_horaria) 
             VALUES('$nome', '$situacao', '$ch')");
