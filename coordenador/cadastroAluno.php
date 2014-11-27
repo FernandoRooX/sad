@@ -37,16 +37,9 @@
                                         </div>
                                     </div>
                                     <div class="form-group has-error">
-<<<<<<< HEAD
                                         <label for="inputCpf" class="col-xs-3 col-sm-2 col-md-2 control-label">CPF:</label>
                                         <div class="col-xs-8 col-sm-5 col-md-5">
                                             <input type="text" class="form-control" name="cpf" id="inputCpf" placeholder="000.000.000-00" maxlength="14" onkeypress="formatar('###.###.###-##', this);" required />
-=======
-                                        <label for="inputCpf" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">CPF:</label>
-                                        <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-                                            <input type="text" class="form-control" name="cpf" id="inputCpf" placeholder="000.000.000-00" maxlength="14" onkeypress="formatar('###.###.###-##', this);" required=""/>
->>>>>>> 1a2fabdd1539631f648a94bfc3ae6442c153fd70
-                                            <br>
                                             <?php
                                             function verifyCPF($cpf) {
                                                 $cpf = "$cpf";
