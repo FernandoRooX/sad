@@ -3,7 +3,7 @@
 require_once '../conecta.php';
 require_once '../classes/Validacao.class.php';
 
-if ($_REQUEST["acao"] == "adicionar") {
+if (@$_REQUEST["acao"] == "adicionar") {
 
     $nome = $_REQUEST['nome'];
     $cpf = str_replace(".", "", $_REQUEST['cpf']);
@@ -32,8 +32,13 @@ if ($_REQUEST["acao"] == "adicionar") {
 
     $inserirTblAluno = mysql_query("INSERT INTO aluno (matricula, PESSOA_idPESSOA) VALUES ('$matricula', '$primeiro')") or die(mysql_error()); {
         if (!($sql && $inserirTblAluno)) {
-            die(' Ja existe Aluno cadastrado! ' . mysql_error());
-            mysql_close();
+            die('<html>
+                <body>
+                
+                Ja existe Aluno cadastrado!
+                
+                </body>
+                </html>' . mysql_error());
              header("refresh: 3; url=cadastroAluno.php");
         } else {
             echo '<h2>Cadastrado com sucesso!<hr></h2>';
