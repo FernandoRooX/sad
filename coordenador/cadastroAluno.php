@@ -31,15 +31,21 @@
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="form-group">
-                                        <label for="inputName" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Nome:</label>
-                                        <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
+                                        <label for="inputName" class="col-xs-3 col-sm-2 col-md-2 control-label">Nome:</label>
+                                        <div class="col-xs-8 col-sm-5 col-md-5">
                                             <input type="text" class="form-control" name="nome" placeholder="Digite seu nome completo" maxlength="50" id="inputName" required>
                                         </div>
                                     </div>
                                     <div class="form-group has-error">
+<<<<<<< HEAD
+                                        <label for="inputCpf" class="col-xs-3 col-sm-2 col-md-2 control-label">CPF:</label>
+                                        <div class="col-xs-8 col-sm-5 col-md-5">
+                                            <input type="text" class="form-control" name="cpf" id="inputCpf" placeholder="000.000.000-00" maxlength="14" onkeypress="formatar('###.###.###-##', this);" required />
+=======
                                         <label for="inputCpf" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">CPF:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
                                             <input type="text" class="form-control" name="cpf" id="inputCpf" placeholder="000.000.000-00" maxlength="14" onkeypress="formatar('###.###.###-##', this);" required=""/>
+>>>>>>> 1a2fabdd1539631f648a94bfc3ae6442c153fd70
                                             <br>
                                             <?php
                                             function verifyCPF($cpf) {
@@ -95,8 +101,8 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="inputMat" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Matrícula:</label>
-                                        <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
+                                        <label for="inputMat" class="col-xs-3 col-sm-2 col-md-2 control-label">Matrícula:</label>
+                                        <div class="col-xs-8 col-sm-5 col-md-5">
                                             <input type="text" class="form-control" name="matricula" placeholder="Matricula" id="inputMat" maxlength="11" required>
                                         </div>
                                     </div>
@@ -154,15 +160,15 @@
                                                                                                     </div>-->
 
                                     <div class="form-group">
-                                        <label for="inputPhone" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Telefone:</label>
-                                        <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
+                                        <label for="inputPhone" class="col-xs-3 col-sm-2 col-md-2 control-label">Telefone:</label>
+                                        <div class="col-xs-8 col-sm-5 col-md-5">
                                             <input type="text" class="form-control" name="telefone" id="inputPhone" placeholder="00-0000-0000" maxlength="14" onkeypress="formatar('##-####-####', this);" required />
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="radioSexo" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Sexo:</label>
-                                        <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
+                                        <label for="radioSexo" class="col-xs-3 col-sm-2 col-md-2 control-label">Sexo:</label>
+                                        <div class="col-xs-8 col-sm-5 col-md-5">
                                             <label class="btn btn-primary">
                                                 <input type="radio" name="sexo" id="optionMasculino" value="Masculino"> Masculino
                                             </label>
@@ -187,20 +193,20 @@
                                     </div>-->
 
                                     <div class="form-group">
-                                        <label for="inputNasc" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Nascimento:</label>
-                                        <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
+                                        <label for="inputNasc" class="col-xs-3 col-sm-2 col-md-2 control-label">Nascimento:</label>
+                                        <div class="col-xs-8 col-sm-5 col-md-5">
                                             <input type="date" name="nascimento" class="form-control" id="inputNac" required>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="inputEmail" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">E-mail:</label>
-                                        <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
+                                        <label for="inputEmail" class="col-xs-3 col-sm-2 col-md-2 control-label">E-mail:</label>
+                                        <div class="col-xs-8 col-sm-5 col-md-5">
                                             <input type="text" name="email" class="form-control" id="inputEmail" maxlength="50" placeholder="Digite seu e-mail">
                                         </div>
                                     </div>
 
-                                    <div class="pull-right">
+                                    <div class="col-md-offset-4">
                                         <button type="submit" class="btn btn-success">Cadastrar</button>
                                         <a href="javascript:window.history.go(-1)"><button type="button" class="btn btn-warning">Cancelar</button></a>
                                     </div>

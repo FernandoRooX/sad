@@ -37,15 +37,15 @@ $idTruma = $_GET['idTurma'];
 						<div class="form-group">
 							<div class="col-md-12">
 								<div class="form-group">
-									<label for="inputName" class="col-xs-3 col-sm-2 col-md-1 control-label">Nome:</label>
-									<div class="col-xs-8 col-sm-5 col-md-3">
+									<label for="inputName" class="col-xs-3 col-sm-2 col-md-2 control-label">Nome:</label>
+									<div class="col-xs-8 col-sm-5 col-md-5">
 										<input type="text" class="form-control" id="inputName" required>
 									</div>
 								</div>
 
 								<div class="form-group">
-									<label for="selectDependencia" class="col-xs-3 col-sm-2 col-md-1 control-label">Dependência:</label>
-									<div class="col-xs-8 col-sm-5 col-md-3">
+									<label for="selectDependencia" class="col-xs-3 col-sm-2 col-md-2 control-label">Dependência:</label>
+									<div class="col-xs-8 col-sm-5 col-md-5">
 										<select name="selectDependencia" id="selectDependencia" class="form-control" required>
 											<option value=""></option>
 											<option value="rdr">RDR</option>
@@ -58,8 +58,8 @@ $idTruma = $_GET['idTurma'];
 								</div>
 
 								<div class="form-group">
-									<label for="dateBegin" class="col-xs-3 col-sm-2 col-md-1 control-label">Data Inicial:</label>
-									<div class="col-xs-8 col-sm-5 col-md-3">
+									<label for="dateBegin" class="col-xs-3 col-sm-2 col-md-2 control-label">Data Inicial:</label>
+									<div class="col-xs-8 col-sm-5 col-md-5">
 										<div class="input-group date">
 											<span class="input-group-addon">
 												<span class="glyphicon glyphicon-calendar"></span>
@@ -70,8 +70,8 @@ $idTruma = $_GET['idTurma'];
 								</div>
 
 								<div class="form-group">
-									<label for="dateEnd" class="col-xs-3 col-sm-2 col-md-1 control-label">Data Final:</label>
-									<div class="col-xs-8 col-sm-5 col-md-3">
+									<label for="dateEnd" class="col-xs-3 col-sm-2 col-md-2 control-label">Data Final:</label>
+									<div class="col-xs-8 col-sm-5 col-md-5">
 										<div class="input-group date">
 											<span class="input-group-addon">
 												<span class="glyphicon glyphicon-calendar"></span>
@@ -82,8 +82,8 @@ $idTruma = $_GET['idTurma'];
 								</div>
 
 								<div class="form-group">
-									<label for="Hora" class="col-xs-3 col-sm-2 col-md-1 control-label">Hora:</label>
-									<div class="col-xs-8 col-sm-5 col-md-3">
+									<label for="Hora" class="col-xs-3 col-sm-2 col-md-2 control-label">Hora:</label>
+									<div class="col-xs-8 col-sm-5 col-md-5">
 										<div class="input-group time">
 											<span class="input-group-addon">
 												<span class="glyphicon glyphicon-time"></span>
@@ -94,8 +94,8 @@ $idTruma = $_GET['idTurma'];
 								</div>
 
 								<div class="form-group">
-									<label for="selectActive" class="col-xs-3 col-sm-2 col-md-1 control-label">Ativo:</label>
-									<div class="col-xs-8 col-sm-5 col-md-3">
+									<label for="selectActive" class="col-xs-3 col-sm-2 col-md-2 control-label">Ativo:</label>
+									<div class="col-xs-8 col-sm-5 col-md-5">
 										<select name="active" id="active" class="form-control">
 											<option></option>
 											<option>Sim</option>
@@ -105,8 +105,8 @@ $idTruma = $_GET['idTurma'];
 								</div>
 
 								<div class="form-group">
-									<label for="inputProf" class="col-xs-3 col-sm-2 col-md-1 control-label">Professor:</label>
-									<div class="col-xs-8 col-sm-5 col-md-3">
+									<label for="inputProf" class="col-xs-3 col-sm-2 col-md-2 control-label">Professor:</label>
+									<div class="col-xs-8 col-sm-5 col-md-5">
 										<select name="selectProf" id="selectProf" class="form-control" required>
 											<option></option>
 											<option>Guilherme Costa</option>
@@ -118,8 +118,8 @@ $idTruma = $_GET['idTurma'];
 								</div>
 
 								<div class="form-group">
-									<label for="selectDisciplina" class="col-xs-3 col-sm-2 col-md-1 control-label">Disiciplina:</label>
-									<div class="col-xs-8 col-sm-5 col-md-3">
+									<label for="selectDisciplina" class="col-xs-3 col-sm-2 col-md-2 control-label">Disiciplina:</label>
+									<div class="col-xs-8 col-sm-5 col-md-5">
 										<select name="selectHabilitado" id="selectHabilitado" class="form-control">
 											<option value=""></option>
 											<option value="prog-estruturada">Programação Estruturada</option>
@@ -131,7 +131,7 @@ $idTruma = $_GET['idTurma'];
 									</div>
 								</div>
 
-								<div class="pull-right col-sm-8 col-md-10">
+								<div class="col-md-offset-4">
 									<button type="button" class="btn btn-success" data-toggle="modal" data-target="#editar-success">Alterar</button>
 										<div class="modal fade" id="editar-success" tabindex="-1" role="dialog" aria-labelledby="editar-success" aria-hidden="true">
 											<div class="modal-dialog modal">

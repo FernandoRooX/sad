@@ -42,15 +42,16 @@ require_once '../conecta.php';
                         ?>
                             <tr>
                                 <td><?php echo $obj->nome; ?></td>
-                                            <td><?php echo $obj->nome; ?></td>
-                                            <td><?php echo $obj->cpf; ?></td>
-                                            <td><?php echo $obj->dt_nascimento; ?></td>
-                                            <td><?php echo $obj->email; ?></td>
-                                            
+                                <td><?php echo $obj->nome; ?></td>
+                                <td><?php echo $obj->cpf; ?></td>
+                                <td><?php echo $obj->dt_nascimento; ?></td>
+                                <td><?php echo $obj->email; ?></td>
                             </tr>
-
                         </tbody>
                         <?php } ?>
+<<<<<<< HEAD
+                        <div class="col-md-offset-4">
+=======
 =======
                        
                             <?php
@@ -101,6 +102,7 @@ require_once '../conecta.php';
                         </tbody>
 >>>>>>> 41c89ff57a1e255f6d5c8307caaf5d59d970ab8d
                         <div class="pull-right">
+>>>>>>> 1a2fabdd1539631f648a94bfc3ae6442c153fd70
                             <button type="submit" class="btn btn-success">Editar</button>
                             <a href="javascript:window.history.go(-1)"><button type="button" class="btn btn-warning">Cancelar</button></a>
                         </div>

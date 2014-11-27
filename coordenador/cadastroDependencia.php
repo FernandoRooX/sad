@@ -28,11 +28,9 @@
                         <form method="post" action="banksdependencia.php?acao=adicionar" class="form-horizontal" role="form">
                             <div class="row">
                                 <div class="col-md-8">
-                                    
-
                                     <div class="form-group">
-                                        <label for="optionCurso" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Disciplina:</label>
-                                        <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
+                                        <label for="optionCurso" class="col-xs-3 col-sm-2 col-md-2 control-label">Disciplina:</label>
+                                        <div class="col-xs-8 col-sm-5 col-md-6">
                                             <select name="codDisciplina" id="idPessoa" class="form-control" required>
                                                 <option value="">Selecione a Disciplina</option>
                                                 <?php
@@ -47,8 +45,8 @@
                                     </div>
                                     
                                     <div class="form-group">
-                                        <label for="optionAluno" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Aluno:</label>
-                                        <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
+                                        <label for="optionAluno" class="col-xs-3 col-sm-2 col-md-2 control-label">Aluno:</label>
+                                        <div class="col-xs-8 col-sm-5 col-md-6">
                                             <select name="codAluno" id="idPessoa" class="form-control" required>
                                                 <option value="">Selecione o Aluno</option>
                                                 <?php
@@ -63,8 +61,8 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="optionAluno" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Turma:</label>
-                                        <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
+                                        <label for="optionAluno" class="col-xs-3 col-sm-2 col-md-2 control-label">Turma:</label>
+                                        <div class="col-xs-8 col-sm-5 col-md-6">
                                             <select name="codTurma" id="idPessoa" class="form-control" required>
                                                 <option value="">Selecione a Turma</option>
                                                 <?php
@@ -78,14 +76,14 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="dt_inicio" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Data de Início:</label>
-                                        <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
+                                        <label for="dt_inicio" class="col-xs-3 col-sm-2 col-md-2 control-label">Data de Início:</label>
+                                        <div class="col-xs-8 col-sm-5 col-md-6">
                                             <input type="date" name="dt_inicio" class="form-control" id="inputNac" required>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="dt_final" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Data Final:</label>
-                                        <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
+                                        <label for="dt_final" class="col-xs-3 col-sm-2 col-md-2 control-label">Data Final:</label>
+                                        <div class="col-xs-8 col-sm-5 col-md-6">
                                             <input type="date" name="dt_final" class="form-control" id="inputNac" required>
                                         </div>
                                     </div>
@@ -131,7 +129,7 @@
                                     </div>-->
 
 
-                                    <div class="pull-right">
+                                    <div class="col-md-offset-5">
                                         <button type="submit" class="btn btn-success">Cadastrar</button>
                                         <a href="javascript:window.history.go(-1)"><button type="button" class="btn btn-warning">Cancelar</button></a>
                                     </div>

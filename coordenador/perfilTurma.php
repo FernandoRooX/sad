@@ -29,7 +29,7 @@
                 <div class="row">
                     <div id="conteudo" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="page-header">
-                            <h3><span class="glyphicon glyphicon-th-list"></span> Turma: <?php echo $obj->periodo . "/" . $obj->ano . " - " . $obj->turno . " - " . $obj->nome . " - " . $obj->modalidade; ?> </h3>
+                            <h3><span class="glyphicon glyphicon-th-list"></span> Turma:</h3>
                         </div>
 
                         <div class="table-responsive">
@@ -136,7 +136,7 @@
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td><button type="submit"  class="btn btn-success btn-xs">Salvar</button></td>
+                                            <td><button type="submit"  class="btn btn-success btn-xs">Salvar</button> </td>
                                         </tr>
                                     </form>
 >>>>>>> 41c89ff57a1e255f6d5c8307caaf5d59d970ab8d

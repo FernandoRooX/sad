@@ -32,22 +32,22 @@ require_once '../classes/validaAcesso.php';
 						<div class="form-group">
 							<div class="col-md-12">
 								<div class="form-group">
-									<label for="inputName" class="col-xs-3 col-sm-2 col-md-1 control-label">Nome:</label>
-									<div class="col-xs-8 col-sm-5 col-md-3">
+									<label for="inputName" class="col-xs-3 col-sm-2 col-md-2 control-label">Nome:</label>
+									<div class="col-xs-8 col-sm-5 col-md-5">
 										<input type="text" class="form-control" id="inputDisciplina" required>
 									</div>
 								</div>
 
 								<div class="form-group">
-									<label for="inputCH" class="col-xs-3 col-sm-2 col-md-1 control-label">Carga Horária:</label>
-									<div class="col-xs-8 col-sm-5 col-md-3">
+									<label for="inputCH" class="col-xs-3 col-sm-2 col-md-2 control-label">Carga Horária:</label>
+									<div class="col-xs-8 col-sm-5 col-md-5">
 										<input type="number" class="form-control" id="inputCH" required>
 									</div>
 								</div>
 
 								<div class="form-group">
-									<label for="selectSemestre" class="col-xs-3 col-sm-2 col-md-1 control-label">Semestre:</label>
-									<div class="col-xs-8 col-sm-5 col-md-3">
+									<label for="selectSemestre" class="col-xs-3 col-sm-2 col-md-2 control-label">Semestre:</label>
+									<div class="col-xs-8 col-sm-5 col-md-5">
 										<select name="selectSerie" id="selectSerie" class="form-control" required>
 											<option value=""></option>
 											<option value="1">1º</option>
@@ -63,8 +63,8 @@ require_once '../classes/validaAcesso.php';
 								</div>
 
 								<div class="form-group">
-									<label for="inputPeriodo" class="col-xs-3 col-sm-2 col-md-1 control-label">Período Letivo:</label>
-									<div class="col-xs-8 col-sm-5 col-md-3">
+									<label for="inputPeriodo" class="col-xs-3 col-sm-2 col-md-2 control-label">Período Letivo:</label>
+									<div class="col-xs-8 col-sm-5 col-md-5">
 										<select name="periodo" id="selectPeriodo" class="form-control" required>
 											<option value=""></option>
 											<option value="1">1</option>
@@ -74,8 +74,8 @@ require_once '../classes/validaAcesso.php';
 								</div>
 
 								<div class="form-group">
-									<label for="selectDependencia" class="col-xs-3 col-sm-2 col-md-1 control-label">Dependência:</label>
-									<div class="col-xs-8 col-sm-5 col-md-3">
+									<label for="selectDependencia" class="col-xs-3 col-sm-2 col-md-2 control-label">Dependência:</label>
+									<div class="col-xs-8 col-sm-5 col-md-5">
 										<select name="selectDependencia" id="selectDependencia" class="form-control" required>
 											<option value=""></option>
 											<option value="rdr">RDR</option>
@@ -88,8 +88,8 @@ require_once '../classes/validaAcesso.php';
 								</div>
 
 								<div class="form-group">
-									<label for="inputProfessor" class="col-xs-3 col-sm-2 col-md-1 control-label">Professor:</label>
-									<div class="col-xs-8 col-sm-5 col-md-3">
+									<label for="inputProfessor" class="col-xs-3 col-sm-2 col-md-2 control-label">Professor:</label>
+									<div class="col-xs-8 col-sm-5 col-md-5">
 										<select name="selectProfessor" id="selectProfessor" class="form-control" required>
 											<option></option>
 											<option>Guilherme Costa</option>
@@ -100,7 +100,7 @@ require_once '../classes/validaAcesso.php';
 									</div>
 								</div>
 
-								<div class="pull-right col-sm-8 col-md-10">
+								<div class="col-md-offset-4">
 									<button type="button" class="btn btn-success" data-toggle="modal" data-target="#editar-success">Alterar</button>
 										<div class="modal fade" id="editar-success" tabindex="-1" role="dialog" aria-labelledby="editar-success" aria-hidden="true">
 											<div class="modal-dialog modal">
