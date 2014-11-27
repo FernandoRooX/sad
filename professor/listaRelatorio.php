@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 	
-	<?php session_start(); ?>
+	<?php session_start(); 
+        $variavel = "Professor";
+        require_once '../classes/validaAcesso.php';
+        ?>
 
 	<head>
 		<?php include_once '../inc/head.php'; ?>
