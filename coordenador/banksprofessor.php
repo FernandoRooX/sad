@@ -19,7 +19,6 @@ if ($_REQUEST["acao"] == "adicionar") {
 	JS::exibeMSG(Seguranca::tratarVarAjaxBasico("CPF inválido!"));
 	JS::voltar();
  }
- 
  $verificarDuplicidade = mysql_query("SELECT cpf FROM pessoa WHERE cpf = " . $cpf);
  if (mysql_num_rows($verificarDuplicidade) > 0)
  {
@@ -27,7 +26,6 @@ if ($_REQUEST["acao"] == "adicionar") {
 	JS::voltar();
  }
 
- 
     $sql = mysql_query("INSERT INTO pessoa (nome, cpf, dt_nascimento, telefone, email, sexo) 
             VALUES('$nome', '$cpf', '$nascimento', '$telefone', '$email', '$sexo')");
 
@@ -36,8 +34,7 @@ if ($_REQUEST["acao"] == "adicionar") {
     $primeiro = $primeiro[0];
     
     $inserirTblProfessor = mysql_query("INSERT INTO professor (PESSOA_idPESSOA) VALUES ('$primeiro')")or die(mysql_error());
-    
-    
+        
     if (!($sql && $inserirTblProfessor) ) {
         die('Erro: ' . mysql_error());
         mysql_close();

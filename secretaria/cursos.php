@@ -38,27 +38,29 @@
 
                         <div class="row">
                             <div class="col-lg-4">
-                                <input type="search" id="container-search" class="form-control" placeholder="Pesquisar...">
+                                <input type="search" id="container-search" class="form-control" placeholder="Search...">
                             </div>
                         </div>
-
                         <div class="table-responsive">
                             <table class="table bordered">
                                 <thead class="h4">
                                     <tr>
                                         <th>Curso</th>
                                         <th>Orientador</th>
-                                        <th>Tipo</th>
-                                        <th>Carga Horária</th>
+                                        <th>Modalidade</th>
+                                        <!--<th>Carga Horária</th>-->
                                         <th></th>
                                     </tr>
                                 </thead>
                                 <tbody class="h5">
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                    <?php
+                                    $rs = mysql_query("select * FROM curso ORDER BY nome");
+                                    while ($obj = mysql_fetch_object($rs)) {
+                                        ?>
+                                        <tr>
+                                            <td><?php echo $obj->nome; ?></td>
+                                            <td><?php echo $obj->orientador; ?></td>
+                                            <td><?php echo $obj->modalidade; ?></td>
                                         <td><a href="../coordenador/editarCurso.php" type="button" class="btn btn-warning btn-xs">Editar</a> <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal-delete">Excluir</button></td>
                                         <div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="modal-delete" aria-hidden="true">
                                             <div class="modal-dialog modal-sm">
@@ -77,6 +79,7 @@
                                             </div>
                                         </div>
                                     </tr>
+                                    <?php } ?>
                                 </tbody>
                             </table>
                         </div>
