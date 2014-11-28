@@ -43,7 +43,7 @@ and open the template in the editor.
 
                         <div class="row">
                             <div class="col-lg-4">
-                                <input type="search" id="container-search" class="form-control" placeholder="Procurar">
+                                <input type="search" id="container-search" class="form-control" placeholder="Pesquisar...">
                             </div>
                         </div>
 
