@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="pt-BR">
     <?php
-    $variavel = 'secretaria';
+    session_start();
+    $variavel = 'Secretaria';
     require_once '../classes/validaAcesso.php';
     ?>
     <head>

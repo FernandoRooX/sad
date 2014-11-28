@@ -16,7 +16,6 @@ if ($_REQUEST["acao"] == "adicionar"){
 	JS::exibeMSG(Seguranca::tratarVarAjaxBasico("Já existe uma disciplina cadastrada com o nome informado!"));
 	JS::voltar();
  }
- 
     $sql = mysql_query("INSERT INTO disciplina (nome, situacao, carga_horaria) 
             VALUES('$nome', '$situacao', '$ch')");
 
@@ -27,7 +26,6 @@ if ($_REQUEST["acao"] == "adicionar"){
         echo '<h2>Cadastrado com sucesso!<hr></h2>';
 
         mysql_close();
-
         header("refresh: 3; url=cadastroDisciplina.php");
     }
 }
