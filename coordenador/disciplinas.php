@@ -36,7 +36,7 @@
 
 					<div class="row">
 						<div class="col-lg-4">
-							<input type="search" id="container-search" class="form-control" placeholder="Search...">
+							<input type="search" id="container-search" class="form-control" placeholder="Pesquisar...">
 						</div>
 					</div>
 
@@ -45,7 +45,7 @@
 						<table class="table table-striped bordered">
 							<thead class="h4">
 								<tr>
-									<th>Disciplina <span class="glyphicon glyphicon-search"></span></th>
+									<th>Disciplina</th>
 									<th>Situação</th>
 									<th>Carga-Horária</th>
 									<th>Ação</th>
