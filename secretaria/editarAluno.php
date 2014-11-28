@@ -28,24 +28,24 @@ require_once '../classes/validaAcesso.php';
 
 					<form method="post" action="" class="form-horizontal" role="form">
 						<div class="form-group">
-							<div class="col-md-12">
+							<div class="col-md-8">
 								<div class="form-group">
-									<label for="inputRa" class="col-xs-3 col-sm-2 col-md-1 control-label">RA:</label>
-									<div class="col-xs-8 col-sm-5 col-md-3">
+									<label for="inputRa" class="col-xs-3 col-sm-2 col-md-2 control-label">RA:</label>
+									<div class="col-xs-8 col-sm-5 col-md-5">
 										<input type="text" class="form-control" id="inputRa" required>
 									</div>
 								</div>
 
 								<div class="form-group">
-									<label for="inputName" class="col-xs-3 col-sm-2 col-md-1 control-label">Nome:</label>
-									<div class="col-xs-8 col-sm-5 col-md-3">
+									<label for="inputName" class="col-xs-3 col-sm-2 col-md-2 control-label">Nome:</label>
+									<div class="col-xs-8 col-sm-5 col-md-5">
 										<input type="text" class="form-control" id="inputName" required>
 									</div>
 								</div>
 
 								<div class="form-group">
-									<label for="sexo" class="col-xs-3 col-sm-2 col-md-1 control-label">Sexo:</label>
-									<div class="col-xs-8 col-sm-5 col-md-3">
+									<label for="sexo" class="col-xs-3 col-sm-2 col-md-2 control-label">Sexo:</label>
+									<div class="col-xs-8 col-sm-5 col-md-5">
 										<select name="sexo" class="form-control">
 											<option value=""></option>
 											<option value="feminino">Feminino</option>
@@ -55,8 +55,8 @@ require_once '../classes/validaAcesso.php';
 								</div>
 
 								<div class="form-group">
-									<label for="selectCurso" class="col-xs-3 col-sm-2 col-md-1 control-label">Curso:</label>
-									<div class="col-xs-8 col-sm-5 col-md-3">
+									<label for="selectCurso" class="col-xs-3 col-sm-2 col-md-2 control-label">Curso:</label>
+									<div class="col-xs-8 col-sm-5 col-md-5">
 										<select name="selectCurso" id="selectCurso" class="form-control" required>
 											<option value=""></option>
 											<option value="prog-estruturada">Programação Estruturada</option>
@@ -75,8 +75,8 @@ require_once '../classes/validaAcesso.php';
 								</div>
 
 								<div class="form-group">
-									<label for="selectDependencia" class="col-xs-3 col-sm-2 col-md-1 control-label">Dependência:</label>
-									<div class="col-xs-8 col-sm-5 col-md-3">
+									<label for="selectDependencia" class="col-xs-3 col-sm-2 col-md-2 control-label">Dependência:</label>
+									<div class="col-xs-8 col-sm-5 col-md-5">
 										<select name="selectDependencia" id="selectDependencia" class="form-control" required>
 											<option value=""></option>
 											<option value="rdr">RDR</option>
@@ -89,8 +89,8 @@ require_once '../classes/validaAcesso.php';
 								</div>
 
 								<div class="form-group">
-									<label for="selectSemestre" class="col-xs-3 col-sm-2 col-md-1 control-label">Semestre:</label>
-									<div class="col-xs-8 col-sm-5 col-md-3">
+									<label for="selectSemestre" class="col-xs-3 col-sm-2 col-md-2 control-label">Semestre:</label>
+									<div class="col-xs-8 col-sm-5 col-md-5">
 										<select name="selectSemestre" id="selectSemestre" class="form-control" required>
 											<option value=""></option>
 											<option value="1">1º</option>
@@ -106,27 +106,27 @@ require_once '../classes/validaAcesso.php';
 								</div>
 
 								<div class="form-group">
-									<label for="inputPhone" class="col-xs-3 col-sm-2 col-md-1 control-label">Telefone:</label>
-									<div class="col-xs-8 col-sm-5 col-md-3">
+									<label for="inputPhone" class="col-xs-3 col-sm-2 col-md-2 control-label">Telefone:</label>
+									<div class="col-xs-8 col-sm-5 col-md-5">
 										<input type="phone" class="form-control" id="inputPhone" required>
 									</div>
 								</div>
 
 								<div class="form-group">
-									<label for="inputEmail" class="col-xs-3 col-sm-2 col-md-1 control-label">Email:</label>
-									<div class="col-xs-8 col-sm-5 col-md-3">
+									<label for="inputEmail" class="col-xs-3 col-sm-2 col-md-2 control-label">Email:</label>
+									<div class="col-xs-8 col-sm-5 col-md-5">
 										<input type="email" class="form-control" id="inputEmail">
 									</div>
 								</div>
 
 								<div class="form-group">
-									<label for="inputNasc" class="col-xs-3 col-sm-2 col-md-1 control-label">Nascimento:</label>
-									<div class="col-xs-8 col-sm-5 col-md-3">
+									<label for="inputNasc" class="col-xs-3 col-sm-2 col-md-2 control-label">Nascimento:</label>
+									<div class="col-xs-8 col-sm-5 col-md-5">
 										<input type="date" class="form-control" id="inputNac" required>
 									</div>
 								</div>
 
-								<div class="pull-right col-sm-8 col-md-10">
+								<div class="col-md-offset-4">
 									<button type="submit" class="btn btn-success" data-toggle="modal" data-target="#editar-success">Alterar</button>
 									<div class="modal fade" id="editar-success" tabindex="-1" role="dialog" aria-labelledby="editar-success" aria-hidden="true">
 										<div class="modal-dialog modal">
