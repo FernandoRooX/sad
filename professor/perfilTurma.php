@@ -2,7 +2,7 @@
 <html lang="pt-br">
     <?php
     
-    $variavel = "professor";
+    $variavel = "Professor";
     require_once '../classes/validaAcesso.php';
     session_start();
     $idTurma = $_GET['idTurma'];
@@ -38,8 +38,7 @@
                                 <thead class="h4">
                                     <tr>
                                         <th>Alunos <span class="glyphicon glyphicon-search"></span></th>
-                                        <th>Nota 1</th>
-                                        <th>Nota 2</th>
+                                        <th>Nota</th>
                                         <th>Nota Final</th>
                                     </tr>
                                 </thead>
@@ -63,23 +62,28 @@
                                         <input type="hidden" name='idAluno' value='<?php echo $idAluno; ?>'/>
                                         <input type="hidden" name='idTurma' value='<?php echo $idTurma; ?>'/>
                                         <td><?php
-                                            echo"<input type='text' name='nota1' value='$objTurma->nota1'class='form-control'  id='inputName' maxlength='5'  size='2'>";
+                                            echo"<input type='text' name='nota' value='$objTurma->nota'class='form-control'  id='inputName' maxlength='5'  size='5'>";
                                                 ?>
 
                                         </td>
                                         <td><?php
-                                        echo"<input type='text' name='nota2' value='$objTurma->nota2' class='form-control'   id='inputName' maxlength='5'  size='2'>";
+                                        echo"<input type='text' name='notafinal' value='$objTurma->notafinal' class='form-control'   id='inputName' maxlength='5'  size='5'>";
                                                 ?>
                                         </td>
-                                        <td><?php
-                                        if (($objTurma->nota2 == null) && ($objTurma->nota1 == null)) {
+                                        <td><?php #if (($objTurma->nota2 == null) && ($objTurma->nota == null)) {
+                                        if (($objTurma->nota == $objTurma->notalfinal)){
+                                        
                                             echo "Nenhuma nota cadastrada.";
-                                        } else if (($objTurma->nota1 != null) && ($objTurma->nota2 != null)) {
-                                            $nota_final = (($objTurma->nota2) + ($objTurma->nota1)) / 2;
-                                            if ($nota_final < 6) {
-                                                echo "<font color='red'>" . $nota_final . "</font>";
+                                        } #else if (($objTurma->nota != null) && ($objTurma->nota2 != null)) {
+                                           # $nota_final = (($objTurma->nota2) + ($objTurma->nota1)) / 2;
+                                        else if (($objTurma->nota >= 5)){
+                                            echo 'Você Passou!';
+                                            
+                                            if(($objTurma->nota <=4)){
+                                                echo 'Você não passou!';
+                                                echo "<font color='red'>" . $notafinal . "</font>";
                                             } else {
-                                                echo "<font color='green'>" . $nota_final . "</font>";
+                                                echo "<font color='green'>" . $notafinal . "</font>";
                                             }
                                         }
                                         //  echo"<input type='text' name='notafinal' value='$objTurma->nota_final'class='form-control'  id='inputName' maxlength='5' size='2'>";
