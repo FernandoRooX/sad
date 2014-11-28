@@ -34,7 +34,6 @@ require_once '../conecta.php';
                             <h3><span class="glyphicon glyphicon-th-list"></span> Edição de Aluno:</h3>
                         </div>
                         <tbody class="h5">
-<<<<<<< HEAD
                         <?php
                         $rs = mysql_query("select aluno.*, pessoa.* FROM aluno inner join pessoa on $id = pessoa.idPESSOA");
                         while ($obj = mysql_fetch_object($rs) )
@@ -49,10 +48,7 @@ require_once '../conecta.php';
                             </tr>
                         </tbody>
                         <?php } ?>
-<<<<<<< HEAD
                         <div class="col-md-offset-4">
-=======
-=======
                        
                             <?php
                         $rs = mysql_query("select aluno.*, pessoa.* FROM aluno inner join pessoa on $id = pessoa.idPESSOA");
@@ -95,14 +91,10 @@ require_once '../conecta.php';
                             <?php echo $obj->sexo; ?>
 
                         </div>
-
-
                     </div>
                         
                         </tbody>
->>>>>>> 41c89ff57a1e255f6d5c8307caaf5d59d970ab8d
                         <div class="pull-right">
->>>>>>> 1a2fabdd1539631f648a94bfc3ae6442c153fd70
                             <button type="submit" class="btn btn-success">Editar</button>
                             <a href="javascript:window.history.go(-1)"><button type="button" class="btn btn-warning">Cancelar</button></a>
                         </div>

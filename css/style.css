@@ -3,21 +3,21 @@
   padding: 0;
 }
 
-html, body, .wrapper {
+html, body {
   height: auto;
-  min-height: 100%;
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
-  background-color: #101010;
   height: 45px;
   width: 100%;
+  background-color: #101010;
+  bottom: 0;
+  position: absolute;
 }
 
 .wrapper {
   padding-top: 40px;
+  min-height: 100%;
 }
 
 .copyright {
@@ -29,4 +29,3 @@ footer {
   .form-horizontal .control-label {
     text-align: left !important;
   }
-}
