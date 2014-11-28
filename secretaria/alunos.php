@@ -81,12 +81,5 @@
         </div>
     </div>
     <?php include_once '../inc/rodape.php'; ?>
-    <script>
-        $(function() {
-            $('#table').searchable({
-                searchField: '#container-search'
-            });
-        });
-    </script>
 </body>
 </html>

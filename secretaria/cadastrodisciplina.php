@@ -27,8 +27,6 @@
                         <form method="post" action="banksdisciplina.php?acao=adicionar" class="form-horizontal" role="form">
                             <div class="row">
                                 <div class="col-md-8">
-                                    
-
                                     <div class="form-group">
                                         <label for="inputDisciplina" class="col-xs-3 col-sm-2 col-md-2 control-label">Disciplina:</label>
                                         <div class="col-xs-8 col-sm-5 col-md-5">

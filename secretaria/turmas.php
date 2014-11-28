@@ -60,52 +60,53 @@
                                     <tr>
                                         <td><?php echo("<a href='perfilTurma.php?idTurma=" . $obj->turma_cod . "' > " . $obj->periodo . "/" . $obj->ano . " - " . $obj->turno . " - " . $obj->nome." - " . $obj->modalidade." </a>");
                                                 ?></td>
-                                        <td><?php $codigo = $obj->PROFESSOR_cod;
-                                       $rsCodPessoa = mysql_query("SELECT PESSOA_idPESSOA FROM professor WHERE cod=$codigo");
-                                       $objCodPessoa = mysql_fetch_object($rsCodPessoa);
-                                       $codPessoa = $objCodPessoa->PESSOA_idPESSOA;
-                                        $rsProf = mysql_query("select professor.*, pessoa.* FROM professor inner join pessoa on $codPessoa= pessoa.idPESSOA ORDER BY nome");
-                                                  $objProf = mysql_fetch_object($rsProf);
-                                                  echo $objProf->nome;
+                                        <td>
+                                            <?php
+                                                $codigo = $obj->PROFESSOR_cod;
+                                                $rsCodPessoa = mysql_query("SELECT PESSOA_idPESSOA FROM professor WHERE cod=$codigo");
+                                                $objCodPessoa = mysql_fetch_object($rsCodPessoa);
+                                                $codPessoa = $objCodPessoa->PESSOA_idPESSOA;
+                                                $rsProf = mysql_query("select professor.*, pessoa.* FROM professor inner join pessoa on $codPessoa= pessoa.idPESSOA ORDER BY nome");
+                                                $objProf = mysql_fetch_object($rsProf);
+                                                echo $objProf->nome;
                                             ?>
                                         </td>
-                                        <td><?php $mes = date('m');
-                                                  $ano = date('Y');
-                                                  if(($obj->periodo == 1)){
-                                                      if(($mes<7) &&($obj->ano ==$ano)){
-                                                          echo"Ativa";
-                                                      }else{
-                                                          echo"Inativa";
-                                                      }
-                                                  }else if(($obj->periodo == 2)){
-                                                      if(($mes>6)&&($obj->ano ==$ano)){
-                                                          echo"Ativa";
-                                                      }else{
-                                                          echo"Inativa";
-                                                      }
-                                                      }else{echo"nao deu";}
-                                                  ?>
-                                        
-                                        
+                                        <td>
+                                            <?php $mes = date('m');
+                                                $ano = date('Y');
+                                                if(($obj->periodo == 1)){
+                                                    if(($mes<7) &&($obj->ano ==$ano)){
+                                                        echo"Ativa";
+                                                    }else{
+                                                        echo"Inativa";
+                                                    }
+                                                }else if(($obj->periodo == 2)){
+                                                    if(($mes>6)&&($obj->ano ==$ano)){
+                                                        echo"Ativa";
+                                                    }else{
+                                                        echo"Inativa";
+                                                    }
+                                                }else{echo"nao deu";}
+                                            ?>
                                         </td>
                                         <td><button type="button" class="btn btn-warning btn-xs">Editar</button> <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal-delete">Excluir</button></td>
-                                <div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="modal-delete" aria-hidden="true">
-                                    <div class="modal-dialog modal-sm">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Sair</span></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>Tem certeza que deseja remover essa turma?</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-default" data-dismiss="modal">Não</button>
-                                                <button type="button" class="btn btn-danger">Sim</button>
+                                        <div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="modal-delete" aria-hidden="true">
+                                            <div class="modal-dialog modal-sm">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Sair</span></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>Tem certeza que deseja remover essa turma?</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Não</button>
+                                                        <button type="button" class="btn btn-danger">Sim</button>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                </tr>
+                                    </tr>
                                                 <?php }?>
                                 </tbody>
                             </table>

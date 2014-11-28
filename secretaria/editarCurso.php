@@ -30,17 +30,17 @@ require_once '../classes/validaAcesso.php';
 
 					<form method="post" action="" class="form-horizontal" role="form">
 						<div class="form-group">
-							<div class="col-md-12">
+							<div class="col-md-8">
 								<div class="form-group">
-									<label for="inputNome" class="col-xs-3 col-sm-2 col-md-1 control-label">Nome:</label>
-									<div class="col-xs-8 col-sm-5 col-md-3">
+									<label for="inputNome" class="col-xs-3 col-sm-2 col-md-2 control-label">Nome:</label>
+									<div class="col-xs-8 col-sm-5 col-md-5">
 										<input type="text" class="form-control" id="inputNome" required>
 									</div>
 								</div>
 
 								<div class="form-group">
-									<label for="selectTipo" class="col-xs-3 col-sm-2 col-md-1 control-label">Tipo:</label>
-									<div class="col-xs-8 col-sm-5 col-md-3">
+									<label for="selectTipo" class="col-xs-3 col-sm-2 col-md-2 control-label">Tipo:</label>
+									<div class="col-xs-8 col-sm-5 col-md-5">
 										<select name="selectTipo" id="selectTipo" class="form-control" required>
 											<option value=""></option>
 											<option value="">Presencial</option>
@@ -51,20 +51,20 @@ require_once '../classes/validaAcesso.php';
 								</div>
 
 								<div class="form-group">
-									<label for="inputOrientador" class="col-xs-3 col-sm-2 col-md-1 control-label">Orientador:</label>
-									<div class="col-xs-8 col-sm-5 col-md-3">
+									<label for="inputOrientador" class="col-xs-3 col-sm-2 col-md-2 control-label">Orientador:</label>
+									<div class="col-xs-8 col-sm-5 col-md-5">
 										<input type="text" class="form-control" id="inputOrientador" required>
 									</div>
 								</div>
 
 								<div class="form-group">
-									<label for="numberCH" class="col-xs-3 col-sm-2 col-md-1 control-label">Carga Horária:</label>
-									<div class="col-xs-8 col-sm-5 col-md-3">
+									<label for="numberCH" class="col-xs-3 col-sm-2 col-md-2 control-label">Carga Horária:</label>
+									<div class="col-xs-8 col-sm-5 col-md-5">
 										<input type="number" class="form-control" id="inputCarga" required>
 									</div>
 								</div>
 
-								<div class="pull-right col-sm-8 col-md-10">
+								<div class="col-md-offset-4">
 									<button type="button" class="btn btn-success" data-toggle="modal" data-target="#editar-success">Alterar</button>
 										<div class="modal fade" id="editar-success" tabindex="-1" role="dialog" aria-labelledby="editar-success" aria-hidden="true">
 											<div class="modal-dialog modal">
