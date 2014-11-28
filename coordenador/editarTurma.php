@@ -7,7 +7,6 @@ require_once '../classes/validaAcesso.php';
 $idTruma = $_GET['idTurma'];
 ?>
 <html lang="pt-BR">
-<<<<<<< HEAD
 <head>
 	<?php require_once "../inc/head.php"; ?>
 
