@@ -1,4 +1,1 @@
-<?php
 
-session_destroy()
-?>
