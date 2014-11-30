@@ -1,11 +1,7 @@
 <?php
 /**
- * Classe para interação com a interface do usuário envolvento javascript
- * @author Emanuel Sampaio
- * @since 10/03/2009
- * @version 1.0
- * @copyright © 2009 Emanuel Sampaio - Todos os direitos reservados.
- * @package class
+ * Cleynaldo Carvalho
+ * Sistema de Apoio ao Docente
  */
 
 class JS
@@ -39,7 +35,7 @@ class JS
 	
 	
 	/**
-	 * Volta para a página anterior
+	 * Volta para a pï¿½gina anterior
 	 *
 	 * @access public
 	 * @return string
