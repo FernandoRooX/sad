@@ -23,7 +23,6 @@
                         <div class="page-header">
                             <h3><span class="glyphicon glyphicon-th-list"></span> Cadastro de Disciplina</h3>
                         </div>
-
                         <form method="post" action="banksdisciplina.php?acao=adicionar" class="form-horizontal" role="form">
                             <div class="row">
                                 <div class="col-md-8">
@@ -32,19 +31,16 @@
                                         <div class="col-xs-8 col-sm-5 col-md-5">
                                             <input type="text" name="disciplina" class="form-control" id="inputDisciplina" maxlength="30" required>
                                         </div>
-                                    </div>
-                                    
+                                    </div>      
                                     <div class="form-group">
                                         <label for="inputSituacao" class="col-xs-3 col-sm-2 col-md-2 control-label">Situação:</label>
                                         <div class="col-xs-8 col-sm-5 col-md-5">
                                              <select name="situacao" id="idPessoa" class="form-control" required>
                                                 <option value="Ativa">Ativa</option>
                                                 <option value="Inativa">Inativa</option>
-                                             </select>
-                                           
+                                             </select> 
                                         </div>
                                     </div>
-
                                     <div class="form-group">
                                         <label for="numberCarga" class="col-xs-3 col-sm-2 col-md-2 control-label">Carga Horária:</label>
                                         <div class="col-xs-8 col-sm-5 col-md-5">
