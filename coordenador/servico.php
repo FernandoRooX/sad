@@ -20,7 +20,7 @@
 
 $servidor = 'localhost';
 $usuario = 'root';
-$senhaa = '1010';
+$senhaa = '';
 $banco = 'sad9';
 
 #Executa a conexão com o mysql

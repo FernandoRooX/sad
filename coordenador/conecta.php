@@ -4,14 +4,14 @@
 
 $servidor = 'localhost';
 $usuario = 'root';
-$senhaa = '1010';
+$senhaa = '';
 $banco = 'sad9';
 
 #Executa a conexão com o mysql
-$lig = mysql_connect($servidor, $usuario, $senhaa) or die('Não possível fazer a conexão: '.mysql_error());
+$lig = @mysql_connect($servidor, $usuario, $senhaa) or die('Não possível fazer a conexão: '.mysql_error());
 
 #Seleciona o banco de dados que deseja utilizar
-$select = mysql_select_db($banco);
+$select = @mysql_select_db($banco);
 
     if($_REQUEST["acao"] == "cadastrar")
     {
@@ -23,11 +23,11 @@ $select = mysql_select_db($banco);
         $sql .= "'".$_REQUEST['data']."'";
         $sql .= ")";
         
-        $result = mysql_query($sql);
+        $result = @mysql_query($sql);
         
         if(!$result)
         {
-            die('Erro: '.mysql_error());
+            die('Erro: '.@mysql_error());
         }
         else
         {
