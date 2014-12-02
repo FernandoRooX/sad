@@ -8,7 +8,7 @@ class conexao {
 //put your code here
 
     const user = "root";
-    const pass = "1010";
+    const pass = "";
     
 
     private static $instance = null;
